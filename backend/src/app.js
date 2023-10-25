@@ -1,9 +1,14 @@
 // Load the express module to create a web application
 
 const express = require("express");
+const data = require("../data.json");
 
 const app = express();
+app.get("/mainPage", (req, res) => {
+  res.status(200).json(data);
+});
 
+app.use(express.static("public"));
 // Configure it
 
 /* ************************************************************************* */
@@ -85,10 +90,10 @@ app.use(
 /* ************************************************************************* */
 
 // Import the API routes from the router module
-const router = require("./router");
+// const router = require("./router");
 
 // Mount the API routes under the "/api" endpoint
-app.use("/api", router);
+// app.use("/api", router);
 
 /* ************************************************************************* */
 
