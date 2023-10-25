@@ -2,7 +2,7 @@
   {
     "id": "01",
     "artist": "AbazeDatome",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/abazedatome_grandpalais.jpg",
     "imgAlt": "Portrait de Nelson Mandela.",
     "city": "Lille",
     "district": "Grand palais",
@@ -15,7 +15,7 @@
   {
     "id": "02",
     "artist": "Akhine et Vinie",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/akhinevinie_moulins_2020_01.jpg",
     "imgAlt": "Portrait de femme portant un t-shirt large.",
     "city": "Lille",
     "district": "Moulins",
@@ -27,7 +27,7 @@
   {
     "id": "03",
     "artist": "Akhine et Vinie",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/akhinevinie_moulins_2020_02.jpg",
     "imgAlt": "Une jeune femme dont les cheveux sont faits de mots, dont les signatures des auteurs.",
     "city": "Lille",
     "district": "Moulins",
@@ -39,7 +39,7 @@
   {
     "id": "04",
     "artist": "AMTY",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/AMTY_Tourcoing_01.jpg",
     "imgAlt": "Trompe l'oeil de trois trains.",
     "city": "Tourcoing",
     "district": "La Tossée",
@@ -51,7 +51,7 @@
   {
     "id": "05",
     "artist": "Benjamin Duquenne",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/BenjaminDuquenne_Roubaix_01.jpg",
     "imgAlt": "Deux mésanges.",
     "city": "Roubaix",
     "district": "",
@@ -63,7 +63,7 @@
   {
     "id": "06",
     "artist": "C215",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/C215_ roubaix.jpg",
     "imgAlt": "Vieil homme portant un chapeau peint sous plusieurs angles.",
     "city": "Roubaix",
     "district": "La Condition Publique",
@@ -75,7 +75,7 @@
   {
     "id": "07",
     "artist": "Cix et Duek",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Cix_Duek_Gambetta_01.jpg",
     "imgAlt": "Portrait de femme d'inspiration mexicaine.",
     "city": "Lille",
     "district": "Gambetta",
@@ -87,7 +87,7 @@
   {
     "id": "08",
     "artist": "Cix et Duek",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Cix_Duek_moulins_01.jpg",
     "imgAlt": "Robot coloré et Petit Prince.",
     "city": "Lille",
     "district": "Moulins",
@@ -99,7 +99,7 @@
   {
     "id": "09",
     "artist": "Jeroo, Spyre, Sly2, Grey, Eyes.B et Sancé",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Collectif_Moulins_01.jpg",
     "imgAlt": "Fresque collective incluant une très grande souris.",
     "city": "Lille",
     "district": "Moulins",
@@ -111,7 +111,7 @@
   {
     "id": "10",
     "artist": "Danny Boy",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/DanyBoy_Tourcoing_01.jpg",
     "imgAlt": "Un dragon bleu.",
     "city": "Tourcoing",
     "district": "La Tossée",
@@ -123,7 +123,7 @@
   {
     "id": "11",
     "artist": "Collectif Des Friches et des Lettres",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/desfrichesetdeslettres_roubaix_2018.jpg",
     "imgAlt": "Un bébé mannequin de crash test.",
     "city": "Roubaix",
     "district": "",
@@ -135,7 +135,7 @@
   {
     "id": "12",
     "artist": "Duek",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/duekglez_lieu_2019.jpg",
     "imgAlt": "Un homme aux yeux bandés et un cerf.",
     "city": "Lille",
     "district": "Moulins",
@@ -147,7 +147,7 @@
   {
     "id": "13",
     "artist": "Hello Monsters",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/hellomonster_hellemmes_2015.jpg",
     "imgAlt": "Deux personnages semblent faits de patchworks.",
     "city": "Hellemmes",
     "district": "Hellemmes",
@@ -159,7 +159,7 @@
   {
     "id": "14",
     "artist": "Ikste",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Ikste_Tourcoing_01.jpg",
     "imgAlt": "Portrait d'homme avec un chapeau, sa peau est jaune.",
     "city": "Tourcoing",
     "district": "La Tossée",
@@ -171,7 +171,7 @@
   {
     "id": "15",
     "artist": "Hervé Di Rosa",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/hervedirosa_lille.jpg",
     "imgAlt": "Amoncellement de petits personnages aux énormes lèvres rouges.",
     "city": "Lille",
     "district": "Saint Sauveur",
@@ -183,7 +183,7 @@
   {
     "id": "16",
     "artist": "Jana et JS",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Jana_JS_Moulins_2015.jpg",
     "imgAlt": "Deux personnages sont assis  une fenêtre.",
     "city": "Lille",
     "district": "Moulins",
@@ -195,7 +195,7 @@
   {
     "id": "17",
     "artist": "Jef Aerosol",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/JefAerosol_Marquette_01.jpg",
     "imgAlt": "Enfants qui jouent.",
     "city": "Marquette-Lez-Lille",
     "district": "",
@@ -207,7 +207,7 @@
   {
     "id": "18",
     "artist": "Jef Aerosol",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/JefAerosol_Marquette_02.jpg",
     "imgAlt": "Femme hindoue qui danse.",
     "city": "Marquette-Lez-Lille",
     "district": "",
@@ -219,7 +219,7 @@
   {
     "id": "19",
     "artist": "Jef Aerosol",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/JefAerosol_Marquette_03.jpg",
     "imgAlt": "Enfants qui jouent.",
     "city": "Marquette-Lez-Lille",
     "district": "",
@@ -231,7 +231,7 @@
   {
     "id": "20",
     "artist": "Jef Aerosol",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/JefAerosol_Marquette-04.jpg",
     "imgAlt": "Enfants qui jouent.",
     "city": "Marquette-Lez-Lille",
     "district": "",
@@ -243,7 +243,7 @@
   {
     "id": "21",
     "artist": "Ted Nomad",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/TedNomad_roubaix_2017.jpg",
     "imgAlt": "Petite fille qui arrose un coeur",
     "city": "Roubaix",
     "district": "Jardin partagé",
@@ -255,7 +255,7 @@
   {
     "id": "22",
     "artist": "JimmyC",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/jimmyC_roubaix_2018.jpg",
     "imgAlt": "Portrait de Camille Claudel",
     "city": "Roubaix",
     "district": "Square Camille Claudel",
@@ -267,7 +267,7 @@
   {
     "id": "23",
     "artist": "LaDame QUICOLLE",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/ladamequicolle_moulins_2022.jpg",
     "imgAlt": "Collage d'une jeune fille en jogging.",
     "city": "Lille",
     "district": "Moulins",
@@ -279,7 +279,7 @@
   {
     "id": "24",
     "artist": "Lady Alezia et Monsieur Cana",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/LadyAlezia_Villeneuve_01.jpg",
     "imgAlt": "Portrait de femme signé par une calligraphie.",
     "city": "Villeneuve d'Ascq",
     "district": "",
@@ -291,7 +291,7 @@
   {
     "id": "25",
     "artist": "Lem",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Lem_SaintAndré_2019_01.jpg",
     "imgAlt": "Cercle multicolore, au centre un rouleau de peinture.",
     "city": "Saint-André-Lez-Lille",
     "district": "",
@@ -303,7 +303,7 @@
   {
     "id": "26",
     "artist": "M-City",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Mcity_moulins_2015.jpg",
     "imgAlt": "Immense homme dans un scaphandre orange.",
     "city": "Lille",
     "district": "Moulins",
@@ -315,7 +315,7 @@
   {
     "id": "27",
     "artist": "Mr VouL",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/MrVoul_roubaix_01.jpg",
     "imgAlt": "Autoportrait de l'artiste.",
     "city": "Roubaix",
     "district": "Librairie 'Autour des mots'",
@@ -327,7 +327,7 @@
   {
     "id": "28",
     "artist": "Nean, Rocket01 et Benjamin Duquenne",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Nean_Rocket01_BenjaminDuquenne_Roubaix_01.jpg",
     "imgAlt": "Ville sous cloche et oiseau.",
     "city": "Roubaix",
     "district": "",
@@ -339,7 +339,7 @@
   {
     "id": "29",
     "artist": "Ouroboros",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/ouroboros_roubaix_2021.jpg",
     "imgAlt": "Portrait d'une jeune fille nommée Embla.",
     "city": "Roubaix",
     "district": "Gare",
@@ -351,7 +351,7 @@
   {
     "id": "30",
     "artist": "Pi80",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/P180_UnknownLoc_01.jpg",
     "imgAlt": "Bombe de peinture façon cartoon.",
     "city": "Tourcoing",
     "district": "La Tossée",
@@ -363,7 +363,7 @@
   {
     "id": "31",
     "artist": "Monsieur Poes et JoBeR",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Poes_Jober_Gambetta_01.jpg",
     "imgAlt": "Deux personnages mystiques se battent.",
     "city": "Lille",
     "district": "Gambetta",
@@ -375,7 +375,7 @@
   {
     "id": "32",
     "artist": "Psyckoze",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/Psyckoze_Tourcoing_01.jpg",
     "imgAlt": "Un personnage stylisé danse.",
     "city": "Roubaix",
     "district": "",
@@ -387,7 +387,7 @@
   {
     "id": "33",
     "artist": "Spaik",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/spaik_moulins_2019.jpg",
     "imgAlt": "Un serpent d'inspiration mexicaine crache du feu.",
     "city": "Lille",
     "district": "Moulins",
@@ -399,7 +399,7 @@
   {
     "id": "34",
     "artist": "Sylvain Ristori",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/sylvainristori_roubaix_2019.jpg",
     "imgAlt": "Des planches sont agencées pour recouvrir un bâtiment et former un soleil.",
     "city": "Roubaix",
     "district": "La Condition Publique",
@@ -411,7 +411,7 @@
   {
     "id": "35",
     "artist": "Tlacolulokos",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/tlacolulokos_moulins_2019.jpg",
     "imgAlt": "Représentation de la justice sous les traits d'une femme mexicaine.",
     "city": "Lille",
     "district": "Moulins",
@@ -423,7 +423,7 @@
   {
     "id": "36",
     "artist": "Tlacolulokos et Lady Alezia",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/tlacolulokosLadyAlezia_moulins_2019.jpg",
     "imgAlt": "Portraits de femmes mexicaines et calligraphies.",
     "city": "Lille",
     "district": "Moulins",
@@ -435,7 +435,7 @@
   {
     "id": "37",
     "artist": "Vhils",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/vhils_roubaix_2017.jpg",
     "imgAlt": "Portrait de femme agée",
     "city": "Roubaix",
     "district": "Le Pile",
@@ -448,7 +448,7 @@
   {
     "id": "",
     "artist": "",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/",
     "location": "",
     "year": "",
     "description": "",
@@ -457,7 +457,7 @@
   {
     "id": "",
     "artist": "",
-    "imgSrc": "",
+    "imgSrc": "localhost:3310/",
     "location": "",
     "year": "",
     "description": "",
