@@ -13,7 +13,7 @@ function Museum() {
         </div>
         <div className="museum__wall museum__wall--right">
           <img
-            src="src/assets/tableaux/jefaerosol_roubaix_2017.jpg"
+            src="src/assets/tableaux/tednomad_roubaix_2017.jpg"
             alt="oeuvre"
           />
           <p>Ted Nomad - Roubaix - 2017</p>
