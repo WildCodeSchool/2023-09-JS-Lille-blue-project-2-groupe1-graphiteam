@@ -4,6 +4,12 @@ import logo from "./assets/logo.svg";
 import "./App.css";
 
 function App() {
+
+  fetch("https://www.wildcodeschool.com/")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
   return (
     <div className="App">
       <header className="App-header">
