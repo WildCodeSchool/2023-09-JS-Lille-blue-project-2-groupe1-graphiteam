@@ -4,7 +4,7 @@ const express = require("express");
 const data = require("../data.json");
 
 const app = express();
-app.get("/mainPage", (req, res) => {
+app.get("/artpieces", (req, res) => {
   res.status(200).json(data);
 });
 
