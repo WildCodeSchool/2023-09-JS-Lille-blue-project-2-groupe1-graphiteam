@@ -1,15 +1,21 @@
+import { useEffect, useState } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from "axios";
 import Counter from "./components/Counter";
 import logo from "./assets/logo.svg";
-
 import "./App.css";
 
 function App() {
-
-  fetch("https://www.wildcodeschool.com/")
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
-
+  const [arts, setArts] = useState();
+  useEffect(() => {
+    axios
+      .get("http://localhost:3310/artpieces")
+      .then((response) => {
+        setArts(response.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+  console.info(arts);
   return (
     <div className="App">
       <header className="App-header">
