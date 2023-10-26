@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Main from "./pages/main/main";
+import HomePage from "./pages/homePage/homePage";
 
 function App() {
   const [arts, setArts] = useState();
@@ -13,7 +13,7 @@ function App() {
   console.info(arts);
   return (
     <div>
-      <Main />
+      <HomePage />
     </div>
   );
 }
