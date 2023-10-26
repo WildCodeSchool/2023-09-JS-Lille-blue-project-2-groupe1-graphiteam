@@ -2,6 +2,7 @@ import "./Variables.scss";
 import "./App.scss";
 import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
+import HomePage from "./pages/homePage/homePage";
 import Museum from "./pages/Museum/Museum";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       {arts ? <Museum arts={arts} /> : <div> data not found </div>}
+     /* <HomePage />*/
     </div>
   );
 }
