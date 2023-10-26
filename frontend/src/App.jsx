@@ -2,6 +2,7 @@ import "./Variables.scss";
 import "./App.scss";
 import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
+import HomePage from "./pages/homePage/homePage";
 import Museum from "./pages/Museum/Museum";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
   }, []);
   console.info(arts);
   return (
-    <div className="App">
+    <div>
+      <HomePage />
       <Museum />
     </div>
   );
