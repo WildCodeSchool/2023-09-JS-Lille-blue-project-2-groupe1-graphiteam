@@ -15,7 +15,7 @@ function App() {
   console.info(arts);
   return (
     <div className="App">
-      <Museum />
+      {arts ? <Museum arts={arts} /> : <div> data not found </div>}
     </div>
   );
 }
