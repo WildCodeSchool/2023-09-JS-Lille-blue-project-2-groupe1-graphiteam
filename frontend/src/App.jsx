@@ -1,6 +1,9 @@
+import "./Variables.scss";
+import "./App.scss";
+import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
-import "./App.css";
 import HomePage from "./pages/homePage/homePage";
+import Museum from "./pages/Museum/Museum";
 
 function App() {
   const [arts, setArts] = useState();
@@ -14,6 +17,7 @@ function App() {
   return (
     <div>
       <HomePage />
+      <Museum />
     </div>
   );
 }
