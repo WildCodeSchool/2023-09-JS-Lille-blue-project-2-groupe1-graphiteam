@@ -5,7 +5,11 @@ function Navbar() {
     <div className="Navbar">
       <ul className="Navbar_buton">
         <li className="Navbar_li a">
-          <button className="Navbar_detourbuton" type="submit">
+          <button
+            className="Navbar_detourbuton"
+            type="button"
+            onClick={() => {}}
+          >
             ◀︎ Retour
           </button>
         </li>
@@ -13,7 +17,11 @@ function Navbar() {
           <h1>Catalogue</h1>
         </li>
         <li className="Navbar_li a">
-          <button className="Navbar_detourbuton" type="submit">
+          <button
+            className="Navbar_detourbuton"
+            type="button"
+            onClick={() => {}}
+          >
             Page d'accueil ▶︎
           </button>
         </li>
