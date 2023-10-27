@@ -81,10 +81,14 @@ body {
 
 .museum__wall img {
   object-fit: contain;
-  max-width: 100%;
+  max-width: 85%;
   max-height: 85%;
   box-shadow: 0 0 5px grey;
   box-shadow:
     $white 0px 0px 0px 1px,
     0 0 8px grey;
+}
+
+.museum__navigationArrows {
+  position: absolute;
 }
