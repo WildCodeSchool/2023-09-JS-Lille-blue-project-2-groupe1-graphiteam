@@ -1,12 +1,11 @@
 import "./homePage.scss";
+import StartVisit from "../../components/startVisitBtn";
 
 function HomePage() {
   return (
     <div className="homepage">
-      <div className="homepage__background">
-        <h1>homepage</h1>
-        <img src="src/assets/bg_main.jpg" alt="" />
-      </div>
+      <h1>homepage</h1>
+      <StartVisit />
     </div>
   );
 }
