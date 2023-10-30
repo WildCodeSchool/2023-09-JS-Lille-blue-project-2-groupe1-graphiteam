@@ -1,40 +1,23 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
-import "./App.css";
+import "./Variables.scss";
+import "./App.scss";
+import "./pages/Museum/Museum.scss";
+import { useEffect, useState } from "react";
+/* import HomePage from "./pages/homePage/homePage"; */
+import Museum from "./pages/Museum/Museum";
 
 function App() {
+  const [arts, setArts] = useState();
+  useEffect(() => {
+    fetch("http://localhost:3310/artpieces")
+      .then((response) => response.json())
+      .then((data) => setArts(data))
+      .catch((error) => console.error(error));
+  }, []);
+  console.info(arts);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      {arts ? <Museum arts={arts} /> : <div> data not found </div>}
+      {/* <HomePage /> */}
     </div>
   );
 }
