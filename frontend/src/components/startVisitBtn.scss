@@ -1,0 +1,17 @@
+$light-main: rgb(153, 204, 172);
+$dark-main: rgb(115, 125, 98);
+$darkest-main: rgb(56, 52, 46);
+$accent: rgb(242, 148, 138);
+$white: rgb(255, 239, 217);
+
+.button__startVisit {
+  display: flex;
+  align-items: center;
+  background-color: $accent;
+  border: 1px solid $darkest-main;
+  border-radius: 8px;
+  padding: 0 0 0 0;
+  width: 200px;
+  box-shadow: 2px 4px 4px -1px $darkest-main;
+  justify-content: center;
+}

@@ -3,7 +3,9 @@ import Navbar from "./components/navbar/Navbar";
 import Museum from "./pages/Museum/Museum";
 import "./Variables.scss";
 import "./pages/Museum/Museum.scss";
+import HomePage from "./pages/homePage/homePage";
 import "./App.scss"
+
 
 function App() {
   const [arts, setArts] = useState();
