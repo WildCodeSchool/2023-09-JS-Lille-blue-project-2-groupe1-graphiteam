@@ -72,6 +72,7 @@ body {
 .museum__wall p {
   font-size: 3vh;
   margin-inline: 10%;
+  margin-top: 0.5rem;
   padding: 0.5rem;
   background-color: rgb(255, 247, 236);
   color: $darkest-main;
@@ -87,6 +88,7 @@ body {
   box-shadow:
     $white 0px 0px 0px 1px,
     0 0 8px grey;
+  margin-top: 1rem;
 }
 
 .museum__navigationArrows {

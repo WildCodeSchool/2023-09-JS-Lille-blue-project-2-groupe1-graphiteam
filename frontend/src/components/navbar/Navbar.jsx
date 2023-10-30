@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="Navbar">
       <ul className="Navbar_thebuton">
-        <li className="Navbar_li a">
+        <li className="Navbar_li">
           <button className="Navbar_buton" type="button" onClick={() => {}}>
             <AiFillCaretLeft size="35px" /> Retour
           </button>
@@ -14,7 +14,7 @@ function Navbar() {
         <li className="Navbar_title">
           <h1>Catalogue</h1>
         </li>
-        <li className="Navbar_li a">
+        <li className="Navbar_li">
           <button className="Navbar_buton" type="button" onClick={() => {}}>
             Page d'accueil <AiFillCaretRight size="35px" />
           </button>

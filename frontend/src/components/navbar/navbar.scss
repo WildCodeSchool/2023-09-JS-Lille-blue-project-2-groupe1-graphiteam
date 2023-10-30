@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+.Navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
 .Navbar_thebuton {
   height: 4rem;
   background: linear-gradient(11deg, #ffeed9 1%, #99ccac 17%);
@@ -10,10 +16,7 @@
   justify-content: space-between;
   list-style: none;
   align-items: center;
-}
-
-.Navbar_li a {
-  background-color: azure;
+  opacity: 50%;
 }
 
 .Navbar_buton {
@@ -27,4 +30,8 @@
 
 .Navbar_title {
   text-shadow: 4px 2px 6px #ffeed9;
+}
+
+h1 {
+  opacity: 100%;
 }
