@@ -1,6 +1,5 @@
 import "./startVisitBtn.scss";
 import { AiFillPlayCircle } from "react-icons/ai";
-/* import AiFillPlayCircle */
 
 function StartVisit() {
   return (
