@@ -2,8 +2,7 @@ import "./Variables.scss";
 import "./App.scss";
 import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
-/* import HomePage from "./pages/homePage/homePage"; */
-import Museum from "./pages/Museum/Museum";
+import Mainpage from "./pages/Mainpage/Mainpage";
 
 function App() {
   const [arts, setArts] = useState();
@@ -16,8 +15,7 @@ function App() {
   console.info(arts);
   return (
     <div className="App">
-      {arts ? <Museum arts={arts} /> : <div> data not found </div>}
-      {/* <HomePage /> */}
+      {arts ? <Mainpage arts={arts} /> : "data not found"}
     </div>
   );
 }
