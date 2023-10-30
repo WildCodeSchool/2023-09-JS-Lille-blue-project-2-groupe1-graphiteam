@@ -1,9 +1,10 @@
-import "./Variables.scss";
-import "./App.scss";
-import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
-import HomePage from "./pages/homePage/homePage";
-/* import Museum from "./pages/Museum/Museum"; */
+import Navbar from "./components/navbar/Navbar";
+import Museum from "./pages/Museum/Museum";
+import "./Variables.scss";
+import "./pages/Museum/Museum.scss";
+/* import HomePage from "./pages/homePage/homePage"; */
+import "./App.scss";
 
 function App() {
   const [arts, setArts] = useState();
@@ -13,11 +14,13 @@ function App() {
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
   }, []);
+
   console.info(arts);
+
   return (
     <div className="App">
-      {arts ? <HomePage arts={arts} /> : null}
-      {/* <HomePage /> */}
+      <Navbar />
+      {arts ? <Museum arts={arts} /> : "oupsy"}
     </div>
   );
 }
