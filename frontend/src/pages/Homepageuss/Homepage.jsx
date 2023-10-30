@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import DropdownMenu from "../../components/DropdownMenu";
-import "./homePage.scss";
+import "./Homepage.scss";
 
 function HomePage({ arts }) {
   return (
