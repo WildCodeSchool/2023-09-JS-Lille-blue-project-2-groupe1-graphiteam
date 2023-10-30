@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Museum from "./pages/Museum/Museum";
 import "./Variables.scss";
-import "./App.scss";
 import "./pages/Museum/Museum.scss";
-import { useEffect, useState } from "react";
 import HomePage from "./pages/homePage/homePage";
+import "./App.scss"
 
 
 function App() {
