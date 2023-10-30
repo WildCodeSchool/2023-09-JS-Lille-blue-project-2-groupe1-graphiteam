@@ -26,6 +26,7 @@ function Museum({ arts }) {
       <div className="museum__walls">
         <div className="museum__wall museum__wall--left">
           <img
+            className="arts__pics-left"
             src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
             alt={arts[artsIndexLeft].imgAlt}
           />
@@ -33,6 +34,7 @@ function Museum({ arts }) {
         </div>
         <div className="museum__wall museum__wall--right">
           <img
+            className="arts__pics-right"
             src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
             alt={arts[artsIndexRight].imgAlt}
           />
