@@ -20,7 +20,6 @@ function App() {
     <div className="App">
       <Navbar />
       {arts ? <Museum arts={arts} /> : <div> data not found </div>}
-      {/* <HomePage /> */}
     </div>
   );
 }
