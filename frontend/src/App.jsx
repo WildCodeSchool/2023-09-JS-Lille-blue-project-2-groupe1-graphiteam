@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Museum from "./pages/Museum/Museum";
 import "./Variables.scss";
 import "./App.scss";
 import "./pages/Museum/Museum.scss";
-import { useEffect, useState } from "react";
-import Homepage from "./pages/Homepage/Homepage";
 
 function App() {
   const [arts, setArts] = useState();
@@ -12,10 +13,13 @@ function App() {
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
   }, []);
+
   console.info(arts);
+
   return (
     <div className="App">
-      {arts ? <Homepage arts={arts} /> : "data not found"}
+      <Navbar />
+      {arts ? <Museum arts={arts} /> : <div> data not found </div>}
     </div>
   );
 }
