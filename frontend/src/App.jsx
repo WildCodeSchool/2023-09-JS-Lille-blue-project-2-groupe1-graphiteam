@@ -2,7 +2,7 @@ import "./Variables.scss";
 import "./App.scss";
 import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
-import Mainpage from "./pages/Mainpage/Mainpage";
+import Homepage from "./pages/Homepage/Homepage";
 
 function App() {
   const [arts, setArts] = useState();
@@ -15,7 +15,7 @@ function App() {
   console.info(arts);
   return (
     <div className="App">
-      {arts ? <Mainpage arts={arts} /> : "data not found"}
+      {arts ? <Homepage arts={arts} /> : "data not found"}
     </div>
   );
 }

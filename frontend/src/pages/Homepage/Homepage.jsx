@@ -1,6 +1,6 @@
-import "./Mainpage.scss";
+import "./Homepage.scss";
 
-function Mainpage() {
+function Homepage() {
   return (
     <div className="homepage">
       <h1>homepage</h1>
@@ -8,4 +8,4 @@ function Mainpage() {
   );
 }
 
-export default Mainpage;
+export default Homepage;
