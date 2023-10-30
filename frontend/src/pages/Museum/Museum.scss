@@ -92,3 +92,39 @@ body {
 .museum__navigationArrows {
   position: absolute;
 }
+//PERSPECTIVE ANIMATION OF PICS
+
+.arts__pics-left {
+  animation: slideInRight 2s ease 0s 1 normal forwards;
+}
+
+.arts__pics-right {
+  animation: slideInLeft 2s ease 0s 1 normal forwards;
+}
+
+// KEYFRAMES FOR ANIMATION
+
+// ENTRANCE LEFT PIC
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+// ENTRANCE RIGHT PIC
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

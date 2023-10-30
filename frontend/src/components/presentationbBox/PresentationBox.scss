@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+
+$light-main: rgb(153, 204, 172);
+$dark-main: rgb(115, 125, 98);
+$darkest-main: rgb(56, 52, 46);
+$accent: rgba(242, 148, 138, 0.9);
+$white: rgb(255, 239, 217);
+
+.logo-app {
+  margin: 1.5em;
+}
+
+.box__description {
+  border-color: $darkest-main;
+  border-style: double;
+  color: $darkest-main;
+  margin: 1.5em;
+  background-color: $accent;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 15em;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
+  -webkit-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
+  -moz-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
+}
+.title__description {
+  margin: 0;
+  font-family: $font-title;
+}
+.text__description {
+  margin: 1.5rem;
+  font-family: $font-text;
+}
