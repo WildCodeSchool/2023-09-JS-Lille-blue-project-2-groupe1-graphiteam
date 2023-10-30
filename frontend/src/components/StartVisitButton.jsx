@@ -1,4 +1,4 @@
-import "./startVisitBtn.scss";
+import "./startVisitButton.scss";
 import { AiFillPlayCircle } from "react-icons/ai";
 
 function StartVisit() {
@@ -6,7 +6,7 @@ function StartVisit() {
     <>
       <h1>btn</h1>
       <button type="submit" className="button__startVisit">
-        <AiFillPlayCircle size="25px" /> Exposition
+        <AiFillPlayCircle size="50px" /> Exposition
       </button>
     </>
   );
