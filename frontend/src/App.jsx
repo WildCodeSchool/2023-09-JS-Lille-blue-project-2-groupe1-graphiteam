@@ -3,7 +3,6 @@ import "./App.scss";
 import "./pages/Museum/Museum.scss";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/homePage/homePage";
-/* import Museum from "./pages/Museum/Museum"; */
 
 function App() {
   const [arts, setArts] = useState();
@@ -14,12 +13,7 @@ function App() {
       .catch((error) => console.error(error));
   }, []);
   console.info(arts);
-  return (
-    <div className="App">
-      {/*       {arts ? <Museum arts={arts} /> : <div> data not found </div>} */}
-      {arts ? <HomePage arts={arts} /> : null}
-    </div>
-  );
+  return <div className="App">{arts ? <HomePage arts={arts} /> : null}</div>;
 }
 
 export default App;
