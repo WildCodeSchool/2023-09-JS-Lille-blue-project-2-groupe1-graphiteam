@@ -1,7 +1,7 @@
-import "./homePage.scss";
+import "./Homepage.scss";
 import StartVisit from "../../components/startVisitBtn";
 
-function HomePage() {
+function Homepage() {
   return (
     <div className="homepage">
       <h1>homepage</h1>
@@ -10,4 +10,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Homepage;

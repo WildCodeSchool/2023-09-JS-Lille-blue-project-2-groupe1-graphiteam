@@ -3,9 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Museum from "./pages/Museum/Museum";
 import "./Variables.scss";
 import "./pages/Museum/Museum.scss";
-import HomePage from "./pages/homePage/homePage";
-import "./App.scss"
-
+import "./App.scss";
 
 function App() {
   const [arts, setArts] = useState();
@@ -21,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {arts ? <Museum arts={arts} /> : <div> data not found </div>}
+      {arts ? <Museum arts={arts} /> : "data not found"}
     </div>
   );
 }
