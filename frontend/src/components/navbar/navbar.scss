@@ -1,21 +1,25 @@
+$light-main: rgb(153, 204, 172);
+$dark-main: rgb(115, 125, 98);
+$darkest-main: rgb(56, 52, 46);
+$accent: rgb(242, 148, 138);
+$white: rgb(255, 239, 217);
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.Navbar {
+.navbar {
   position: absolute;
   width: 100%;
   z-index: 2;
 }
 
-.Navbar_thebuton {
-  height: 4rem;
-  background: rgb(153, 204, 172);
+.navbar__ul {
   background: radial-gradient(
     circle,
-    rgba(153, 204, 172, 0.877264284620098) 15%,
-    rgba(153, 204, 172, 0) 100%
+    rgba($light-main, 0.877264284620098) 15%,
+    rgba($darkest-main, 0) 100%
   );
   display: flex;
   justify-content: space-between;
@@ -23,19 +27,62 @@
   align-items: center;
 }
 
-.Navbar_buton {
+.navbar__button {
   border: none;
   background: none;
-  text-shadow: 4px 2px 6px #ffeed9;
+  margin-inline: 1vw;
+  color: $darkest-main;
+  text-shadow:
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white;
   font-size: large;
   display: flex;
   align-items: center;
 }
 
-.Navbar_title {
-  text-shadow: 4px 2px 6px #ffeed9;
+.navbar__title {
+  text-shadow:
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white,
+    0 0 2px $white;
 }
 
-h1 {
-  font-size: 3rem;
+.navbar__title h1 {
+  font-size: clamp(15px, 6vh, 2.5rem);
+  color: $darkest-main;
 }
