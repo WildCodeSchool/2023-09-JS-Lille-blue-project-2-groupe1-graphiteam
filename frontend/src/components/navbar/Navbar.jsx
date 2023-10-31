@@ -12,7 +12,7 @@ function Navbar() {
           </button>
         </li>
         <li className="Navbar_title">
-          <h1>Catalogue</h1>
+          <h1>Musée</h1>
         </li>
         <li className="Navbar_li">
           <button className="Navbar_buton" type="button" onClick={() => {}}>

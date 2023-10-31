@@ -11,12 +11,16 @@
 
 .Navbar_thebuton {
   height: 4rem;
-  background: linear-gradient(11deg, #ffeed9 1%, #99ccac 17%);
+  background: rgb(153, 204, 172);
+  background: radial-gradient(
+    circle,
+    rgba(153, 204, 172, 0.877264284620098) 15%,
+    rgba(153, 204, 172, 0) 100%
+  );
   display: flex;
   justify-content: space-between;
   list-style: none;
   align-items: center;
-  opacity: 50%;
 }
 
 .Navbar_buton {
@@ -33,5 +37,5 @@
 }
 
 h1 {
-  opacity: 100%;
+  font-size: 3rem;
 }
