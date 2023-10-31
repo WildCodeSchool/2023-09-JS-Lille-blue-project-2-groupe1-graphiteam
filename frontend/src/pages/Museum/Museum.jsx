@@ -26,19 +26,31 @@ function Museum({ arts }) {
       <div className="museum__walls">
         <div className="museum__wall museum__wall--left">
           <img
-            className="arts__pics-left"
+            className="museum__img--left"
             src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
             alt={arts[artsIndexLeft].imgAlt}
           />
-          <p>{arts[artsIndexLeft].artist}</p>
+          <p>
+            <strong>
+              {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
+            </strong>
+            {`(${arts[artsIndexLeft].street})`} <br />
+            {arts[artsIndexLeft].description}
+          </p>
         </div>
         <div className="museum__wall museum__wall--right">
           <img
-            className="arts__pics-right"
+            className="museum__img--right"
             src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
             alt={arts[artsIndexRight].imgAlt}
           />
-          <p>{arts[artsIndexRight].artist}</p>
+          <p>
+            <strong>
+              {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
+            </strong>
+            {`(${arts[artsIndexRight].street})`} <br />
+            {arts[artsIndexRight].description}
+          </p>
         </div>
         <nav className="museum__navigationArrows">
           <button

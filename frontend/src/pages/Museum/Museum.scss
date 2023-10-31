@@ -45,12 +45,13 @@ body {
   border-top-left-radius: 40px;
   border: 1px solid $white;
   align-items: center;
-  padding: 2rem;
-  height: 80vh;
-  width: 33vw;
+  padding-top: 4vh;
+  padding-inline: 8vh;
+  height: 83vh;
+  width: 36vw;
   display: flex;
   flex-direction: column;
-  background-image: url(src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png);
+  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png");
 }
 .museum__wall--left {
   transform: rotateY(30deg);
@@ -70,9 +71,10 @@ body {
   }
 }
 .museum__wall p {
-  font-size: 3vh;
-  margin-inline: 10%;
-  padding: 0.5rem;
+  font-size: clamp(12px, 2.5vh, 3rem);
+  margin-top: 1vh;
+  padding: 0.8vh;
+  max-width: 70%;
   background-color: rgb(255, 247, 236);
   color: $darkest-main;
   border: 1px solid $dark-main;
@@ -82,7 +84,7 @@ body {
 .museum__wall img {
   object-fit: contain;
   max-width: 85%;
-  max-height: 85%;
+  max-height: 70%;
   box-shadow: 0 0 5px grey;
   box-shadow:
     $white 0px 0px 0px 1px,
@@ -92,13 +94,14 @@ body {
 .museum__navigationArrows {
   position: absolute;
 }
+
 //PERSPECTIVE ANIMATION OF PICS
 
-.arts__pics-left {
+.museum__img--left {
   animation: slideInRight 2s ease 0s 1 normal forwards;
 }
 
-.arts__pics-right {
+.museum__img--right {
   animation: slideInLeft 2s ease 0s 1 normal forwards;
 }
 
