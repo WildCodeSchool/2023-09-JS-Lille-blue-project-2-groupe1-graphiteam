@@ -7,7 +7,7 @@ $white: rgb(255, 239, 217);
 body {
   margin: 0;
   background-color: $accent;
-  background-image: url(src/assets/gravel.png);
+  background-image: url("src/assets/gravel.png");
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
   width: 100%;
 }
 .museum__background img {
-  height: 90%;
+  height: 89%;
   width: 100%;
   border-bottom: 1px solid $dark-main;
 }
@@ -36,17 +36,15 @@ body {
   display: flex;
   perspective: 500px;
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   width: 100%;
 }
 .museum__wall {
   background-color: $white;
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
   border: 1px solid $white;
   align-items: center;
   padding-top: 4vh;
-  padding-inline: 8vh;
+  padding-inline: 4vw;
   height: 83vh;
   width: 36vw;
   display: flex;
@@ -54,8 +52,9 @@ body {
   background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png");
 }
 .museum__wall--left {
-  transform: rotateY(30deg);
+  transform: rotateY(25deg);
   position: relative;
+  border-top-right-radius: 40px;
   box-shadow: inset -10px 10px 15px -6px rgba(175, 175, 175, 0.723);
   & img {
     border: 8px ridge $dark-main;
@@ -63,8 +62,9 @@ body {
 }
 
 .museum__wall--right {
-  transform: rotateY(-30deg);
+  transform: rotateY(-25deg);
   position: relative;
+  border-top-left-radius: 40px;
   box-shadow: inset 10px 10px 15px -6px rgba(175, 175, 175, 0.723);
   & img {
     border: 8px ridge $dark-main;
