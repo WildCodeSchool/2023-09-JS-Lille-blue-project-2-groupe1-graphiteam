@@ -55,3 +55,14 @@ button {
     border-color: $dark-main;
   }
 }
+.button__startVisit {
+  display: flex;
+  align-items: center;
+  background-color: $accent;
+  border: 1px solid $darkest-main;
+  border-radius: 8px;
+  padding: 0 0 0 0;
+  width: 200px;
+  box-shadow: 2px 4px 4px -1px $darkest-main;
+  justify-content: center;
+}

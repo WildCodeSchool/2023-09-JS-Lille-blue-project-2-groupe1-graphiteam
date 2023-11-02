@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
-import "./dropdownMenu.scss";
-import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
+import "./dropdownStyle.scss";
+import {
+  AiOutlineCaretDown,
+  AiOutlineCaretUp,
+  AiFillPlayCircle,
+} from "react-icons/ai";
 import { useState } from "react";
-import StartVisitBtn from "./StartVisitBtn";
 
 function DropdownMenu({ arts }) {
   console.warn(arts);
@@ -10,6 +13,7 @@ function DropdownMenu({ arts }) {
   const [show, setShow] = useState(false);
   const [btnText, setBtnText] = useState("--Metropole Lilloise--");
   const [list, setList] = useState("default");
+  console.info(list);
 
   const setOpen = () => {
     setIsOpen(!isOpen);
@@ -74,7 +78,11 @@ function DropdownMenu({ arts }) {
         </div>
       )}
 
-      {show && <StartVisitBtn list={list} />}
+      {show && (
+        <button type="submit" className="button__startVisit">
+          <AiFillPlayCircle size="50px" /> Exposition
+        </button>
+      )}
     </div>
   );
 }
