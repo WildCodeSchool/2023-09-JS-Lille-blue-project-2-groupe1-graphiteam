@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: red;
+}
+h3 {
+  color: yellow;
+}
+.catalog {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
