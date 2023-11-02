@@ -3,6 +3,7 @@ $dark-main: rgb(115, 125, 98);
 $darkest-main: rgb(56, 52, 46);
 $accent: rgb(242, 148, 138);
 $dropdownBG: #ffefd9;
+
 .iconContainer {
   background-color: $light-main;
   height: 100%;
@@ -12,30 +13,15 @@ $dropdownBG: #ffefd9;
   justify-content: center;
   border-radius: 8px;
 }
-li {
-  color: $darkest-main;
-  padding-left: 20px;
-  list-style: none;
-  justify-content: left;
-  background-color: $dropdownBG;
-  &:hover {
-    cursor: pointer;
-    color: $dropdownBG;
-    background-color: $darkest-main;
-  }
-}
-ul {
-  margin: 0;
-  padding: 0;
-  color: $dropdownBG;
-  background-color: $dark-main;
+.dropdownMenu {
+  border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  border: 1px solid black;
-  border-radius: 8px;
 }
-button {
+.dropdownMenu__button {
   background-color: $dropdownBG;
   color: $darkest-main;
   border-radius: 8px;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./dropdownStyle.scss";
 import {
@@ -32,24 +33,24 @@ function DropdownMenu({ arts }) {
    // console.log("list:", list);
   }; */
   return (
-    <div>
-      <button type="submit" onClick={setOpen}>
+    <div className="dropdownMenu">
+      <button className="dropdownMenu__button" type="submit" onClick={setOpen}>
         {btnText}
         {isOpen ? (
           <div className="iconContainer">
-            <AiOutlineCaretUp />
+            <AiOutlineCaretUp size="20px" />
           </div>
         ) : (
           <div className="iconContainer">
-            <AiOutlineCaretDown />
+            <AiOutlineCaretDown size="20px" />
           </div>
         )}
       </button>
       {/* To finish setup the dropdown on click a set isOpen to false also create a new state to put the selected LI or button to show on the main button + add a last button to start visit  */}
       {isOpen && (
-        <div className="dropdown__menu">
+        <div className="dropdownMenu__dropdownItem">
           <button
-            className="button__dropdown"
+            className="dropdownMenu__button"
             type="submit"
             onClick={handleClick}
             name="Moulins"
@@ -58,7 +59,7 @@ function DropdownMenu({ arts }) {
             Moulins
           </button>
           <button
-            className="button__dropdown"
+            className="dropdownMenu__button"
             type="submit"
             onClick={handleClick}
             name="Gambetta"
@@ -67,7 +68,7 @@ function DropdownMenu({ arts }) {
             Gambetta
           </button>
           <button
-            className="button__dropdown"
+            className="dropdownMenu__button"
             type="submit"
             onClick={handleClick}
             name="Saint Sauveur"
@@ -80,7 +81,7 @@ function DropdownMenu({ arts }) {
 
       {show && (
         <button type="submit" className="button__startVisit">
-          <AiFillPlayCircle size="50px" /> Exposition
+          <AiFillPlayCircle size="50px" /> <Link to="/museum">Exposition</Link>
         </button>
       )}
     </div>
