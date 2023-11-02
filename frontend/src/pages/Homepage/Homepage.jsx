@@ -1,23 +1,12 @@
-import PropTypes from "prop-types";
-import DropdownMenu from "../../components/DropdownMenu";
 import "./Homepage.scss";
+import PresentationBox from "../../components/presentationbBox/PresentationBox";
 
-function HomePage({ arts }) {
+function Homepage() {
   return (
     <div className="homepage">
-      <div className="homepage__background">
-        <h1>homepage</h1>
-        <DropdownMenu arts={arts} />
-      </div>
+      <PresentationBox />
     </div>
   );
 }
 
-HomePage.propTypes = {
-  arts: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    district: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
-export default HomePage;
+export default Homepage;

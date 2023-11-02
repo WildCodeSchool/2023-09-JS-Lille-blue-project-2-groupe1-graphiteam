@@ -13,29 +13,25 @@ body {
   background-color: $accent;
   overflow: hidden;
 }
-.homepage {
-  min-height: 100vh;
-  background-image: url("src/assets/bg_main.jpg");
-  background-size: contain;
 
-  animation: myAnim 10s ease-in-out 0s infinite alternate-reverse forwards;
+.homepage {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("src/assets/bg_main.jpg");
+  background-position: top right;
+  background-size: 100% 100%;
+  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
 }
+
 @keyframes myAnim {
   0% {
     background-position: right top;
-    background-size: 100%;
+    background-size: 100% 100%;
   }
+
   100% {
     background-position: right top;
-    background-size: 150%;
+    background-size: 150% 150%;
   }
 }
-
-/* .homepage__background {
-  height: 100%;
-  width: 100%;
-
-} */
-/* .homepage__background img {
-  max-width: 1920px;
-} */

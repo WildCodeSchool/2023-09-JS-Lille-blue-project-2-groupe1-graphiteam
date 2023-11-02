@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Museum.scss";
 
-function Museum({ arts }) {
+function Museum() {
+  const [arts, setArts] = useState();
+  useEffect(() => {
+    fetch("http://localhost:3310/artpieces")
+      .then((response) => response.json())
+      .then((data) => setArts(data))
+      .catch((error) => console.error(error));
+  }, []);
+
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
 
@@ -24,22 +32,42 @@ function Museum({ arts }) {
         <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
       </div>
       <div className="museum__walls">
-        <div className="museum__wall museum__wall--left">
-          <img
-            className="arts__pics-left"
-            src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-            alt={arts[artsIndexLeft].imgAlt}
-          />
-          <p>{arts[artsIndexLeft].artist}</p>
-        </div>
-        <div className="museum__wall museum__wall--right">
-          <img
-            className="arts__pics-right"
-            src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
-            alt={arts[artsIndexRight].imgAlt}
-          />
-          <p>{arts[artsIndexRight].artist}</p>
-        </div>
+        {arts ? (
+          <div className="museum__wall museum__wall--left">
+            <img
+              className="museum__img--left"
+              src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
+              alt={arts[artsIndexLeft].imgAlt}
+            />
+            <p>
+              <strong>
+                {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
+              </strong>
+              {`(${arts[artsIndexLeft].street})`} <br />
+              {arts[artsIndexLeft].description}
+            </p>
+          </div>
+        ) : (
+          "Loading"
+        )}
+        {arts ? (
+          <div className="museum__wall museum__wall--right">
+            <img
+              className="museum__img--right"
+              src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
+              alt={arts[artsIndexRight].imgAlt}
+            />
+            <p>
+              <strong>
+                {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
+              </strong>
+              {`(${arts[artsIndexRight].street})`} <br />
+              {arts[artsIndexRight].description}
+            </p>
+          </div>
+        ) : (
+          "Loading"
+        )}
         <nav className="museum__navigationArrows">
           <button
             type="button"
