@@ -11,11 +11,13 @@ function Museum() {
       .catch((error) => console.error(error));
   }, []);
 
+  const [clickAhead, setClickAhead] = useState();
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
 
   const handleClickNext = (e) => {
     e.preventDefault();
+    setClickAhead(!clickAhead);
     setArtsIndexLeft(artsIndexLeft + 2);
     setArtsIndexRight(artsIndexRight + 2);
   };
@@ -35,7 +37,7 @@ function Museum() {
         {arts ? (
           <div className="museum__wall museum__wall--left">
             <img
-              className="museum__img--left"
+              className={clickAhead && "museum__img--left"}
               src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
               alt={arts[artsIndexLeft].imgAlt}
             />
@@ -53,7 +55,7 @@ function Museum() {
         {arts ? (
           <div className="museum__wall museum__wall--right">
             <img
-              className="museum__img--right"
+              className={clickAhead && "museum__img--right"}
               src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
               alt={arts[artsIndexRight].imgAlt}
             />
