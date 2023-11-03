@@ -67,13 +67,19 @@ function Museum() {
                 alt={arts[artsIndexLeft].imgAlt}
               />
             </button>
-            <p>
+            <p className="museum__caption">
               <strong>
                 {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
               </strong>
               {`(${arts[artsIndexLeft].street})`} <br />
               {arts[artsIndexLeft].description}
             </p>
+            {popUpLeft ===
+            "museum__wall museum__wall--left museum__popUpImg" ? (
+              <p className="museum__img--escapeMessage">
+                Cliquez ou touchez l'oeuvre pour retourner au Musée.
+              </p>
+            ) : null}
           </div>
         ) : (
           "Loading"
@@ -91,13 +97,19 @@ function Museum() {
                 alt={arts[artsIndexRight].imgAlt}
               />
             </button>
-            <p>
+            <p className="museum__caption">
               <strong>
                 {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
               </strong>
               {`(${arts[artsIndexRight].street})`} <br />
               {arts[artsIndexRight].description}
             </p>
+            {popUpRight ===
+            "museum__wall museum__wall--right museum__popUpImg" ? (
+              <p className="museum__img--escapeMessage">
+                Cliquez ou touchez l'oeuvre pour retourner au Musée.
+              </p>
+            ) : null}
           </div>
         ) : (
           "Loading"

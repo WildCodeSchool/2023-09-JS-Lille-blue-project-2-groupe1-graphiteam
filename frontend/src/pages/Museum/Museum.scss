@@ -77,7 +77,7 @@ body {
   }
 }
 
-.museum__wall p {
+.museum__caption {
   font-size: clamp(12px, 2.5vh, 3rem);
   margin-top: 0.5vh;
   padding: 0.8vh;
@@ -114,16 +114,25 @@ body {
   margin-top: 0;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-wrap: wrap;
   & img {
     max-width: auto;
     max-height: 85vh;
     margin-left: 20vw;
   }
-  & p {
+  & .museum__caption {
     max-width: 20%;
     margin-top: 55vh;
     margin-right: 5vw;
   }
+}
+
+.museum__img--escapeMessage {
+  font-weight: bold;
+  position: absolute;
+  bottom: 7%;
+  right: 5%;
+  font-size: clamp(12px, 2.5vh, 3rem);
 }
 
 .museum__navigationArrows {
