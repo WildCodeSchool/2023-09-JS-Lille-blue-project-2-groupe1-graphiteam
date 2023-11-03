@@ -34,13 +34,13 @@ function DropdownMenu() {
     setIsOpen(!isOpen);
   };
 
-  const handleCity = ({ location }) => {
+  const handleClickCity = ({ location }) => {
     selectDistrict(location);
     setBtnText(location);
     setOpen();
     setshowDistrictList(true);
   };
-  const handleDistrict = ({ location }) => {
+  const handleClickDistrict = ({ location }) => {
     selectDistrict(location);
     setBtnText(location);
     setIsOpen(false);
@@ -67,7 +67,7 @@ function DropdownMenu() {
             return (
               <button
                 className="dropdownMenu__button"
-                onClick={() => handleCity({ location })}
+                onClick={() => handleClickCity({ location })}
                 type="submit"
                 key={location}
               >
@@ -83,7 +83,7 @@ function DropdownMenu() {
             return (
               <button
                 className="dropdownMenu__button"
-                onClick={() => handleDistrict({ location })}
+                onClick={() => handleClickDistrict({ location })}
                 type="submit"
                 key={location}
               >
