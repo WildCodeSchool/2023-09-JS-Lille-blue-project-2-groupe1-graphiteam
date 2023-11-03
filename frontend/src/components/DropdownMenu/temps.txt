@@ -1,0 +1,52 @@
+  /*  <div className="dropdownMenu">
+      <button className="dropdownMenu__button" type="submit" onClick={setOpen}>
+        {btnText}
+        {isOpen ? (
+          <div className="iconContainer">
+            <AiOutlineCaretUp size="20px" />
+          </div>
+        ) : (
+          <div className="iconContainer">
+            <AiOutlineCaretDown size="20px" />
+          </div>
+        )}
+      </button>
+       To finish setup the dropdown on click a set isOpen to false also create a new state to put the selected LI or button to show on the main button + add a last button to start visit  
+      {isOpen && (
+        <div className="dropdownMenu__dropdownItem">
+          <button
+            className="dropdownMenu__button"
+            type="submit"
+            onClick={handleClick}
+            name="Moulins"
+            value="Moulins"
+          >
+            Moulins
+          </button>
+          <button
+            className="dropdownMenu__button"
+            type="submit"
+            onClick={handleClick}
+            name="Gambetta"
+            value="Gambetta"
+          >
+            Gambetta
+          </button>
+          <button
+            className="dropdownMenu__button"
+            type="submit"
+            onClick={handleClick}
+            name="Saint Sauveur"
+            value="Saint Sauveur"
+          >
+            Saint Sauveur
+          </button>
+        </div>
+      )}
+
+      {show && (
+        <button type="submit" className="button__startVisit">
+          <AiFillPlayCircle size="50px" /> <Link to="/museum">Exposition</Link>
+        </button>
+      )}
+    </div> */

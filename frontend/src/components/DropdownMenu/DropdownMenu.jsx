@@ -6,32 +6,46 @@ import {
   AiOutlineCaretUp,
   AiFillPlayCircle,
 } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function DropdownMenu({ arts }) {
-  console.warn(arts);
+function DropdownMenu() {
+  const [arts, setArts] = useState();
+  useEffect(() => {
+    fetch("http://localhost:3310/artpieces")
+      .then((response) => response.json())
+      .then((data) => setArts(data))
+      .catch((error) => console.error(error));
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false);
+  const [showDistrictList, setshowDistrictList] = useState(false);
+  const [showVisitButton, setShowVisitButton] = useState(false);
   const [btnText, setBtnText] = useState("--Metropole Lilloise--");
-  const [list, setList] = useState("default");
-  console.info(list);
+  const [district, selectDistrict] = useState("");
+  const uniqueCity = [...new Set(arts?.map((item) => item.city))];
+  const filteredDistrict = arts?.filter((item) =>
+    item.city?.includes(district)
+  );
+  const uniqueDistrict = [
+    ...new Set(filteredDistrict?.map((item) => item.district)),
+  ];
 
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClick = (e) => {
-    setList(e.target.name);
-    setBtnText(e.target.name);
+  const handleCity = ({ location }) => {
+    selectDistrict(location);
     setOpen();
-    setShow(true);
+    setshowDistrictList(true);
   };
-  /*   const filter = (e) => {
-   // const filteredArts = arts.filter((element) => element.district === list);
-    //console.log(filteredArts);
-    //setList(e.target.name);
-   // console.log("list:", list);
-  }; */
+  const handleDistrict = ({ location }) => {
+    selectDistrict(location);
+    setBtnText(location);
+    setIsOpen(false);
+    setshowDistrictList(false);
+    setShowVisitButton(true);
+  };
   return (
     <div className="dropdownMenu">
       <button className="dropdownMenu__button" type="submit" onClick={setOpen}>
@@ -46,40 +60,39 @@ function DropdownMenu({ arts }) {
           </div>
         )}
       </button>
-      {/* To finish setup the dropdown on click a set isOpen to false also create a new state to put the selected LI or button to show on the main button + add a last button to start visit  */}
       {isOpen && (
-        <div className="dropdownMenu__dropdownItem">
-          <button
-            className="dropdownMenu__button"
-            type="submit"
-            onClick={handleClick}
-            name="Moulins"
-            value="Moulins"
-          >
-            Moulins
-          </button>
-          <button
-            className="dropdownMenu__button"
-            type="submit"
-            onClick={handleClick}
-            name="Gambetta"
-            value="Gambetta"
-          >
-            Gambetta
-          </button>
-          <button
-            className="dropdownMenu__button"
-            type="submit"
-            onClick={handleClick}
-            name="Saint Sauveur"
-            value="Saint Sauveur"
-          >
-            Saint Sauveur
-          </button>
+        <div className="dropdownMenu__cityList">
+          {uniqueCity.map((location) => {
+            return (
+              <button
+                className="dropdownMenu__button"
+                onClick={() => handleCity({ location })}
+                type="submit"
+                key={location}
+              >
+                {location}
+              </button>
+            );
+          })}
         </div>
       )}
-
-      {show && (
+      {showDistrictList && (
+        <div className="dropdownMenu__districtList">
+          {uniqueDistrict.map((location) => {
+            return (
+              <button
+                className="dropdownMenu__button"
+                onClick={() => handleDistrict({ location })}
+                type="submit"
+                key={location}
+              >
+                {location}
+              </button>
+            );
+          })}
+        </div>
+      )}
+      {showVisitButton && (
         <button type="submit" className="button__startVisit">
           <AiFillPlayCircle size="50px" /> <Link to="/museum">Exposition</Link>
         </button>
