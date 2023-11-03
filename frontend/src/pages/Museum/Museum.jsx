@@ -13,6 +13,7 @@ function Museum() {
 
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
+  const [popUp, setPopUp] = useState("museum__img--left");
 
   const handleClickNext = (e) => {
     e.preventDefault();
@@ -26,6 +27,11 @@ function Museum() {
     setArtsIndexRight(artsIndexRight - 2);
   };
 
+  const handleClickPopUp = (e) => {
+    e.preventDefault();
+    setPopUp("museum__walls museum__popUpImg");
+  };
+
   return (
     <div className="museum">
       <div className="museum__background">
@@ -33,12 +39,18 @@ function Museum() {
       </div>
       <div className="museum__walls">
         {arts ? (
-          <div className="museum__wall museum__wall--left">
-            <img
-              className="museum__img--left"
-              src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-              alt={arts[artsIndexLeft].imgAlt}
-            />
+          <div className="museum__wall museum__wall--left" key={popUp}>
+            <button
+              type="button"
+              className="museum__img--button"
+              onClick={handleClickPopUp}
+            >
+              <img
+                className="museum__img--left"
+                src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
+                alt={arts[artsIndexLeft].imgAlt}
+              />
+            </button>
             <p>
               <strong>
                 {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
@@ -52,11 +64,13 @@ function Museum() {
         )}
         {arts ? (
           <div className="museum__wall museum__wall--right">
-            <img
-              className="museum__img--right"
-              src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
-              alt={arts[artsIndexRight].imgAlt}
-            />
+            <button type="button" className="museum__img--button">
+              <img
+                className="museum__img--right"
+                src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
+                alt={arts[artsIndexRight].imgAlt}
+              />
+            </button>
             <p>
               <strong>
                 {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
