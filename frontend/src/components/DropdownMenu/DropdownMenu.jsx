@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import "./dropdownStyle.scss";
+import "./DropdownMenu.scss";
 import {
   AiOutlineCaretDown,
   AiOutlineCaretUp,
@@ -36,6 +36,7 @@ function DropdownMenu() {
 
   const handleCity = ({ location }) => {
     selectDistrict(location);
+    setBtnText(location);
     setOpen();
     setshowDistrictList(true);
   };
