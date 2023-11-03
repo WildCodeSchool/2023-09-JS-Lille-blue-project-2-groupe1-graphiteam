@@ -13,7 +13,10 @@ function Museum() {
 
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
-  const [popUp, setPopUp] = useState("museum__img--left");
+  const [popUpLeft, setPopUpLeft] = useState("museum__wall museum__wall--left");
+  const [popUpRight, setPopUpRight] = useState(
+    "museum__wall museum__wall--right"
+  );
 
   const handleClickNext = (e) => {
     e.preventDefault();
@@ -27,9 +30,22 @@ function Museum() {
     setArtsIndexRight(artsIndexRight - 2);
   };
 
-  const handleClickPopUp = (e) => {
+  const handleClickPopUpLeft = (e) => {
     e.preventDefault();
-    setPopUp("museum__walls museum__popUpImg");
+    if (popUpLeft !== "museum__wall museum__wall--left museum__popUpImg") {
+      setPopUpLeft("museum__wall museum__wall--left museum__popUpImg");
+    } else {
+      setPopUpLeft("museum__wall museum__wall--left");
+    }
+  };
+
+  const handleClickPopUpRight = (e) => {
+    e.preventDefault();
+    if (popUpRight !== "museum__wall museum__wall--right museum__popUpImg") {
+      setPopUpRight("museum__wall museum__wall--right museum__popUpImg");
+    } else {
+      setPopUpRight("museum__wall museum__wall--right");
+    }
   };
 
   return (
@@ -39,11 +55,11 @@ function Museum() {
       </div>
       <div className="museum__walls">
         {arts ? (
-          <div className="museum__wall museum__wall--left" key={popUp}>
+          <div className={popUpLeft}>
             <button
               type="button"
               className="museum__img--button"
-              onClick={handleClickPopUp}
+              onClick={handleClickPopUpLeft}
             >
               <img
                 className="museum__img--left"
@@ -63,8 +79,12 @@ function Museum() {
           "Loading"
         )}
         {arts ? (
-          <div className="museum__wall museum__wall--right">
-            <button type="button" className="museum__img--button">
+          <div className={popUpRight}>
+            <button
+              type="button"
+              className="museum__img--button"
+              onClick={handleClickPopUpRight}
+            >
               <img
                 className="museum__img--right"
                 src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
