@@ -18,6 +18,9 @@ function Museum() {
   const handleClickNext = (e) => {
     e.preventDefault();
     setClickAhead(!clickAhead);
+    setTimeout(() => {
+      setClickAhead();
+    }, 2000);
     setArtsIndexLeft(artsIndexLeft + 2);
     setArtsIndexRight(artsIndexRight + 2);
   };
