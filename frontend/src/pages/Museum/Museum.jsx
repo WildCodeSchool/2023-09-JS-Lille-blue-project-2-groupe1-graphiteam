@@ -22,8 +22,16 @@ function Museum() {
     setTimeout(() => {
       setClickAhead();
     }, 2000);
-    setArtsIndexLeft(artsIndexLeft + 2);
-    setArtsIndexRight(artsIndexRight + 2);
+    if (artsIndexLeft >= 35) {
+      setArtsIndexLeft(0);
+    } else {
+      setArtsIndexLeft(artsIndexLeft + 2);
+    }
+    if (artsIndexRight >= 34) {
+      setArtsIndexRight(1);
+    } else {
+      setArtsIndexRight(artsIndexRight + 2);
+    }
   };
 
   const handleClickPrevious = (e) => {
@@ -32,8 +40,16 @@ function Museum() {
     setTimeout(() => {
       setClickBack();
     }, 2000);
-    setArtsIndexLeft(artsIndexLeft - 2);
-    setArtsIndexRight(artsIndexRight - 2);
+    if (artsIndexLeft <= 1) {
+      setArtsIndexLeft(35);
+    } else {
+      setArtsIndexLeft(artsIndexLeft - 2);
+    }
+    if (artsIndexRight <= 1) {
+      setArtsIndexRight(36);
+    } else {
+      setArtsIndexRight(artsIndexRight - 2);
+    }
   };
 
   return (
@@ -88,7 +104,7 @@ function Museum() {
           <button
             type="button"
             className="museum__navigationArrows--left"
-            disabled={artsIndexRight === 37}
+            // disabled={artsIndexRight === 37}
             onClick={handleClickNext}
           >
             Avant
@@ -96,7 +112,7 @@ function Museum() {
           <button
             type="button"
             className="museum__navigationArrows--right"
-            disabled={artsIndexLeft === 0}
+            // disabled={artsIndexLeft === 0}
             onClick={handleClickPrevious}
           >
             Arrière
