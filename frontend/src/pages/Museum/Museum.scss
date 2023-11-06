@@ -94,6 +94,9 @@ body {
 .museum__navigationArrows {
   position: absolute;
 }
+.disabled {
+  pointer-events: none;
+}
 
 //PERSPECTIVE ANIMATION OF PICS
 

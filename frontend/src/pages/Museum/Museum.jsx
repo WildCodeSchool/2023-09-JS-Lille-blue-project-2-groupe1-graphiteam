@@ -11,17 +11,46 @@ function Museum() {
       .catch((error) => console.error(error));
   }, []);
 
-  const [clickAhead, setClickAhead] = useState(true);
-  const [clickBack, setClickBack] = useState(true);
+  /*   const [clickAhead, setClickAhead] = useState(true);
+  const [clickBack, setClickBack] = useState(true); */
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
+  const [movingLeft, setMovingLeft] = useState("");
+  const [movingRight, setMovingRight] = useState("");
+  const [isDisabled, setIsDisabled] = useState("");
 
+  const transitionForward = () => {
+    setMovingRight("museum__img--right--next");
+    setTimeout(() => {
+      setMovingRight("");
+    }, 2000);
+    setMovingLeft("museum__img--left--next");
+    setTimeout(() => {
+      setMovingLeft("");
+    }, 2000);
+  };
+  const transitionBackward = () => {
+    setMovingRight("museum__img--right--previous");
+    setTimeout(() => {
+      setMovingRight("");
+    }, 2000);
+    setMovingLeft("museum__img--left--previous");
+    setTimeout(() => {
+      setMovingLeft("");
+    }, 2000);
+  };
+  const disableBtn = () => {
+    setIsDisabled("disabled");
+    setTimeout(() => {
+      setIsDisabled("");
+    }, 2000);
+  };
   const handleClickNext = (e) => {
     e.preventDefault();
-    setClickAhead(!clickAhead);
+    /*    setClickAhead(!clickAhead);
     setTimeout(() => {
       setClickAhead();
-    }, 2000);
+    }, 2000); */
     if (artsIndexLeft >= 35) {
       setArtsIndexLeft(0);
     } else {
@@ -32,14 +61,16 @@ function Museum() {
     } else {
       setArtsIndexRight(artsIndexRight + 2);
     }
+    transitionForward();
+    disableBtn();
   };
 
   const handleClickPrevious = (e) => {
     e.preventDefault();
-    setClickBack(!clickBack);
+    /*     setClickBack(!clickBack);
     setTimeout(() => {
       setClickBack();
-    }, 2000);
+    }, 2000); */
     if (artsIndexLeft <= 1) {
       setArtsIndexLeft(35);
     } else {
@@ -50,6 +81,8 @@ function Museum() {
     } else {
       setArtsIndexRight(artsIndexRight - 2);
     }
+    transitionBackward();
+    disableBtn();
   };
 
   return (
@@ -61,10 +94,7 @@ function Museum() {
         {arts ? (
           <div className="museum__wall museum__wall--left">
             <img
-              className={
-                (clickAhead && "museum__img--left--next") ??
-                (clickBack && "museum__img--left--previous")
-              }
+              className={movingLeft}
               src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
               alt={arts[artsIndexLeft].imgAlt}
             />
@@ -83,8 +113,9 @@ function Museum() {
           <div className="museum__wall museum__wall--right">
             <img
               className={
-                (clickAhead && "museum__img--right--next") ||
-                (clickBack && "museum__img--right--previous")
+                movingRight
+                /* (clickAhead && "museum__img--right--next") ||
+                (clickBack && "museum__img--right--previous") */
               }
               src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
               alt={arts[artsIndexRight].imgAlt}
@@ -103,16 +134,14 @@ function Museum() {
         <nav className="museum__navigationArrows">
           <button
             type="button"
-            className="museum__navigationArrows--left"
-            // disabled={artsIndexRight === 37}
+            className={`museum__navigationArrows--left ${isDisabled}`}
             onClick={handleClickNext}
           >
             Avant
           </button>
           <button
             type="button"
-            className="museum__navigationArrows--right"
-            // disabled={artsIndexLeft === 0}
+            className={`museum__navigationArrows--right ${isDisabled}`}
             onClick={handleClickPrevious}
           >
             Arrière
