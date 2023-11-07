@@ -19,17 +19,40 @@ function Museum() {
   const [movingRight, setMovingRight] = useState("");
   const [isDisabled, setIsDisabled] = useState("");
 
-  const transitionForward = () => {
-    setMovingRight("museum__img--right--next");
-    setTimeout(() => {
+  const transitionOutNext = () => {
+    setMovingRight("museum__img--right--nextLeaving");
+    setMovingLeft("museum__img--left--nextLeaving");
+    /*     setTimeout(() => {
       setMovingRight("");
-    }, 2000);
+      setMovingLeft("");
+    }, 2000); */
+  };
+  const transitionInNext = () => {
+    setMovingRight("museum__img--right--next");
     setMovingLeft("museum__img--left--next");
     setTimeout(() => {
+      setMovingRight("");
       setMovingLeft("");
     }, 2000);
   };
-  const transitionBackward = () => {
+  const transitionOutPrev = () => {
+    setMovingRight("museum__img--right--previousLeaving");
+    setMovingLeft("museum__img--left--previousLeaving");
+    /*     setTimeout(() => {
+      setMovingRight("");
+      setMovingLeft("");
+    }, 2000); */
+  };
+  const transitionInPrev = () => {
+    setMovingRight("museum__img--right--previous");
+    setMovingLeft("museum__img--left--previous");
+    setTimeout(() => {
+      setMovingRight("");
+      setMovingLeft("");
+    }, 2000);
+  };
+
+  /*   const transitionBackward = () => {
     setMovingRight("museum__img--right--previous");
     setTimeout(() => {
       setMovingRight("");
@@ -38,31 +61,45 @@ function Museum() {
     setTimeout(() => {
       setMovingLeft("");
     }, 2000);
-  };
+  }; */
   const disableBtn = () => {
     setIsDisabled("disabled");
     setTimeout(() => {
       setIsDisabled("");
-    }, 2000);
+    }, 4000);
   };
-  const handleClickNext = (e) => {
-    e.preventDefault();
-    /*    setClickAhead(!clickAhead);
-    setTimeout(() => {
-      setClickAhead();
-    }, 2000); */
-    if (artsIndexLeft >= 35) {
+  const incrementIndex = () => {
+    if (artsIndexLeft >= arts.length - 1) {
       setArtsIndexLeft(0);
     } else {
       setArtsIndexLeft(artsIndexLeft + 2);
     }
-    if (artsIndexRight >= 34) {
+    if (artsIndexRight >= arts.length - 2) {
       setArtsIndexRight(1);
     } else {
       setArtsIndexRight(artsIndexRight + 2);
     }
-    transitionForward();
-    disableBtn();
+  };
+  const decrementIndex = () => {
+    if (artsIndexLeft <= 1) {
+      setArtsIndexLeft(arts.length - 1);
+    } else {
+      setArtsIndexLeft(artsIndexLeft - 2);
+    }
+    if (artsIndexRight <= 1) {
+      setArtsIndexRight(arts.length - 2);
+    } else {
+      setArtsIndexRight(artsIndexRight - 2);
+    }
+  };
+  const handleClickNext = (e) => {
+    e.preventDefault();
+    transitionOutNext();
+    /* disableBtn(); */
+    setTimeout(() => {
+      incrementIndex("");
+      transitionInNext();
+    }, 2000);
   };
 
   const handleClickPrevious = (e) => {
@@ -71,17 +108,13 @@ function Museum() {
     setTimeout(() => {
       setClickBack();
     }, 2000); */
-    if (artsIndexLeft <= 1) {
-      setArtsIndexLeft(35);
-    } else {
-      setArtsIndexLeft(artsIndexLeft - 2);
-    }
-    if (artsIndexRight <= 1) {
-      setArtsIndexRight(36);
-    } else {
-      setArtsIndexRight(artsIndexRight - 2);
-    }
-    transitionBackward();
+    transitionOutPrev();
+    /* disableBtn(); */
+    setTimeout(() => {
+      decrementIndex("");
+      transitionInPrev();
+    }, 2000);
+    /*  transitionBackward(); */
     disableBtn();
   };
 
