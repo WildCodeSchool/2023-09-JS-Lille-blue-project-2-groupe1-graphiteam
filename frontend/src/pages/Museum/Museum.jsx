@@ -10,9 +10,6 @@ function Museum() {
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
   }, []);
-
-  /*   const [clickAhead, setClickAhead] = useState(true);
-  const [clickBack, setClickBack] = useState(true); */
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
   const [movingLeft, setMovingLeft] = useState("");
@@ -22,10 +19,6 @@ function Museum() {
   const transitionOutNext = () => {
     setMovingRight("museum__img--right--nextLeaving");
     setMovingLeft("museum__img--left--nextLeaving");
-    /*     setTimeout(() => {
-      setMovingRight("");
-      setMovingLeft("");
-    }, 2000); */
   };
   const transitionInNext = () => {
     setMovingRight("museum__img--right--next");
@@ -33,15 +26,11 @@ function Museum() {
     setTimeout(() => {
       setMovingRight("");
       setMovingLeft("");
-    }, 2000);
+    }, 1000);
   };
   const transitionOutPrev = () => {
     setMovingRight("museum__img--right--previousLeaving");
     setMovingLeft("museum__img--left--previousLeaving");
-    /*     setTimeout(() => {
-      setMovingRight("");
-      setMovingLeft("");
-    }, 2000); */
   };
   const transitionInPrev = () => {
     setMovingRight("museum__img--right--previous");
@@ -49,24 +38,13 @@ function Museum() {
     setTimeout(() => {
       setMovingRight("");
       setMovingLeft("");
-    }, 2000);
+    }, 1000);
   };
-
-  /*   const transitionBackward = () => {
-    setMovingRight("museum__img--right--previous");
-    setTimeout(() => {
-      setMovingRight("");
-    }, 2000);
-    setMovingLeft("museum__img--left--previous");
-    setTimeout(() => {
-      setMovingLeft("");
-    }, 2000);
-  }; */
   const disableBtn = () => {
     setIsDisabled("disabled");
     setTimeout(() => {
       setIsDisabled("");
-    }, 4000);
+    }, 2000);
   };
   const incrementIndex = () => {
     if (artsIndexLeft >= arts.length - 1) {
@@ -95,27 +73,20 @@ function Museum() {
   const handleClickNext = (e) => {
     e.preventDefault();
     transitionOutNext();
-    /* disableBtn(); */
+    disableBtn();
     setTimeout(() => {
       incrementIndex("");
       transitionInNext();
-    }, 2000);
+    }, 1000);
   };
-
   const handleClickPrevious = (e) => {
     e.preventDefault();
-    /*     setClickBack(!clickBack);
-    setTimeout(() => {
-      setClickBack();
-    }, 2000); */
     transitionOutPrev();
-    /* disableBtn(); */
+    disableBtn();
     setTimeout(() => {
       decrementIndex("");
       transitionInPrev();
-    }, 2000);
-    /*  transitionBackward(); */
-    disableBtn();
+    }, 1000);
   };
 
   return (
@@ -145,11 +116,7 @@ function Museum() {
         {arts ? (
           <div className="museum__wall museum__wall--right">
             <img
-              className={
-                movingRight
-                /* (clickAhead && "museum__img--right--next") ||
-                (clickBack && "museum__img--right--previous") */
-              }
+              className={movingRight}
               src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
               alt={arts[artsIndexRight].imgAlt}
             />

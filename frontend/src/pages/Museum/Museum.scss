@@ -96,35 +96,36 @@ body {
 }
 .disabled {
   pointer-events: none;
+  opacity: 0.3;
 }
 
 //PERSPECTIVE ANIMATION OF PICS
 
 .museum__img--left--next {
-  animation: slideInRight 2s ease 0s 1 normal forwards;
+  animation: slideInRight 1s ease 0s 1 normal forwards;
 }
 .museum__img--left--nextLeaving {
-  animation: leavingLeft 2s ease 0s 1 normal forwards;
+  animation: leavingLeft 1s ease 0s 1 normal forwards;
 }
 
 .museum__img--right--next {
-  animation: slideInLeft 2s ease 0s 1 normal forwards;
+  animation: slideInLeft 1s ease 0s 1 normal forwards;
 }
 .museum__img--right--nextLeaving {
-  animation: leavingRight 2s ease 0s 1 normal forwards;
+  animation: leavingRight 1s ease 0s 1 normal forwards;
 }
 
 .museum__img--left--previous {
-  animation: slideInLeft 2s ease 0s 1 normal forwards;
+  animation: slideInLeft 1s ease 0s 1 normal forwards;
 }
 .museum__img--left--previousLeaving {
-  animation: leavingLeft 2s ease 0s 1 normal forwards;
+  animation: leavingRight 1s ease 0s 1 normal forwards;
 }
 .museum__img--right--previous {
-  animation: slideInRight 2s ease 0s 1 normal forwards;
+  animation: slideInRight 1s ease 0s 1 normal forwards;
 }
 .museum__img--right--previousLeaving {
-  animation: leavingRight 2s ease 0s 1 normal forwards;
+  animation: leavingLeft 1s ease 0s 1 normal forwards;
 }
 // KEYFRAMES FOR ANIMATION
 
