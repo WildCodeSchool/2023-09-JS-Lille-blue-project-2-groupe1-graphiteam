@@ -2,11 +2,13 @@ import "./ArtCard.scss";
 
 function ArtCard() {
   return (
-    <>
+    <div className="card">
       <img src="" alt="" />
-      <h4>Artiste</h4>
-      <p>stuff</p>
-    </>
+      <article>
+        <h4>artist</h4>
+        <p>description</p>
+      </article>
+    </div>
   );
 }
 
