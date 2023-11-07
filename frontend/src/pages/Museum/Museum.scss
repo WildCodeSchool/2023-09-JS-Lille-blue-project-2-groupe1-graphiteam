@@ -92,7 +92,36 @@ body {
 }
 
 .museum__navigationArrows {
-  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* Pour centrer le bouton horizontalement */
+  transform: translateX(-50%);
+}
+.museum__navigationArrows--left {
+  background-color: #99ccac;
+  border: solid 1%;
+  border-radius: 10px;
+  padding: 1em;
+  transform: skew(10deg, 1deg);
+  margin-right: 1rem;
+  transform: rotateX(53deg) rotateY(1deg);
+  transform-style: preserve-3d;
+  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+.museum__navigationArrows--right {
+  background-color: #99ccac;
+  border: solid 1%;
+  border-radius: 10px;
+  padding: 1em;
+  margin-left: 1rem;
+  transform: skew(10deg, 1deg);
+  transform: rotateX(53deg) rotateY(1deg);
+  transform-style: preserve-3d;
+  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 //PERSPECTIVE ANIMATION OF PICS
