@@ -1,12 +1,12 @@
 import "./Homepage.scss";
-import StartVisit from "../../components/startVisitBtn";
 import PresentationBox from "../../components/presentationbBox/PresentationBox";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 
 function Homepage() {
   return (
     <div className="homepage">
       <PresentationBox />
-      <StartVisit />
+      <DropdownMenu />
     </div>
   );
 }
