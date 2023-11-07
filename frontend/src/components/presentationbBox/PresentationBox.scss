@@ -13,30 +13,52 @@ $accent: rgba(242, 148, 138, 0.9);
 $white: rgb(255, 239, 217);
 
 .logo-app {
-  margin: 1.5em;
+  margin: 0.7vw;
+  width: 15vw;
 }
 
 .box__description {
   border-color: $darkest-main;
   border-style: double;
   color: $darkest-main;
-  margin: 1.5em;
+  margin: 1.4vw;
+  margin-top: 3.5vw;
   background-color: $accent;
   display: flex;
   text-align: center;
+  align-items: center;
   flex-direction: column;
-  width: 15em;
+  width: 30vw;
   height: auto;
+
   border-radius: 30px;
   box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
   -webkit-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
   -moz-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
 }
 .title__description {
-  margin: 0;
+  font-size: 2.5vw;
   font-family: $font-title;
+  color: $darkest-main;
 }
 .text__description {
-  margin: 1.5rem;
+  margin: 0.7vw;
   font-family: $font-text;
+  font-size: 1.6vw;
+}
+@media screen and (min-height: 500px) {
+  .box__description {
+    margin-top: 4.6vw;
+  }
+  .logo-app {
+    width: 20vw;
+    margin: 2vw;
+  }
+  .text__description {
+    margin: 1.8vw;
+    font-size: 1.7vw;
+  }
+  .title__description {
+    font-size: 2.8vw;
+  }
 }
