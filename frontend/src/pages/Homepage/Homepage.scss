@@ -1,0 +1,37 @@
+$light-main: rgb(153, 204, 172);
+$dark-main: rgb(115, 125, 98);
+$darkest-main: rgb(56, 52, 46);
+$accent: rgb(242, 148, 138);
+$white: rgb(255, 239, 217);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: $accent;
+  overflow: hidden;
+}
+
+.homepage {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("src/assets/bg_main.jpg");
+  background-position: top right;
+  background-size: 100% 100%;
+  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
+}
+
+@keyframes myAnim {
+  0% {
+    background-position: right top;
+    background-size: 100% 100%;
+  }
+
+  100% {
+    background-position: right top;
+    background-size: 150% 150%;
+  }
+}
