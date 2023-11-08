@@ -1,0 +1,53 @@
+$light-main: rgb(153, 204, 172);
+$dark-main: rgb(115, 125, 98);
+$darkest-main: rgb(56, 52, 46);
+$accent: rgb(242, 148, 138);
+$dropdownBG: #ffefd9;
+
+.iconContainer {
+  background-color: $light-main;
+  height: 100%;
+  width: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.dropdownMenu__button {
+  background-color: $dropdownBG;
+  color: $darkest-main;
+  border-radius: 8px;
+  padding: 0 0 0 50px;
+  border: 1px solid black;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+    border-color: $dark-main;
+  }
+}
+.button__startVisit {
+  display: flex;
+  align-items: center;
+  background-color: $accent;
+  border: 1px solid $darkest-main;
+  border-radius: 8px;
+  padding: 0 0 0 0;
+  width: 200px;
+  box-shadow: 2px 4px 4px -1px $darkest-main;
+  justify-content: center;
+}
