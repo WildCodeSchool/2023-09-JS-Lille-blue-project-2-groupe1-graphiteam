@@ -73,6 +73,7 @@ function Museum() {
             type="button"
             className="museum__navigationArrows--left"
             onClick={handleClickNext}
+            label=""
           >
             <img
               className="fleche__haut"
@@ -84,6 +85,7 @@ function Museum() {
             type="button"
             className="museum__navigationArrows--right"
             onClick={handleClickPrevious}
+            label=""
           >
             <img
               className="fleche__bas"
