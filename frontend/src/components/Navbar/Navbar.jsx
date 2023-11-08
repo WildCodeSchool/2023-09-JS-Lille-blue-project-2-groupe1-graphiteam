@@ -1,4 +1,4 @@
-import "./chaussette.scss";
+import "./Navbar.scss";
 import { Link, useLocation } from "react-router-dom";
 
 const pathnames = [

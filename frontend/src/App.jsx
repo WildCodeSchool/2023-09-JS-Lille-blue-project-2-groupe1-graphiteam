@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import "./Variables.scss";
 import "./pages/Museum/Museum.scss";
 import "./App.scss";
-import Navbar from "./components/Chaussettenav/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
