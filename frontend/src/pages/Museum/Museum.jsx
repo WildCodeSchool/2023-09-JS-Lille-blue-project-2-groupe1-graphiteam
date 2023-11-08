@@ -182,15 +182,25 @@ function Museum() {
             type="button"
             className={`museum__navigationArrows--left ${isDisabled}`}
             onClick={handleClickNext}
+            label="flecheavant"
           >
-            Avant
+            <img
+              className="fleche__haut"
+              src="src/assets/flechehaut96.png"
+              alt=""
+            />
           </button>
           <button
             type="button"
             className={`museum__navigationArrows--right ${isDisabled}`}
             onClick={handleClickPrevious}
+            label="flechearriere"
           >
-            Arrière
+            <img
+              className="fleche__bas"
+              src="src/assets/flechebas96.png"
+              alt=""
+            />
           </button>
         </nav>
       </div>
