@@ -103,6 +103,7 @@ body {
     $white 0px 0px 0px 1px,
     0 0 8px grey;
 }
+//ARROWS MUSEUM
 
 .museum__popUpImg {
   z-index: 2;
@@ -116,7 +117,6 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   & img {
-    max-width: auto;
     max-height: 85vh;
     margin-left: 20vw;
   }
@@ -136,19 +136,73 @@ body {
 }
 
 .museum__navigationArrows {
-  position: absolute;
+  position: fixed;
+  bottom: -3vh;
+}
+.fleche__haut {
+  width: 8vw;
+}
+
+.fleche__bas {
+  width: 8vw;
+}
+.museum__navigationArrows--left {
+  padding-block: 0.5vw;
+  background-color: #99ccac;
+  border: solid 1%;
+  border-radius: 10px;
+  margin-right: 0.5rem;
+  transform: rotateX(60deg) rotateY(1deg);
+  transform-style: preserve-3d;
+  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+.museum__navigationArrows--right {
+  background-color: #99ccac;
+  padding-block: 0.5vw;
+  border: solid 1%;
+  border-radius: 10px;
+  margin-left: 0.5rem;
+  transform: rotateX(60deg) rotateY(1deg);
+  transform-style: preserve-3d;
+  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 //PERSPECTIVE ANIMATION OF PICS
 
-.museum__img--left {
-  animation: slideInRight 2s ease 0s 1 normal forwards;
+.museum__img--left--next {
+  animation: slideInRight 1s ease 0s 1 normal forwards;
+}
+.museum__img--left--nextLeaving {
+  animation: leavingLeft 1s ease 0s 1 normal forwards;
 }
 
-.museum__img--right {
-  animation: slideInLeft 2s ease 0s 1 normal forwards;
+.museum__img--right--next {
+  animation: slideInLeft 1s ease 0s 1 normal forwards;
+}
+.museum__img--right--nextLeaving {
+  animation: leavingRight 1s ease 0s 1 normal forwards;
 }
 
+.museum__img--left--previous {
+  animation: slideInLeft 1s ease 0s 1 normal forwards;
+}
+.museum__img--left--previousLeaving {
+  animation: leavingRight 1s ease 0s 1 normal forwards;
+}
+.museum__img--right--previous {
+  animation: slideInRight 1s ease 0s 1 normal forwards;
+}
+.museum__img--right--previousLeaving {
+  animation: leavingLeft 1s ease 0s 1 normal forwards;
+}
 // KEYFRAMES FOR ANIMATION
 
 // ENTRANCE LEFT PIC
@@ -173,5 +227,29 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+// EXIT LEFT PIC
+@keyframes leavingLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+}
+// EXIT RIGHT PIC
+@keyframes leavingRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(250px);
   }
 }
