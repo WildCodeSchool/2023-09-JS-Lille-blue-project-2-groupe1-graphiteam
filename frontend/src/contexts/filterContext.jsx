@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export const FilterContext = createContext();
 
 export function FilterProvider({ children }) {
-  const [filter, setFilter] = useState("test");
+  const [filter, setFilter] = useState("all");
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values

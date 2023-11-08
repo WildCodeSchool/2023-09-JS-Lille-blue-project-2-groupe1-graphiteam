@@ -20,6 +20,7 @@ function DropdownMenu() {
   }, []);
 
   const { /* filter, */ setFilter } = useContext(FilterContext);
+  const [city, setCity] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
@@ -32,19 +33,20 @@ function DropdownMenu() {
   const uniqueDistrict = [
     ...new Set(filteredDistrict?.map((item) => item.district)),
   ];
-  /*   console.log("filter:", filter); */
+  /*  console.log("filter:", filter); */
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
   const setFilterFunction = (location) => {
     setFilter(location);
-    /*   console.log("filteredLocation:", filter); */
+    /*    console.log("filteredLocation:", filter); */
   };
   const handleClickCity = ({ location }) => {
     selectDistrict(location);
     setBtnText(location);
     setOpen();
     setshowDistrictList(true);
+    setCity(location);
   };
   const handleClickDistrict = ({ location }) => {
     selectDistrict(location);
@@ -53,7 +55,12 @@ function DropdownMenu() {
     setshowDistrictList(false);
     setShowVisitButton(true);
     setFilterFunction(location);
-    /*     console.log("clicked filter:", filter); */
+  };
+  const handleClickCityOnly = () => {
+    setIsOpen(false);
+    setshowDistrictList(false);
+    setShowVisitButton(true);
+    setFilterFunction(city);
   };
   return (
     <div className="dropdownMenu">
@@ -87,6 +94,13 @@ function DropdownMenu() {
       )}
       {showDistrictList && (
         <div className="dropdownMenu__districtList">
+          <button
+            type="submit"
+            className="dropdownMenu__button"
+            onClick={handleClickCityOnly}
+          >
+            Toute la ville
+          </button>
           {uniqueDistrict.map((location) => {
             return (
               <button

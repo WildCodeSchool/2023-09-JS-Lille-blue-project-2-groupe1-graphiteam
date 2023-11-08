@@ -13,10 +13,12 @@ function Museum() {
   }, []);
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
-  const { filter /* , setFilter */ } = useContext(FilterContext);
+  const { filter } = useContext(FilterContext);
   /*   console.log("filter museum:", filter); */
-  const filteredArts = arts?.filter((item) => item.district?.includes(filter));
-  /*  console.log("filteredArts:", filteredArts); */
+  const filteredArts = arts?.filter((item) =>
+    item.district?.includes(filter === "all" ? "" : filter)
+  );
+  /*   console.log("filteredArts:", filteredArts); */
   const [movingLeft, setMovingLeft] = useState("");
   const [movingRight, setMovingRight] = useState("");
   const [isDisabled, setIsDisabled] = useState("");
@@ -56,12 +58,12 @@ function Museum() {
     }, 2000);
   };
   const incrementIndex = () => {
-    if (artsIndexLeft >= arts.length - 1) {
+    if (artsIndexLeft >= filteredArts.length - 1) {
       setArtsIndexLeft(0);
     } else {
       setArtsIndexLeft(artsIndexLeft + 2);
     }
-    if (artsIndexRight >= arts.length - 2) {
+    if (artsIndexRight >= filteredArts.length - 2) {
       setArtsIndexRight(1);
     } else {
       setArtsIndexRight(artsIndexRight + 2);
@@ -69,12 +71,12 @@ function Museum() {
   };
   const decrementIndex = () => {
     if (artsIndexLeft <= 1) {
-      setArtsIndexLeft(arts.length - 1);
+      setArtsIndexLeft(filteredArts.length - 1);
     } else {
       setArtsIndexLeft(artsIndexLeft - 2);
     }
     if (artsIndexRight <= 1) {
-      setArtsIndexRight(arts.length - 2);
+      setArtsIndexRight(filteredArts.length - 2);
     } else {
       setArtsIndexRight(artsIndexRight - 2);
     }
@@ -131,8 +133,8 @@ function Museum() {
             >
               <img
                 className={movingLeft}
-                src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-                alt={arts[artsIndexLeft].imgAlt}
+                src={`http://localhost:3310/${filteredArts[artsIndexLeft].imgSrc}`}
+                alt={filteredArts[artsIndexLeft].imgAlt}
               />
             </button>
             <p className="museum__caption">
@@ -161,16 +163,16 @@ function Museum() {
             >
               <img
                 className={movingRight}
-                src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
-                alt={arts[artsIndexRight].imgAlt}
+                src={`http://localhost:3310/${filteredArts[artsIndexRight].imgSrc}`}
+                alt={filteredArts[artsIndexRight].imgAlt}
               />
             </button>
             <p className="museum__caption">
               <strong>
-                {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
+                {`${filteredArts[artsIndexRight].artist} - ${filteredArts[artsIndexRight].city} `}
               </strong>
-              {`(${arts[artsIndexRight].street})`} <br />
-              {arts[artsIndexRight].description}
+              {`(${filteredArts[artsIndexRight].street})`} <br />
+              {filteredArts[artsIndexRight].description}
             </p>
             {popUpRight ===
             "museum__wall museum__wall--right museum__popUpImg" ? (
