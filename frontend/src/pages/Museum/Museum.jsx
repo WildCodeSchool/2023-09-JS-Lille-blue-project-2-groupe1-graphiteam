@@ -67,7 +67,7 @@ function Museum() {
               onClick={handleClickPopUpLeft}
             >
               <img
-                className={clickAhead && "museum__img--left"}
+                className="museum__img--left"
                 src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
                 alt={arts[artsIndexLeft].imgAlt}
               />
@@ -97,7 +97,7 @@ function Museum() {
               onClick={handleClickPopUpRight}
             >
               <img
-                className={clickAhead && "museum__img--right"}
+                className="museum__img--right"
                 src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
                 alt={arts[artsIndexRight].imgAlt}
               />
