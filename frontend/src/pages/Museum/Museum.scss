@@ -97,11 +97,17 @@ body {
   left: 50%; /* Pour centrer le bouton horizontalement */
   transform: translateX(-50%);
 }
+.fleche__haut {
+  width: 5vw;
+}
+
+.fleche__bas {
+  width: 5vw;
+}
 .museum__navigationArrows--left {
   background-color: #99ccac;
   border: solid 1%;
   border-radius: 10px;
-  padding: 1em;
   transform: skew(10deg, 1deg);
   margin-right: 1rem;
   transform: rotateX(53deg) rotateY(1deg);
@@ -114,7 +120,6 @@ body {
   background-color: #99ccac;
   border: solid 1%;
   border-radius: 10px;
-  padding: 1em;
   margin-left: 1rem;
   transform: skew(10deg, 1deg);
   transform: rotateX(53deg) rotateY(1deg);
