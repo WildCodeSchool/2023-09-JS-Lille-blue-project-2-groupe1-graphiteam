@@ -3,13 +3,16 @@ import "./Variables.scss";
 import "./pages/Museum/Museum.scss";
 import "./App.scss";
 import Navbar from "./components/navbar/Navbar";
+import { FilterProvider } from "./contexts/filterContext";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Outlet />
-    </div>
+    <FilterProvider>
+      <div className="App">
+        <Navbar />
+        <Outlet />
+      </div>
+    </FilterProvider>
   );
 }
 

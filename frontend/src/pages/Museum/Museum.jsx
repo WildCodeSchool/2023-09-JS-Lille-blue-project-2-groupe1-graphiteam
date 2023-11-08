@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect, useContext } from "react";
+/* import PropTypes from "prop-types"; */
 import "./Museum.scss";
+import { FilterContext } from "../../contexts/filterContext";
 
 function Museum() {
   const [arts, setArts] = useState();
@@ -13,7 +14,10 @@ function Museum() {
 
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
-
+  const { filter /* , setFilter */ } = useContext(FilterContext);
+  /*   console.log("filter museum:", filter); */
+  const filteredArts = arts?.filter((item) => item.district?.includes(filter));
+  /*  console.log("filteredArts:", filteredArts); */
   const handleClickNext = (e) => {
     e.preventDefault();
     setArtsIndexLeft(artsIndexLeft + 2);
@@ -36,15 +40,15 @@ function Museum() {
           <div className="museum__wall museum__wall--left">
             <img
               className="museum__img--left"
-              src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-              alt={arts[artsIndexLeft].imgAlt}
+              src={`http://localhost:3310/${filteredArts[artsIndexLeft].imgSrc}`}
+              alt={filteredArts[artsIndexLeft].imgAlt}
             />
             <p>
               <strong>
-                {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
+                {`${filteredArts[artsIndexLeft].artist} - ${filteredArts[artsIndexLeft].city} `}
               </strong>
-              {`(${arts[artsIndexLeft].street})`} <br />
-              {arts[artsIndexLeft].description}
+              {`(${filteredArts[artsIndexLeft].street})`} <br />
+              {filteredArts[artsIndexLeft].description}
             </p>
           </div>
         ) : (
@@ -89,11 +93,11 @@ function Museum() {
   );
 }
 
-Museum.propTypes = {
-  arts: PropTypes.shape({
-    imgAlt: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// Museum.propTypes = {
+//   arts: PropTypes.shape({
+//     imgAlt: PropTypes.string.isRequired,
+//     imgSrc: PropTypes.string.isRequired,
+//   }).isRequired,
+// };
 
 export default Museum;

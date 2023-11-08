@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+/* import PropTypes from "prop-types"; */
 import "./DropdownMenu.scss";
 import {
   AiOutlineCaretDown,
   AiOutlineCaretUp,
   AiFillPlayCircle,
 } from "react-icons/ai";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
+
   useEffect(() => {
     fetch("http://localhost:3310/artpieces")
       .then((response) => response.json())
@@ -17,6 +19,7 @@ function DropdownMenu() {
       .catch((error) => console.error(error));
   }, []);
 
+  const { /* filter, */ setFilter } = useContext(FilterContext);
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
@@ -29,11 +32,14 @@ function DropdownMenu() {
   const uniqueDistrict = [
     ...new Set(filteredDistrict?.map((item) => item.district)),
   ];
-
+  /*   console.log("filter:", filter); */
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
-
+  const setFilterFunction = (location) => {
+    setFilter(location);
+    /*   console.log("filteredLocation:", filter); */
+  };
   const handleClickCity = ({ location }) => {
     selectDistrict(location);
     setBtnText(location);
@@ -46,6 +52,8 @@ function DropdownMenu() {
     setIsOpen(false);
     setshowDistrictList(false);
     setShowVisitButton(true);
+    setFilterFunction(location);
+    /*     console.log("clicked filter:", filter); */
   };
   return (
     <div className="dropdownMenu">
@@ -69,7 +77,7 @@ function DropdownMenu() {
                 className="dropdownMenu__button"
                 onClick={() => handleClickCity({ location })}
                 type="submit"
-                key={location}
+                key={`city-${location}`}
               >
                 {location}
               </button>
@@ -85,7 +93,7 @@ function DropdownMenu() {
                 className="dropdownMenu__button"
                 onClick={() => handleClickDistrict({ location })}
                 type="submit"
-                key={location}
+                key={`disctrict-${location}`}
               >
                 {location}
               </button>
@@ -102,11 +110,11 @@ function DropdownMenu() {
   );
 }
 
-DropdownMenu.propTypes = {
-  arts: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    district: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// DropdownMenu.propTypes = {
+//   arts: PropTypes.shape({
+//     city: PropTypes.string.isRequired,
+//     district: PropTypes.string.isRequired,
+//   }).isRequired,
+// };
 
 export default DropdownMenu;
