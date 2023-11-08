@@ -90,29 +90,26 @@ body {
     $white 0px 0px 0px 1px,
     0 0 8px grey;
 }
+//ARROWS MUSEUM
 
 .museum__navigationArrows {
   position: fixed;
-  bottom: 0;
-  left: 50%; /* Pour centrer le bouton horizontalement */
-  transform: translateX(-50%);
+  bottom: -3vh;
 }
 .fleche__haut {
-  width: 5vw;
+  width: 8vw;
 }
 
 .fleche__bas {
-  width: 5vw;
+  width: 8vw;
 }
 .museum__navigationArrows--left {
   padding-block: 0.5vw;
-
   background-color: #99ccac;
   border: solid 1%;
   border-radius: 10px;
-  transform: skew(10deg, 1deg);
   margin-right: 0.5rem;
-  transform: rotateX(53deg) rotateY(1deg);
+  transform: rotateX(60deg) rotateY(1deg);
   transform-style: preserve-3d;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
@@ -124,8 +121,7 @@ body {
   border: solid 1%;
   border-radius: 10px;
   margin-left: 0.5rem;
-  transform: skew(10deg, 1deg);
-  transform: rotateX(53deg) rotateY(1deg);
+  transform: rotateX(60deg) rotateY(1deg);
   transform-style: preserve-3d;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
