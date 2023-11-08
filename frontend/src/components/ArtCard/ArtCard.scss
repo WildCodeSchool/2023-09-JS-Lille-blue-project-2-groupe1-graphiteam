@@ -1,5 +1,5 @@
 .card {
-  background-color: antiquewhite;
+  background-color: #fff1dd;
   width: 20vw;
   height: 20vh;
   display: flex;
@@ -8,4 +8,10 @@
   justify-content: center;
   padding: 3vw;
   border-radius: 15px;
+}
+.card__picture {
+  background-color: aqua;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
 }
