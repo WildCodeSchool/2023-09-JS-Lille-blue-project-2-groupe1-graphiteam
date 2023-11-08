@@ -6,11 +6,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 3vw;
+  padding: 1vw;
   border-radius: 15px;
 }
 .card__picture {
   background-color: aqua;
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+}
+.card__artist {
+  background-color: aquamarine;
+  color: brown;
   width: 160px;
   height: 160px;
   border-radius: 10px;
