@@ -105,6 +105,8 @@ body {
   width: 5vw;
 }
 .museum__navigationArrows--left {
+  padding-block: 0.5vw;
+
   background-color: #99ccac;
   border: solid 1%;
   border-radius: 10px;
@@ -118,6 +120,7 @@ body {
 }
 .museum__navigationArrows--right {
   background-color: #99ccac;
+  padding-block: 0.5vw;
   border: solid 1%;
   border-radius: 10px;
   margin-left: 1rem;
