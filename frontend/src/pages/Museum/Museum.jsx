@@ -74,14 +74,22 @@ function Museum() {
             className="museum__navigationArrows--left"
             onClick={handleClickNext}
           >
-            <img src="src/assets/flechehaut.png" alt="" />
+            <img
+              className="fleche__haut"
+              src="src/assets/flechehaut96.png"
+              alt=""
+            />
           </button>
           <button
             type="button"
             className="museum__navigationArrows--right"
             onClick={handleClickPrevious}
           >
-            <img src="src/assets/flechebas.png" alt="" />
+            <img
+              className="fleche__bas"
+              src="src/assets/flechebas96.png"
+              alt=""
+            />
           </button>
         </nav>
       </div>
