@@ -118,13 +118,6 @@ function Museum() {
       </div>
       <div className="museum__walls">
         {arts ? (
-          <div className="museum__wall museum__wall--left">
-            <img
-              className={movingLeft}
-              src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-              alt={arts[artsIndexLeft].imgAlt}
-            />
-            <p>
           <div className={popUpLeft}>
             <button
               type="button"
@@ -132,7 +125,7 @@ function Museum() {
               onClick={handleClickPopUpLeft}
             >
               <img
-                className="museum__img--left"
+                className={movingLeft}
                 src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
                 alt={arts[artsIndexLeft].imgAlt}
               />
@@ -155,13 +148,6 @@ function Museum() {
           "Loading"
         )}
         {arts ? (
-          <div className="museum__wall museum__wall--right">
-            <img
-              className={movingRight}
-              src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
-              alt={arts[artsIndexRight].imgAlt}
-            />
-            <p>
           <div className={popUpRight}>
             <button
               type="button"
@@ -169,7 +155,7 @@ function Museum() {
               onClick={handleClickPopUpRight}
             >
               <img
-                className="museum__img--right"
+                className={movingRight}
                 src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
                 alt={arts[artsIndexRight].imgAlt}
               />
