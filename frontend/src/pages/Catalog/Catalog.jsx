@@ -13,7 +13,9 @@ function Catalog() {
   console.warn(arts);
   return (
     <div className="catalog" style={{ overflow: "scroll", height: "100vh" }}>
-      {arts ? arts.map((art) => <ArtCard key={art.id} />) : "Loading"}
+      {arts
+        ? arts.map((art) => <ArtCard key={art.id} img={art.imgSrc} />)
+        : "Loading"}
     </div>
   );
 }
