@@ -10,13 +10,16 @@ $white: rgb(255, 239, 217);
 }
 
 .homepage {
+  background-color: aqua;
   display: flex;
-  width: 100vw;
   height: 100vh;
   background-image: url("src/assets/bg_main.jpg");
   background-position: top right;
   background-size: 100% 100%;
   animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
+}
+.warning-message {
+  display: none;
 }
 
 @keyframes myAnim {
