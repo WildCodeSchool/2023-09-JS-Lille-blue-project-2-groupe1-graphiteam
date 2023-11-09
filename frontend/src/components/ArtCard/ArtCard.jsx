@@ -1,12 +1,17 @@
 import "./ArtCard.scss";
 
-function ArtCard() {
+// eslint-disable-next-line react/prop-types
+function ArtCard({ img }) {
   return (
     <div className="card">
-      <img className="card__picture" src="" alt="" />
+      <img
+        className="card__picture"
+        src={`http://localhost:3310/${img}`}
+        alt=""
+      />
       <article className="card__artist">
-        <h4>artist</h4>
-        <p>description</p>
+        <h3 className="card__title">Artiste</h3>
+        <p className="card__description">description</p>
       </article>
     </div>
   );
