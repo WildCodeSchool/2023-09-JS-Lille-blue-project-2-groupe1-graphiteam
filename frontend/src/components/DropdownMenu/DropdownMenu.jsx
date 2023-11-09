@@ -60,15 +60,19 @@ function DropdownMenu() {
   };
   return (
     <div className="dropdownMenu">
-      <button className="dropdownMenu__button" type="submit" onClick={setOpen}>
+      <button
+        className="dropdownMenu__button dropdownMenu__main__button"
+        type="submit"
+        onClick={setOpen}
+      >
         {btnText}
         {isOpen ? (
           <div className="iconContainer">
-            <AiOutlineCaretUp size="20px" />
+            <AiOutlineCaretUp size="1.5vw" />
           </div>
         ) : (
           <div className="iconContainer">
-            <AiOutlineCaretDown size="20px" />
+            <AiOutlineCaretDown size="1.5vw" />
           </div>
         )}
       </button>
@@ -113,7 +117,10 @@ function DropdownMenu() {
       )}
       {showVisitButton && (
         <button type="submit" className="button__startVisit">
-          <AiFillPlayCircle size="50px" /> <Link to="/museum">Exposition</Link>
+          <Link className="linkToMuseum" to="/museum">
+            Exposition
+          </Link>{" "}
+          <AiFillPlayCircle size="3vw" />
         </button>
       )}
     </div>
