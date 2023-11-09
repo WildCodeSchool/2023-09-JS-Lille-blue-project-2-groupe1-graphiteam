@@ -14,11 +14,18 @@ function Museum() {
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
   const { filter } = useContext(FilterContext);
-  /*   console.log("filter museum:", filter); */
-  const filteredArts = arts?.filter((item) =>
-    item.district?.includes(filter === "all" ? "" : filter)
-  );
-  /*   console.log("filteredArts:", filteredArts); */
+  const city = [
+    "Lille",
+    "Tourcoing",
+    "Roubaix",
+    "Hellemmes",
+    "Marquette-Lez-Lille",
+    "Villeneuve d'Ascq",
+    "Saint-André-Lez-Lille",
+  ];
+  const filteredArts = city.includes(filter)
+    ? arts?.filter((item) => item.city?.includes(filter))
+    : arts?.filter((item) => item.district?.includes(filter));
   const [movingLeft, setMovingLeft] = useState("");
   const [movingRight, setMovingRight] = useState("");
   const [isDisabled, setIsDisabled] = useState("");
@@ -189,15 +196,25 @@ function Museum() {
             type="button"
             className={`museum__navigationArrows--left ${isDisabled}`}
             onClick={handleClickNext}
+            label="flecheavant"
           >
-            Avant
+            <img
+              className="fleche__haut"
+              src="src/assets/flechehaut96.png"
+              alt=""
+            />
           </button>
           <button
             type="button"
             className={`museum__navigationArrows--right ${isDisabled}`}
             onClick={handleClickPrevious}
+            label="flechearriere"
           >
-            Arrière
+            <img
+              className="fleche__bas"
+              src="src/assets/flechebas96.png"
+              alt=""
+            />
           </button>
         </nav>
       </div>

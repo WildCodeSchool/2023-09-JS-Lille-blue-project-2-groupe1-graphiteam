@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-/* import PropTypes from "prop-types"; */
 import "./DropdownMenu.scss";
 import {
   AiOutlineCaretDown,
@@ -19,37 +18,35 @@ function DropdownMenu() {
       .catch((error) => console.error(error));
   }, []);
 
-  const { /* filter, */ setFilter } = useContext(FilterContext);
+  const { setFilter } = useContext(FilterContext);
   const [city, setCity] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("--Metropole Lilloise--");
-  const [district, selectDistrict] = useState("");
+  const [btnText, setBtnText] = useState("--Métropole Lilloise--");
+  const [districtTofilter, setDistrictToFilter] = useState("");
   const uniqueCity = [...new Set(arts?.map((item) => item.city))];
   const filteredDistrict = arts?.filter((item) =>
-    item.city?.includes(district)
+    item.city?.includes(districtTofilter)
   );
   const uniqueDistrict = [
     ...new Set(filteredDistrict?.map((item) => item.district)),
   ];
-  /*  console.log("filter:", filter); */
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
   const setFilterFunction = (location) => {
     setFilter(location);
-    /*    console.log("filteredLocation:", filter); */
   };
   const handleClickCity = ({ location }) => {
-    selectDistrict(location);
+    setDistrictToFilter(location);
     setBtnText(location);
     setOpen();
     setshowDistrictList(true);
     setCity(location);
   };
   const handleClickDistrict = ({ location }) => {
-    selectDistrict(location);
+    setDistrictToFilter(location);
     setBtnText(location);
     setIsOpen(false);
     setshowDistrictList(false);
