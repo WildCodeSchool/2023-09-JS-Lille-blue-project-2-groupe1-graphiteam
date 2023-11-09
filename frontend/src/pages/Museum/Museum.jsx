@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-/* import PropTypes from "prop-types"; */
 import "./Museum.scss";
 import { FilterContext } from "../../contexts/filterContext";
 
@@ -221,12 +220,5 @@ function Museum() {
     </div>
   );
 }
-
-// Museum.propTypes = {
-//   arts: PropTypes.shape({
-//     imgAlt: PropTypes.string.isRequired,
-//     imgSrc: PropTypes.string.isRequired,
-//   }).isRequired,
-// };
 
 export default Museum;
