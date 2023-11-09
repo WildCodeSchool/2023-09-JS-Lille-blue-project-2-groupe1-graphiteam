@@ -5,7 +5,7 @@ import "./Museum.scss";
 function Museum() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
@@ -111,8 +111,17 @@ function Museum() {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "ArrowUp") {
+      handleClickNext(event);
+    }
+    if (event.key === "ArrowDown") {
+      handleClickPrevious(event);
+    }
+  };
+
   return (
-    <div className="museum">
+    <button type="button" className="museum" onKeyDown={handleKeyPress}>
       <div className="museum__background">
         <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
       </div>
@@ -126,7 +135,9 @@ function Museum() {
             >
               <img
                 className={movingLeft}
-                src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  arts[artsIndexLeft].imgSrc
+                }`}
                 alt={arts[artsIndexLeft].imgAlt}
               />
             </button>
@@ -156,7 +167,9 @@ function Museum() {
             >
               <img
                 className={movingRight}
-                src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  arts[artsIndexRight].imgSrc
+                }`}
                 alt={arts[artsIndexRight].imgAlt}
               />
             </button>
@@ -204,7 +217,7 @@ function Museum() {
           </button>
         </nav>
       </div>
-    </div>
+    </button>
   );
 }
 

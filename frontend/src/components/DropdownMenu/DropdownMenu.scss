@@ -40,6 +40,10 @@ $dropdownBG: #ffefd9;
     border-color: $dark-main;
   }
 }
+
+.dropdownMenu__cityList {
+  scrollbar-width: none;
+}
 .button__startVisit {
   display: flex;
   align-items: center;

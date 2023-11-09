@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 function DropdownMenu() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
@@ -20,7 +20,7 @@ function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("--Metropole Lilloise--");
+  const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
   const [district, selectDistrict] = useState("");
   const uniqueCity = [...new Set(arts?.map((item) => item.city))];
   const filteredDistrict = arts?.filter((item) =>

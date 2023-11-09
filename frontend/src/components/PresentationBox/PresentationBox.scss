@@ -13,27 +13,26 @@ $accent: rgba(242, 148, 138, 0.864);
 $white: rgb(255, 239, 217);
 
 .logo-app {
-  margin: 3vh;
   width: 20vw;
 }
 
 .box__description {
   padding-block: 4vh;
-  padding-inline: 2vw;
+  padding-inline: 3vw;
   overflow: scroll;
+  scrollbar-width: none;
   border-color: $darkest-main;
   border-style: double;
   color: $darkest-main;
   font-family: $font-text;
   margin: 1.4vw;
-  margin-top: 7vh;
+  margin-top: clamp(2.4rem, 6.6vh, 3.1rem);
   background-color: $accent;
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 35ch;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-
+  width: 40ch;
+  font-size: clamp(12px, 2vw, 1rem);
   border-radius: 30px;
   box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
   -webkit-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
