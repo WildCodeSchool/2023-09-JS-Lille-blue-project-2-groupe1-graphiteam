@@ -8,14 +8,6 @@ $white: rgb(255, 239, 217);
   margin: 0;
   padding: 0;
 }
-body {
-  min-height: 100vh;
-  // background-image: url("src/assets/bg_main.jpg");
-  // background-position: top right;
-  // background-size: 100% 100%;
-  // animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
-  // overflow: hidden;
-}
 
 .homepage {
   background-color: aqua;
@@ -41,22 +33,3 @@ body {
     background-size: 150% 150%;
   }
 }
-
-// @media only screen and (orientation:portrait){
-//     .homepage{
-//       background-color: aqua;
-//     }
-//     .components {
-//       display:none;
-//     }
-//     .warning-message {
-//       background-color: aqua;
-//       display:block;
-//       position: absolute;
-//     }
-// }
-// @media only screen and (orientation:landscape){
-//     .warning-message{
-//       display:none;
-//   }
-// }
