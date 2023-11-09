@@ -10,7 +10,6 @@ import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
-
   useEffect(() => {
     fetch("http://localhost:3310/artpieces")
       .then((response) => response.json())
@@ -120,12 +119,5 @@ function DropdownMenu() {
     </div>
   );
 }
-
-// DropdownMenu.propTypes = {
-//   arts: PropTypes.shape({
-//     city: PropTypes.string.isRequired,
-//     district: PropTypes.string.isRequired,
-//   }).isRequired,
-// };
 
 export default DropdownMenu;
