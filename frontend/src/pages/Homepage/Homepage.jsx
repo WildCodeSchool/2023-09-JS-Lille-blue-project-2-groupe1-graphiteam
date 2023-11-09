@@ -6,7 +6,10 @@ function Homepage() {
   return (
     <div className="homepage">
       <PresentationBox />
-      <DropdownMenu />
+      <div className="homepage--button--container">
+        <h1 className="homepage--title">Lille Street Art</h1>
+        <DropdownMenu />
+      </div>
     </div>
   );
 }
