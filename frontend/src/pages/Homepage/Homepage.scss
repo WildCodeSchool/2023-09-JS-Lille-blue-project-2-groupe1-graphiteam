@@ -35,13 +35,9 @@ $outline:
   margin: 0;
   padding: 0;
 }
-body {
-  min-height: 100vh;
-  background-color: $accent;
-  overflow: hidden;
-}
 
 .homepage {
+  background-color: aqua;
   display: flex;
   flex-direction: row;
   text-align: center;
