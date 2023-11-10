@@ -141,7 +141,7 @@ function Museum() {
                 alt={arts[artsIndexLeft].imgAlt}
               />
             </button>
-            <p className="museum__caption">
+            <p className={{ movingLeft } && "museum__caption"}>
               <strong>
                 {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
               </strong>
@@ -173,7 +173,7 @@ function Museum() {
                 alt={arts[artsIndexRight].imgAlt}
               />
             </button>
-            <p className="museum__caption">
+            <p className={movingRight}>
               <strong>
                 {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
               </strong>
