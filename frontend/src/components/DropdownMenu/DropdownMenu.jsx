@@ -24,13 +24,20 @@ function DropdownMenu() {
   const [showVisitButton, setShowVisitButton] = useState(false);
   const [btnText, setBtnText] = useState("--Métropole Lilloise--");
   const [districtTofilter, setDistrictToFilter] = useState("");
-  const uniqueCity = [...new Set(arts?.map((item) => item.city))];
+  const uniqueCity = [];
+  arts?.map((item) =>
+    uniqueCity.includes(item.city) ? "" : uniqueCity.push(item.city)
+  );
+
   const filteredDistrict = arts?.filter((item) =>
     item.city?.includes(districtTofilter)
   );
-  const uniqueDistrict = [
-    ...new Set(filteredDistrict?.map((item) => item.district)),
-  ];
+  const uniqueDistrict = [];
+  filteredDistrict?.map((item) =>
+    uniqueDistrict.includes(item.district)
+      ? ""
+      : uniqueDistrict.push(item.district)
+  );
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
