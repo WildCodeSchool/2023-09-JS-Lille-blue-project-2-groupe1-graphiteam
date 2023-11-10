@@ -13,10 +13,6 @@ export function FilterProvider({ children }) {
     </FilterContext.Provider>
   );
 }
-
-/* FilterProvider.propTypes = {
-  children: PropTypes.object.isRequired,
-}; */
 FilterProvider.propTypes = {
   children: PropTypes.shape({}).isRequired,
 };

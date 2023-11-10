@@ -33,7 +33,7 @@ $white: rgb(255, 239, 217);
   flex-direction: column;
   width: 35ch;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-
+  cursor: pointer;
   border-radius: 30px;
   box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
   -webkit-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
