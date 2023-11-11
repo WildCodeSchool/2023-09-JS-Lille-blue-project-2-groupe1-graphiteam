@@ -8,3 +8,9 @@
     display: none;
   }
 }
+@font-face {
+  font-family: "donGraffiti";
+  src:
+    local("DonGraffiti"),
+    url("./fonts/DonGraffiti.otf") format("opentype");
+}
