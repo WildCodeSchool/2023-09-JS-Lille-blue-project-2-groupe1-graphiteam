@@ -13,20 +13,44 @@ $accent: rgba(242, 148, 138, 0.864);
 $white: rgb(255, 239, 217);
 
 .logo-app {
-  margin: 3vh;
-  width: 20vw;
+  /*   margin: 3vh; */
+  width: 15vw;
 }
 
 .box__description {
+  z-index: 100;
+  /*  padding-block: 4vh;
+  padding-inline: 2vw; */
+  /* overflow: scroll; */
+  /*   border-color: $darkest-main;
+  border-style: double; */
+  color: $darkest-main;
+  font-family: $font-text;
+  margin: 1vw;
+  /*   margin-top: 1vh; */
+  /*   background-color: $accent; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  /*   font-size: clamp(1rem, 2.5vw, 1.3rem); */
+  /*   cursor: pointer; */
+  /*   border-radius: 30px;
+  box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
+  -webkit-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8);
+  -moz-box-shadow: -8px 5px 5px 0px rgba(56, 52, 46, 0.8); */
+}
+.article {
+  z-index: 100;
   padding-block: 4vh;
   padding-inline: 2vw;
-  overflow: scroll;
+  /* overflow: scroll; */
   border-color: $darkest-main;
   border-style: double;
   color: $darkest-main;
   font-family: $font-text;
   margin: 1.4vw;
-  margin-top: 7vh;
+  margin-top: 12vh;
   background-color: $accent;
   display: flex;
   align-items: center;

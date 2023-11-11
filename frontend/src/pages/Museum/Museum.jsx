@@ -128,7 +128,7 @@ function Museum() {
   return (
     <div className="museum">
       <div className="museum__background">
-        <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
+        <img src="src/assets/2.jpg" alt="Portrait de Camille Claudel" />
       </div>
       <div className="museum__walls">
         {filteredArts ? (
@@ -157,6 +157,7 @@ function Museum() {
               {`(${filteredArts[artsIndexLeft].street})`} <br />
               {filteredArts[artsIndexLeft].description}
             </p>
+
             {popUpLeft ===
             "museum__wall museum__wall--left museum__popUpImg" ? (
               <p className="museum__img--escapeMessage">

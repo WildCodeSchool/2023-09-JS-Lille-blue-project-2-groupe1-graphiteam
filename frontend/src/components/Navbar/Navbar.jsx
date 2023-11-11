@@ -8,7 +8,7 @@ const pathnames = [
   },
   {
     path: "/museum",
-    label: "Musée",
+    label: "Musee",
   },
   {
     path: "/catalog",

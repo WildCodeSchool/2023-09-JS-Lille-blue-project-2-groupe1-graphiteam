@@ -6,8 +6,8 @@ $white: rgb(255, 239, 217);
 
 body {
   margin: 0;
-  background-color: $accent;
-  background-image: url("src/assets/gravel.png");
+  /*   background-color: $accent; */
+  /*   background-image: url("src/assets/gravel.png"); */
   overflow: hidden;
 }
 
@@ -24,13 +24,13 @@ body {
   width: 100%;
 }
 .museum__background img {
-  height: 89%;
+  height: 100%;
   width: 100%;
   border-bottom: 1px solid $dark-main;
 }
 
 .museum__walls {
-  height: 88vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   gap: 10%;
@@ -50,7 +50,10 @@ body {
   width: 36vw;
   display: flex;
   flex-direction: column;
-  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png");
+  background-image: url("src/assets/graffitiWall.jpg");
+  background-image: url("src/assets/Freebie-GraffitiTextures-09.jpg");
+  background-size: cover;
+  /*  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png"); */
 }
 
 .museum__wall--left {
@@ -77,12 +80,22 @@ body {
     border: 8px ridge $dark-main;
   }
 }
-
+.test {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  margin-top: 0.5vh;
+  padding: 0.8vh;
+  max-width: 75%;
+  background-color: antiquewhite;
+  background-image: url("src/assets/spraySmall.png");
+}
 .museum__caption {
   font-size: clamp(12px, 2.5vh, 3rem);
   margin-top: 0.5vh;
   padding: 0.8vh;
   max-width: 75%;
+  /*   background: #ffffff url("src/assets/graffitiFrameBanner.png") no-repeat; */
   background-color: rgb(255, 247, 236);
   color: $darkest-main;
   border: 1px solid $dark-main;

@@ -8,8 +8,12 @@ function Homepage() {
     <div className="homepage">
       <PresentationBox />
       <div className="homepage--button--container">
-        <h1 className="homepage--title font">Lille Street Art</h1>
-        {/* <img className="tornedBanner" src="src/assets/singletorn.png" alt="" /> */}
+        <h1 className="homepage--title font"> Lille Street Art</h1>
+        <img
+          className="homepage--banner"
+          src="src/assets/dirtyBrick.png"
+          alt=""
+        />
         <DropdownMenu />
       </div>
     </div>

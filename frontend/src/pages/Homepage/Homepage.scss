@@ -111,9 +111,10 @@ $outline:
 }
 .homepage--title {
   z-index: 100;
-  font-size: clamp(1rem, 8vw, 8rem);
+  color: $darkest-main;
+  font-size: clamp(1rem, 12vw, 12rem);
   font-family: "amsterdamG";
-  margin-top: 8vh;
+  margin-top: 5vh;
   text-shadow: $outline;
 }
 
@@ -128,11 +129,10 @@ $outline:
     background-size: 150% 150%;
   }
 }
-.tornedBanner {
+.homepage--banner {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -20vh;
   z-index: 1;
   width: 100vw;
-  height: 500px;
 }
