@@ -68,7 +68,7 @@ function DropdownMenu() {
   return (
     <div className="dropdownMenu">
       <button
-        className="dropdownMenu__button dropdownMenu__main__button"
+        className="dropdownMenu__button dropdownMenu__main__button fancy"
         type="submit"
         onClick={setOpen}
       >
@@ -88,7 +88,7 @@ function DropdownMenu() {
           {uniqueCity.map((location) => {
             return (
               <button
-                className="dropdownMenu__button"
+                className="dropdownMenu__button fancy"
                 onClick={() => handleClickCity({ location })}
                 type="submit"
                 key={`city-${location}`}

@@ -50,11 +50,20 @@ body {
   width: 36vw;
   display: flex;
   flex-direction: column;
-  background-image: url("src/assets/graffitiWall.jpg");
-  background-image: url("src/assets/Freebie-GraffitiTextures-09.jpg");
+  background-image: url("src/assets/40.png");
   background-size: cover;
+  /*   background-image: url("src/assets/graffitiWall.jpg"); */
   /*  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png"); */
 }
+/* .museum__wall::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+} */
 
 .museum__wall--left {
   text-align: center;
@@ -144,7 +153,7 @@ body {
 .museum__img--escapeMessage {
   font-weight: bold;
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   right: 5%;
   font-size: clamp(12px, 2.5vh, 3rem);
 }

@@ -21,7 +21,7 @@ function Navbar() {
 
   function changeTitle() {
     const newTitle = pathnames.filter((e) => e.path === location.pathname);
-    return <h1>{newTitle[0].label}</h1>;
+    return <h1 className="fancy">{newTitle[0].label}</h1>;
   }
 
   function changeLinksLeft() {
@@ -30,17 +30,35 @@ function Navbar() {
       return "";
     }
     if (location.pathname === "/catalog") {
-      return <Link to={newPath[1].path}> ◁ {newPath[1].label}</Link>;
+      return (
+        <Link className="fancy" to={newPath[1].path}>
+          {" "}
+          ◁ {newPath[1].label}
+        </Link>
+      );
     }
-    return <Link to={newPath[0].path}> ◁ {newPath[0].label}</Link>;
+    return (
+      <Link className="fancy" to={newPath[0].path}>
+        {" "}
+        ◁ {newPath[0].label}
+      </Link>
+    );
   }
 
   function changeLinksRight() {
     const newPath = pathnames.filter((e) => e.path !== location.pathname);
     if (location.pathname === "/catalog") {
-      return <Link to={newPath[0].path}>{newPath[0].label} ▷ </Link>;
+      return (
+        <Link className="fancy" to={newPath[0].path}>
+          {newPath[0].label} ▷{" "}
+        </Link>
+      );
     }
-    return <Link to={newPath[1].path}>{newPath[1].label} ▷ </Link>;
+    return (
+      <Link className="fancy" to={newPath[1].path}>
+        {newPath[1].label} ▷{" "}
+      </Link>
+    );
   }
 
   return (

@@ -112,9 +112,9 @@ $outline:
 .homepage--title {
   z-index: 100;
   color: $darkest-main;
-  font-size: clamp(1rem, 12vw, 12rem);
-  font-family: "amsterdamG";
-  margin-top: 5vh;
+  font-size: clamp(1rem, 8vw, 8rem);
+  /*   font-family: "amsterdamG"; */
+  margin-top: 10vh;
   text-shadow: $outline;
 }
 

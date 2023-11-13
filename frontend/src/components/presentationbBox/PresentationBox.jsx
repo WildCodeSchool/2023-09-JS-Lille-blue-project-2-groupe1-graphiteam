@@ -9,8 +9,8 @@ export default function PresentationBox() {
         alt="L S A letter in a graffity style, logo of the page"
       />
       <article className="article">
-        <h2 className="title__description">Le Street Art...</h2>
-        <p className="text__description">
+        <h2 className="title__description title">Le Street Art...</h2>
+        <p className="text__description text">
           ... apporte une touche de couleur, de surprise et de réflexion
           publics, encourageant la discussion et la réflexion, tout en
           transformant notre notre paysage urbain en une galerie d'art en plein

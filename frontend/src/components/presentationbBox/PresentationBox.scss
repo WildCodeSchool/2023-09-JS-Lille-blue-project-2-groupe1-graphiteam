@@ -25,7 +25,7 @@ $white: rgb(255, 239, 217);
   /*   border-color: $darkest-main;
   border-style: double; */
   color: $darkest-main;
-  font-family: $font-text;
+  /*   font-family: $font-text; */
   margin: 1vw;
   /*   margin-top: 1vh; */
   /*   background-color: $accent; */
@@ -48,7 +48,7 @@ $white: rgb(255, 239, 217);
   border-color: $darkest-main;
   border-style: double;
   color: $darkest-main;
-  font-family: $font-text;
+  /*   font-family: $font-text; */
   margin: 1.4vw;
   margin-top: 12vh;
   background-color: $accent;
@@ -68,7 +68,7 @@ $white: rgb(255, 239, 217);
 }
 
 .title__description {
-  font-family: $font-title;
+  /*   font-family: $font-title; */
   color: $darkest-main;
   margin: 3vh;
 }

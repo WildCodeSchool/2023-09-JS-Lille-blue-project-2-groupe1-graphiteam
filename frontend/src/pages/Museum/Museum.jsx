@@ -128,7 +128,7 @@ function Museum() {
   return (
     <div className="museum">
       <div className="museum__background">
-        <img src="src/assets/2.jpg" alt="Portrait de Camille Claudel" />
+        <img src="src/assets/anguille.png" alt="Portrait de Camille Claudel" />
       </div>
       <div className="museum__walls">
         {filteredArts ? (
@@ -150,17 +150,19 @@ function Museum() {
                 alt={filteredArts[artsIndexLeft].imgAlt}
               />
             </button>
-            <p className="museum__caption">
-              <strong>
+            <article className="museum__caption">
+              <strong className="fancy">
                 {`${filteredArts[artsIndexLeft].artist} - ${filteredArts[artsIndexLeft].city} `}
               </strong>
-              {`(${filteredArts[artsIndexLeft].street})`} <br />
-              {filteredArts[artsIndexLeft].description}
-            </p>
+              <p className="fancy">
+                {`(${filteredArts[artsIndexLeft].street})`} - {/* <br /> */}
+                {filteredArts[artsIndexLeft].description}
+              </p>
+            </article>
 
             {popUpLeft ===
             "museum__wall museum__wall--left museum__popUpImg" ? (
-              <p className="museum__img--escapeMessage">
+              <p className="museum__img--escapeMessage text">
                 Cliquez ou touchez l'oeuvre pour retourner au Musée.
               </p>
             ) : null}
