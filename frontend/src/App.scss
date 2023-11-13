@@ -1,0 +1,10 @@
+@media only screen and (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
+}
+@media only screen and (orientation: landscape) {
+  .warning-msg {
+    display: none;
+  }
+}
