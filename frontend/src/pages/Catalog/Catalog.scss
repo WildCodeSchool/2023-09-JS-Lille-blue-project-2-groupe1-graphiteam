@@ -2,9 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
-
+h2 {
+  color: red;
+}
+h3 {
+  color: yellow;
+}
 .catalog {
-  background-image: url("src/assets/bg main.jpg");
+  background-image: url("src/assets/bg-catalog.jpg");
   background-position: top right;
   background-size: cover;
   min-height: 100vh;
