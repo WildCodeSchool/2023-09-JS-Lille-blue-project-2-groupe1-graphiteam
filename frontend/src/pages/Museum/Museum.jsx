@@ -122,9 +122,6 @@ function Museum() {
 
   return (
     <button type="button" className="museum" onKeyDown={handleKeyPress}>
-      <div className="museum__background">
-        <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
-      </div>
       <div className="museum__walls">
         {arts ? (
           <div className={popUpLeft}>

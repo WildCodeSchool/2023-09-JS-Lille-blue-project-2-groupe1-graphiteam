@@ -16,15 +16,15 @@ $white: #a4a1a0;
 body {
   margin: 0;
   background-color: $accent;
-  background-image: url("src/assets/gravel.png");
+  background-image: url("src/assets/vieux-lille_def.jpg");
+  background-size: cover;
   overflow: hidden;
 }
 
 button {
   all: unset;
 }
-
-.museum {
+frontend/src/assets/vieux-lille_def.jpg .museum {
   display: flex;
   height: 100%;
   width: 100%;
