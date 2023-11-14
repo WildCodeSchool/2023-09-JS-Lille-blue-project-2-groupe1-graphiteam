@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 import "./DropdownMenu.scss";
-import {
-  AiOutlineCaretDown,
-  AiOutlineCaretUp,
-  AiFillPlayCircle,
-} from "react-icons/ai";
+import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { useState, useEffect, useContext } from "react";
 import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
@@ -123,11 +119,11 @@ function DropdownMenu() {
         </div>
       )}
       {showVisitButton && (
-        <button type="submit" className="button__startVisit testbtn">
-          <Link className="linkToMuseum" to="/museum">
-            Exposition
-          </Link>{" "}
-          <AiFillPlayCircle size="3vw" />
+        <button type="submit" className="button__startVisit">
+          <Link to="/museum">
+            Exposition {">"}
+            {">"}
+          </Link>
         </button>
       )}
     </div>

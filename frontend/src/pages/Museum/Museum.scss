@@ -1,14 +1,27 @@
+//IMPORT FONT-FAMILY OF THE APP
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+//FONT-FAMILY
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$white: rgb(255, 239, 217);
+$accent: #ffd353;
+$white: #a4a1a0;
 
 body {
   margin: 0;
   /*   background-color: $accent; */
   /*   background-image: url("src/assets/gravel.png"); */
   overflow: hidden;
+}
+
+button {
+  all: unset;
 }
 
 .museum {
@@ -33,11 +46,11 @@ body {
   height: 80vh;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 9%;
   display: flex;
   perspective: 500px;
   position: absolute;
-  bottom: 2%;
+  bottom: 2.5%;
   width: 100%;
 }
 .museum__wall {
@@ -70,8 +83,7 @@ body {
   transform: rotateY(25deg);
   position: relative;
   padding-left: 3vw;
-  border-top-right-radius: 40px;
-  box-shadow: inset -10px 10px 15px -6px rgba(175, 175, 175, 0.723);
+  border-top-right-radius: 20px;
   align-items: center;
   & img {
     border: 8px ridge $dark-main;
@@ -83,8 +95,7 @@ body {
   transform: rotateY(-25deg);
   position: relative;
   padding-right: 3vw;
-  border-top-left-radius: 40px;
-  box-shadow: inset 10px 10px 15px -6px rgba(175, 175, 175, 0.723);
+  border-top-left-radius: 20px;
   & img {
     border: 8px ridge $dark-main;
   }
@@ -100,16 +111,18 @@ body {
   background-image: url("src/assets/spraySmall.png");
 }
 .museum__caption {
-  font-size: clamp(12px, 2.5vh, 3rem);
+  font-size: clamp(11px, 2.5vh, 3rem);
+  font-family: $font-text;
   margin-top: 0.5vh;
+  margin-left: 1.5vw;
   padding: 0.8vh;
-  max-width: 75%;
-  /*   background: #ffffff url("src/assets/graffitiFrameBanner.png") no-repeat; */
+  max-width: 90%;
   background-color: rgb(255, 247, 236);
   color: $darkest-main;
   border: 1px solid $dark-main;
   box-shadow: 0 0 3px $dark-main;
   text-align: left;
+  line-height: 2.3vh;
 }
 
 .museum__img--button {
@@ -160,39 +173,27 @@ body {
 
 .museum__navigationArrows {
   position: fixed;
-  bottom: -3vh;
+  bottom: -7.5vh;
 }
-.fleche__haut {
-  width: 8vw;
-}
-
+.fleche__haut,
 .fleche__bas {
   width: 8vw;
 }
-.museum__navigationArrows--left {
-  padding-block: 0.5vw;
-  background-color: #99ccac;
-  border: solid 1%;
-  border-radius: 10px;
-  margin-right: 0.5rem;
-  transform: rotateX(60deg) rotateY(1deg);
-  transform-style: preserve-3d;
-  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
-}
+
+.museum__navigationArrows--left,
 .museum__navigationArrows--right {
-  background-color: #99ccac;
   padding-block: 0.5vw;
-  border: solid 1%;
-  border-radius: 10px;
-  margin-left: 0.5rem;
-  transform: rotateX(60deg) rotateY(1deg);
+  background-color: #99ccac;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transform: rotateX(70deg) rotateY(1deg);
   transform-style: preserve-3d;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
 }
+
 .disabled {
   pointer-events: none;
   opacity: 0.3;

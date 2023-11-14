@@ -1,11 +1,11 @@
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$dropdownBG: #ffefd9;
+$accent: #ffd353;
+$white: #cbcbcb;
 
 .iconContainer {
-  background-color: $light-main;
+  background-color: $accent;
   height: 100%;
   width: 3vw;
   align-items: center;
@@ -26,17 +26,20 @@ $dropdownBG: #ffefd9;
   display: none;
 }
 .dropdownMenu__button {
-  background-color: $dropdownBG;
+  background-color: $dark-main;
   color: $darkest-main;
-  padding: 0 0 0 1vw;
-  /*  border: 1px solid black; */
-  width: 25vw;
-  height: 7vh;
+  border-radius: 8px;
+  padding: 0 0 0 50px;
+  box-shadow: 0px 0px 10px 20px $dark-main;
+  width: 300px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: clamp(1rem, 1.5vw, 3rem);
+  font-size: 2rem;
+  color: $accent;
+  text-shadow: 2px 5px 1px $darkest-main;
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -44,10 +47,16 @@ $dropdownBG: #ffefd9;
     border-color: $dark-main;
   } */
 }
-/* .dropdownMenu__main__button {
+
+.dropdownMenu__cityList {
+  scrollbar-width: none;
+}
+
+.dropdownMenu__main__button {
   border-radius: 8px 8px 0 0;
-} */
-.button__startVisit {
+}
+
+*/ .button__startVisit {
   display: flex;
   align-items: center;
   justify-content: space-between;

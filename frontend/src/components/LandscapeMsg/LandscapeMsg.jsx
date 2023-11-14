@@ -11,7 +11,7 @@ export default function LandscapeMsg() {
       <h1>
         ⚠<br />
         Ce site Web ne peut être consulté qu'en mode paysage, merci de basculer
-        votre écran
+        votre écran.
       </h1>
     </div>
   );
