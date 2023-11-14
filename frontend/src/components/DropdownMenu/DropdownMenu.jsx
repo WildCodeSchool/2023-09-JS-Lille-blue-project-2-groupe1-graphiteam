@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "./DropdownMenu.scss";
 import { useState, useEffect, useContext } from "react";
-import { FilterContext } from "../../contexts/filterContext";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
+import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
@@ -19,14 +19,20 @@ function DropdownMenu() {
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
   const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
-  const [district, selectDistrict] = useState("");
-  const uniqueCity = [...new Set(arts?.map((item) => item.city))];
-  const filteredDistrict = arts?.filter((item) =>
-    item.city?.includes(districtTofilter)
+  const [districtToFilter, setDistrictToFilter] = useState("");
+  const uniqueCity = [];
+  arts?.map((item) =>
+    uniqueCity.includes(item.city) ? "" : uniqueCity.push(item.city)
   );
-  const uniqueDistrict = [
-    ...new Set(filteredDistrict?.map((item) => item.district)),
-  ];
+  const filteredDistrict = arts?.filter((item) =>
+    item.city?.includes(districtToFilter)
+  );
+  const uniqueDistrict = [];
+  filteredDistrict?.map((item) =>
+    uniqueDistrict.includes(item.district)
+      ? ""
+      : uniqueDistrict.push(item.district)
+  );
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
