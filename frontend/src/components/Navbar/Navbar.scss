@@ -21,6 +21,19 @@ $outline:
   0 0 2px $white,
   0 0 2px $white;
 
+@font-face {
+  font-family: "amsterdamG";
+  src: url("../../fonts/AmsterdamGraffiti.eot");
+  src:
+    url("../../fonts/AmsterdamGraffiti.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/AmsterdamGraffiti.woff2") format("woff2"),
+    url("../../fonts/AmsterdamGraffiti.woff") format("woff"),
+    url("../../fonts/AmsterdamGraffiti.ttf") format("truetype"),
+    url("../../fonts/AmsterdamGraffiti.svg#AmsterdamGraffiti") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +41,7 @@ $outline:
 }
 
 .navbar {
+  /* font-family: "amsterdamG"; */
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -59,6 +73,16 @@ $outline:
 
 .navbar__title {
   text-shadow: $outline;
+}
+.navbar__ul {
+  .navbar__button {
+    a {
+      color: $darkest-main;
+      text-decoration: none;
+      font-size: 2rem;
+      font-family: "blowBrush";
+    }
+  }
 }
 
 .navbar__title h1 {

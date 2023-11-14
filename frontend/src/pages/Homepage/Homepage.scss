@@ -104,7 +104,7 @@ $outline:
   background-image: url("/src/assets/wall-3.jpg");
   background-position: top right;
   background-size: 100% 100%;
-  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
+  /*  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none; */
 }
 .homepage--button--container {
   display: flex;
@@ -113,6 +113,7 @@ $outline:
 }
 .homepage--title {
   z-index: 100;
+  color: $darkest-main;
   font-size: clamp(1rem, 8vw, 8rem);
   font-family: $font-test;
   margin-top: 8vh;
@@ -130,11 +131,10 @@ $outline:
     background-size: 150% 150%;
   }
 }
-.tornedBanner {
+.homepage--banner {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -20vh;
   z-index: 1;
   width: 100vw;
-  height: 500px;
 }

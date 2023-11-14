@@ -11,7 +11,7 @@ $white: #cbcbcb;
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 0 8px 0 0;
+  /*  border-radius: 0 8px 0 0; */
 }
 .dropdownMenu {
   display: flex;
@@ -20,7 +20,7 @@ $white: #cbcbcb;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  margin: 8vh 0 0 0;
+  margin: 10vh 0 0 0;
 }
 .dropdownMenu::-webkit-scrollbar {
   display: none;
@@ -43,25 +43,27 @@ $white: #cbcbcb;
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
-  &:hover {
+  /*  &:hover {
     border-color: $dark-main;
-  }
+  } */
 }
 
 .dropdownMenu__cityList {
   scrollbar-width: none;
 }
+
 .dropdownMenu__main__button {
   border-radius: 8px 8px 0 0;
 }
+
 .button__startVisit {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: $accent;
-  box-shadow: 2px 4px 4px -1px $darkest-main;
+  /*  box-shadow: 2px 4px 4px -1px $darkest-main;
   border: 1px solid $darkest-main;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px; */
   padding: 0 0 0 1vw;
   width: 25vw;
   height: 7vh;
@@ -78,4 +80,12 @@ $white: #cbcbcb;
 .button__startVisit a {
   color: inherit;
   text-decoration: inherit;
+}
+.testbtn {
+  border: none;
+}
+button {
+  font-family: "attackG";
+  all: unset;
+  box-shadow: 0px 0px 20px 25px #ffefd9;
 }

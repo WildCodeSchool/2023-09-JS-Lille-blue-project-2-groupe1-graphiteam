@@ -37,13 +37,13 @@ button {
   width: 100%;
 }
 .museum__background img {
-  height: 89%;
+  height: 100%;
   width: 100%;
   border-bottom: 1px solid $dark-main;
 }
 
 .museum__walls {
-  height: 88vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   gap: 9%;
@@ -63,8 +63,20 @@ button {
   width: 36vw;
   display: flex;
   flex-direction: column;
-  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png");
+  background-image: url("src/assets/40.png");
+  background-size: cover;
+  /*   background-image: url("src/assets/graffitiWall.jpg"); */
+  /*  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png"); */
 }
+/* .museum__wall::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+} */
 
 .museum__wall--left {
   text-align: center;
@@ -88,7 +100,16 @@ button {
     border: 8px ridge $dark-main;
   }
 }
-
+.test {
+  width: 80%;
+  height: 40%;
+  display: flex;
+  margin-top: 0.5vh;
+  padding: 0.8vh;
+  max-width: 75%;
+  background-color: antiquewhite;
+  background-image: url("src/assets/spraySmall.png");
+}
 .museum__caption {
   font-size: clamp(11px, 2.5vh, 3rem);
   font-family: $font-text;
@@ -145,7 +166,7 @@ button {
 .museum__img--escapeMessage {
   font-weight: bold;
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   right: 5%;
   font-size: clamp(12px, 2.5vh, 3rem);
 }
