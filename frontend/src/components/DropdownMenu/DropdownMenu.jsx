@@ -66,9 +66,9 @@ function DropdownMenu() {
     setFilterFunction(city);
   };
   return (
-    <div className="dropdownMenu">
+    <div className="dropdownMenu testbtn">
       <button
-        className="dropdownMenu__button dropdownMenu__main__button fancy"
+        className="dropdownMenu__button dropdownMenu__main__button fancy testbtn"
         type="submit"
         onClick={setOpen}
       >
@@ -84,11 +84,11 @@ function DropdownMenu() {
         )}
       </button>
       {isOpen && (
-        <div className="dropdownMenu__cityList">
+        <div className="dropdownMenu__cityList testbtn">
           {uniqueCity.map((location) => {
             return (
               <button
-                className="dropdownMenu__button fancy"
+                className="dropdownMenu__button fancy testbtn"
                 onClick={() => handleClickCity({ location })}
                 type="submit"
                 key={`city-${location}`}
@@ -100,10 +100,10 @@ function DropdownMenu() {
         </div>
       )}
       {showDistrictList && (
-        <div className="dropdownMenu__districtList">
+        <div className="dropdownMenu__districtList testbtn">
           <button
             type="submit"
-            className="dropdownMenu__button"
+            className="dropdownMenu__button testbtn"
             onClick={handleClickCityOnly}
           >
             Toute la ville
@@ -111,7 +111,7 @@ function DropdownMenu() {
           {uniqueDistrict.map((location) => {
             return (
               <button
-                className="dropdownMenu__button"
+                className="dropdownMenu__button testbtn"
                 onClick={() => handleClickDistrict({ location })}
                 type="submit"
                 key={`disctrict-${location}`}
@@ -123,7 +123,7 @@ function DropdownMenu() {
         </div>
       )}
       {showVisitButton && (
-        <button type="submit" className="button__startVisit">
+        <button type="submit" className="button__startVisit testbtn">
           <Link className="linkToMuseum" to="/museum">
             Exposition
           </Link>{" "}

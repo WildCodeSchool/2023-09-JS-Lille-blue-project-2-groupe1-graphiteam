@@ -99,10 +99,10 @@ $outline:
   text-align: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/bg_main.jpg");
+  background-image: url("src/assets/wideBrick.jpg");
   background-position: top right;
   background-size: 100% 100%;
-  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
+  /*  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none; */
 }
 .homepage--button--container {
   display: flex;

@@ -9,11 +9,11 @@ function Homepage() {
       <PresentationBox />
       <div className="homepage--button--container">
         <h1 className="homepage--title fancy"> Lille Street Art</h1>
-        <img
+        {/*  <img
           className="homepage--banner"
           src="src/assets/dirtyBrick.png"
           alt=""
-        />
+        /> */}
         <DropdownMenu />
       </div>
     </div>

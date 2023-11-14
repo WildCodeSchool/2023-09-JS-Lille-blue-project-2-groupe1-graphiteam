@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Montserrat&family=Sedgwick+Ave&display=swap");
 $title: "Hind Madurai", sans-serif;
 $text: "Montserrat", sans-serif;
-/* $Fancy: "Sedgwick Ave", cursive; */
-$Fancy: "blowBrush", cursive;
+$Fancy: "Sedgwick Ave", cursive;
+/* $Fancy: "amsterdamG", cursive;
+$Fancy: "blowBrush", cursive; */
 @media only screen and (orientation: portrait) {
   .landscape {
     display: none;
@@ -63,9 +64,12 @@ $Fancy: "blowBrush", cursive;
 .title {
   font-family: $title;
 }
-.fancy {
+/* .fancy {
   font-family: $Fancy;
-}
+} */
 .text {
   font-family: $text;
+}
+.tt {
+  font-family: $Fancy;
 }
