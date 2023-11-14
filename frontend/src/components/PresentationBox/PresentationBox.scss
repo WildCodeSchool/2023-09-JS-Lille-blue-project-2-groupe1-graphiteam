@@ -40,11 +40,11 @@ $outline:
 .box__description {
   overflow: scroll;
   scrollbar-width: none;
-  width: 33vw;
+  width: 50vw;
   color: $darkest-main;
   font-family: $font-text;
   margin-top: 12vh;
-  margin-left: 5vw;
+  margin-left: 4vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -73,6 +73,7 @@ article {
 
 .text__description {
   padding: 5%;
+  text-align: left;
 }
 
 .box__paperUp,
