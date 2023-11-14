@@ -64,7 +64,7 @@ function Museum() {
     }, 2000);
   };
   const incrementIndex = () => {
-    if (artsIndexLeft >= filteredArts.length - 1) {
+    if (artsIndexLeft >= filteredArts.length - 2) {
       setArtsIndexLeft(0);
     } else {
       setArtsIndexLeft(artsIndexLeft + 2);
@@ -136,8 +136,14 @@ function Museum() {
   return (
     <button type="button" className="museum" onKeyDown={handleKeyPress}>
       <div className="museum__walls">
-        {arts ? (
-          <div className={popUpLeft}>
+        {filteredArts ? (
+          <div
+            className={
+              filteredArts?.length === 1
+                ? "museum__wall museum__wall--left museum__popUpImg"
+                : popUpLeft
+            }
+          >
             <button
               type="button"
               className="museum__img--button"
@@ -168,7 +174,7 @@ function Museum() {
         ) : (
           "Loading"
         )}
-        {arts ? (
+        {filteredArts?.length > 1 ? (
           <div className={popUpRight}>
             <button
               type="button"

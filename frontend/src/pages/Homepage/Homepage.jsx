@@ -1,13 +1,15 @@
 import "./Homepage.scss";
 import PresentationBox from "../../components/PresentationBox/PresentationBox";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
+import "../../fonts/DonGraffiti.otf";
 
 function Homepage() {
   return (
     <div className="homepage">
       <PresentationBox />
       <div className="homepage--button--container">
-        <h1 className="homepage--title">Lille Street Art</h1>
+        <h1 className="homepage--title font">Lille Street Art</h1>
+        {/* <img className="tornedBanner" src="src/assets/singletorn.png" alt="" /> */}
         <DropdownMenu />
       </div>
     </div>
