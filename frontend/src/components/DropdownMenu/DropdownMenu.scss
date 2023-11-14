@@ -1,19 +1,24 @@
 $light-main: rgb(153, 204, 172);
 $dark-main: #4f654e;
-$darkest-main: rgb(56, 52, 46);
+$darkest-main: #38342e;
 $accent: #ffd353;
 $white: #cbcbcb;
 
+.dropdown__Container {
+  margin: 0 auto;
+  width: 30vw;
+}
 .iconContainer {
-  background-color: $accent;
   height: 100%;
-  width: 3vw;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  /*  border-radius: 0 8px 0 0; */
+  width: 10%;
+}
+.iconContainer img {
+  margin-left: 3vw;
+  height: 100%;
+  width: 80%;
 }
 .dropdownMenu {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +26,7 @@ $white: #cbcbcb;
   -ms-overflow-style: none;
   scrollbar-width: none;
   margin: 10vh 0 0 0;
+  box-shadow: 0px 0px 10px 20px $dark-main;
 }
 .dropdownMenu::-webkit-scrollbar {
   display: none;
@@ -28,44 +34,32 @@ $white: #cbcbcb;
 .dropdownMenu__button {
   background-color: $dark-main;
   color: $darkest-main;
-  border-radius: 8px;
-  padding: 0 0 0 50px;
-  box-shadow: 0px 0px 10px 20px $dark-main;
-  width: 300px;
-  height: 50px;
+  padding: 0 0 0 0px;
+  width: 100%;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: clamp(13px, 2.1vw, 2.2rem);
   color: $accent;
   text-shadow: 2px 5px 1px $darkest-main;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.25s;
-  /*  &:hover {
-    border-color: $dark-main;
-  } */
-}
-
-.dropdownMenu__cityList {
   scrollbar-width: none;
 }
 
-.dropdownMenu__main__button {
-  border-radius: 8px 8px 0 0;
+.dropdownMenu__cityList,
+.dropdownMenu__districtList {
+  width: 100%;
+  scrollbar-width: none;
 }
 
 .button__startVisit {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $accent;
-  /*  box-shadow: 2px 4px 4px -1px $darkest-main;
-  border: 1px solid $darkest-main;
-  border-radius: 0 0 8px 8px; */
-  padding: 0 0 0 1vw;
-  width: 25vw;
   height: 7vh;
   font-size: clamp(1rem, 1.5vw, 3rem);
 }
@@ -73,7 +67,7 @@ $white: #cbcbcb;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 25vw;
+  width: 30vw;
   height: 7vh;
   font-size: clamp(1rem, 1.5vw, 3rem);
 }
@@ -81,11 +75,16 @@ $white: #cbcbcb;
   color: inherit;
   text-decoration: inherit;
 }
-.testbtn {
-  border: none;
-}
 button {
-  font-family: "attackG";
   all: unset;
-  box-shadow: 0px 0px 20px 25px #ffefd9;
+}
+
+.dropdownMenu__dripping {
+  margin-top: -1px;
+  align-items: center;
+  width: 100%;
+}
+.small {
+  margin-left: 2vw;
+  width: 15%;
 }
