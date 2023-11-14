@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./DropdownMenu.scss";
-import {
-  AiOutlineCaretDown,
-  AiOutlineCaretUp,
-  AiFillPlayCircle,
-} from "react-icons/ai";
+import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
@@ -20,7 +16,7 @@ function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("--Métropole Lilloise--");
+  const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
   const [district, selectDistrict] = useState("");
   const uniqueCity = [...new Set(arts?.map((item) => item.city))];
   const filteredDistrict = arts?.filter((item) =>
@@ -99,10 +95,10 @@ function DropdownMenu() {
       )}
       {showVisitButton && (
         <button type="submit" className="button__startVisit">
-          <Link className="linkToMuseum" to="/museum">
-            Exposition
-          </Link>{" "}
-          <AiFillPlayCircle size="3vw" />
+          <Link to="/museum">
+            Exposition {">"}
+            {">"}
+          </Link>
         </button>
       )}
     </div>
