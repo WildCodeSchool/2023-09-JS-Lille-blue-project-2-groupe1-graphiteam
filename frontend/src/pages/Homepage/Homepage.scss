@@ -1,8 +1,8 @@
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$white: rgb(255, 239, 217);
+$accent: #ffd353;
+$white: #cbcbcb;
 
 * {
   margin: 0;
@@ -18,20 +18,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/bg_main.jpg");
+  background-image: url("/src/assets/wall-3.jpg");
   background-position: top right;
   background-size: 100% 100%;
-  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
-}
-
-@keyframes myAnim {
-  0% {
-    background-position: right top;
-    background-size: 100% 100%;
-  }
-
-  100% {
-    background-position: right top;
-    background-size: 150% 150%;
-  }
 }

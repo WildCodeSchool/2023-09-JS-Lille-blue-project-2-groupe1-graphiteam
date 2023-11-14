@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./DropdownMenu.scss";
-import {
-  AiOutlineCaretDown,
-  AiOutlineCaretUp,
-  AiFillPlayCircle,
-} from "react-icons/ai";
+import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
 function DropdownMenu() {
@@ -95,7 +91,10 @@ function DropdownMenu() {
       )}
       {showVisitButton && (
         <button type="submit" className="button__startVisit">
-          <AiFillPlayCircle size="50px" /> <Link to="/museum">Exposition</Link>
+          <Link to="/museum">
+            Exposition {">"}
+            {">"}
+          </Link>
         </button>
       )}
     </div>
