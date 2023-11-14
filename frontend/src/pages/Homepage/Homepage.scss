@@ -64,7 +64,7 @@
 $font-app-name: "Saira Stencil One", sans-serif;
 $font-title: "Source Serif 4", serif;
 $font-text: "Source Sans 3", sans-serif;
-$font-test: "Sedgwick Ave", cursive;
+$font-test: "attackG";
 // COLORS OF THE APP
 $light-main: rgb(153, 204, 172);
 $dark-main: #4f654e;
@@ -73,22 +73,10 @@ $accent: #ffd353;
 $white: #cbcbcb;
 //SHADOW OUTLINE
 $outline:
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white;
+  8px 0px 0px $darkest-main,
+  -8px 0px 0px $dark-main,
+  0px 8px 0px $darkest-main,
+  0px -8px 0px $dark-main;
 
 * {
   margin: 0;
@@ -104,8 +92,8 @@ $outline:
   background-image: url("/src/assets/wall-3.jpg");
   background-position: top right;
   background-size: 100% 100%;
-  /*  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none; */
 }
+
 .homepage--button--container {
   display: flex;
   flex-direction: column;
@@ -113,24 +101,13 @@ $outline:
 }
 .homepage--title {
   z-index: 100;
-  color: $darkest-main;
-  font-size: clamp(1rem, 8vw, 8rem);
+  color: $accent;
+  font-size: clamp(1rem, 6vw, 8rem);
   font-family: $font-test;
-  margin-top: 8vh;
+  margin-top: 25vh;
   text-shadow: $outline;
 }
 
-@keyframes myAnim {
-  0% {
-    background-position: right top;
-    background-size: 100% 100%;
-  }
-
-  100% {
-    background-position: right top;
-    background-size: 150% 150%;
-  }
-}
 .homepage--banner {
   position: absolute;
   left: 0;

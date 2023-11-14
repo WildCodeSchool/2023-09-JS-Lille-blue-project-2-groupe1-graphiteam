@@ -12,29 +12,13 @@ $darkest-main: rgb(56, 52, 46);
 $accent: #ffd353;
 $white: #cbcbcb;
 $outline:
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white,
-  0 0 2px white;
+  2px 0px 0px $darkest-main,
+  -2px 0px 0px $dark-main,
+  0px 2px 0px $darkest-main,
+  0px -2px 0px $dark-main;
 
 .logo-app {
-  width: 15vw;
-  margin-top: 1vh;
-  filter: drop-shadow(8px 8px 5px $dark-main);
+  width: 12vw;
 }
 
 .box__description {
@@ -56,7 +40,7 @@ $outline:
 article {
   background-color: white;
   background-image: url("./src/assets/111386198-ripped-poster-background-grunge-texture-of-torn-advertisement-on-billboard-sheet-metal.png");
-  font-size: clamp(13px, 2.1vw, 1.5rem);
+  font-size: clamp(13px, 1.2vw, 1.5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,25 +68,7 @@ article {
 
 strong {
   color: $accent;
-  text-shadow:
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main,
-    0 0 2px $darkest-main;
+  text-shadow: $outline;
   font-size: clamp(15px, 2.2vw, 1.6rem);
 }
 

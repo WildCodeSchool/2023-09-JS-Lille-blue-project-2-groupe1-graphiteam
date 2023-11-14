@@ -54,8 +54,8 @@ button {
   width: 100%;
 }
 .museum__wall {
+  border: 4px solid white;
   background-color: $white;
-  border: 1px solid $white;
   align-items: center;
   padding-top: 3vh;
   padding-inline: 1vw;
@@ -65,18 +65,7 @@ button {
   flex-direction: column;
   background-image: url("src/assets/40.png");
   background-size: cover;
-  /*   background-image: url("src/assets/graffitiWall.jpg"); */
-  /*  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png"); */
 }
-/* .museum__wall::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 1;
-} */
 
 .museum__wall--left {
   text-align: center;
@@ -86,7 +75,7 @@ button {
   border-top-right-radius: 20px;
   align-items: center;
   & img {
-    border: 8px ridge $dark-main;
+    border: 4px ridge $accent;
   }
 }
 
@@ -97,32 +86,25 @@ button {
   padding-right: 3vw;
   border-top-left-radius: 20px;
   & img {
-    border: 8px ridge $dark-main;
+    border: 4px ridge $accent;
   }
 }
-.test {
-  width: 80%;
-  height: 40%;
-  display: flex;
-  margin-top: 0.5vh;
-  padding: 0.8vh;
-  max-width: 75%;
-  background-color: antiquewhite;
-  background-image: url("src/assets/spraySmall.png");
-}
+
 .museum__caption {
-  font-size: clamp(11px, 2.5vh, 3rem);
-  font-family: $font-text;
+  font-size: clamp(11px, 2.5vh, 1rem);
   margin-top: 0.5vh;
   margin-left: 1.5vw;
   padding: 0.8vh;
   max-width: 90%;
   background-color: rgb(255, 247, 236);
   color: $darkest-main;
-  border: 1px solid $dark-main;
+  border: 1px solid $accent;
   box-shadow: 0 0 3px $dark-main;
   text-align: left;
-  line-height: 2.3vh;
+}
+
+.fancy {
+  font-size: clamp(12px, 2.5vh, 1.2rem);
 }
 
 .museum__img--button {
@@ -134,13 +116,10 @@ button {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  box-shadow: 0 0 5px grey;
-  box-shadow:
-    $white 0px 0px 0px 1px,
-    0 0 8px grey;
+  box-shadow: 0 0 8px $darkest-main;
 }
-//ARROWS MUSEUM
 
+//ARROWS MUSEUM
 .museum__popUpImg {
   z-index: 2;
   flex-direction: row;
@@ -172,22 +151,27 @@ button {
 }
 
 .museum__navigationArrows {
-  position: fixed;
-  bottom: -7.5vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: -6vh;
 }
 .fleche__haut,
 .fleche__bas {
   width: 8vw;
 }
+.museum__navigationArrows--left {
+  position: relative;
+  bottom: -7vh;
+}
 
 .museum__navigationArrows--left,
 .museum__navigationArrows--right {
-  padding-block: 0.5vw;
-  background-color: #99ccac;
-  border: 1px solid black;
+  background-color: $accent;
+  border: 5px solid $darkest-main;
   border-radius: 50%;
-  margin-right: 0.5rem;
   transform: rotateX(70deg) rotateY(1deg);
+  padding-block: 0.5vw;
   transform-style: preserve-3d;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);

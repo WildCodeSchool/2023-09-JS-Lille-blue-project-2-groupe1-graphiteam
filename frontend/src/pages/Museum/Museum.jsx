@@ -133,6 +133,9 @@ function Museum() {
     }
   };
 
+  const leftClass = `${movingLeft} museum__caption`;
+  const rightClass = `${movingRight} museum__caption`;
+
   return (
     <button type="button" className="museum" onKeyDown={handleKeyPress}>
       <div className="museum__background">
@@ -160,13 +163,12 @@ function Museum() {
                 alt={filteredArts[artsIndexLeft].imgAlt}
               />
             </button>
-            <article className={{ movingLeft } && "museum__caption"}>
-              <strong className="fancy">
-                {`${filteredArts[artsIndexLeft].artist} - ${filteredArts[artsIndexLeft].city} `}
-              </strong>
-              <p className="fancy">
-                {`(${filteredArts[artsIndexLeft].street})`} - {/* <br /> */}
-                {filteredArts[artsIndexLeft].description}
+            <article className={leftClass}>
+              <p>
+                <strong className="fancy">
+                  {filteredArts[artsIndexLeft].artist}
+                </strong>{" "}
+                {`(${filteredArts[artsIndexLeft].city}, ${filteredArts[artsIndexLeft].street}) ${filteredArts[artsIndexLeft].description}`}
               </p>
             </article>
 
@@ -195,13 +197,14 @@ function Museum() {
                 alt={filteredArts[artsIndexRight].imgAlt}
               />
             </button>
-            <p className={movingRight}>
-              <strong>
-                {`${filteredArts[artsIndexRight].artist} - ${filteredArts[artsIndexRight].city} `}
-              </strong>
-              {`(${filteredArts[artsIndexRight].street})`} <br />
-              {filteredArts[artsIndexRight].description}
-            </p>
+            <article className={rightClass}>
+              <p>
+                <strong className="fancy">
+                  {filteredArts[artsIndexRight].artist}
+                </strong>{" "}
+                {`(${filteredArts[artsIndexRight].city}, ${filteredArts[artsIndexRight].street}) ${filteredArts[artsIndexRight].description}`}
+              </p>
+            </article>
             {popUpRight ===
             "museum__wall museum__wall--right museum__popUpImg" ? (
               <p className="museum__img--escapeMessage">
