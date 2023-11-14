@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./DropdownMenu.scss";
-import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { useState, useEffect, useContext } from "react";
+import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
@@ -18,15 +18,14 @@ function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("--Métropole Lilloise--");
-  const [districtTofilter, setDistrictToFilter] = useState("");
+  const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
+  const [districtToFilter, setDistrictToFilter] = useState("");
   const uniqueCity = [];
   arts?.map((item) =>
     uniqueCity.includes(item.city) ? "" : uniqueCity.push(item.city)
   );
-
   const filteredDistrict = arts?.filter((item) =>
-    item.city?.includes(districtTofilter)
+    item.city?.includes(districtToFilter)
   );
   const uniqueDistrict = [];
   filteredDistrict?.map((item) =>

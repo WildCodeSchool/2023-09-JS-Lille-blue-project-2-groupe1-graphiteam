@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-/* import PropTypes from "prop-types"; */
 import "./Museum.scss";
 import { FilterContext } from "../../contexts/filterContext";
 
@@ -156,9 +155,9 @@ function Museum() {
               <img
                 className={movingLeft}
                 src={`${import.meta.env.VITE_BACKEND_URL}/${
-                  arts[artsIndexLeft].imgSrc
+                  filteredArts[artsIndexLeft].imgSrc
                 }`}
-                alt={arts[artsIndexLeft].imgAlt}
+                alt={filteredArts[artsIndexLeft].imgAlt}
               />
             </button>
             <article className={{ movingLeft } && "museum__caption"}>
@@ -191,9 +190,9 @@ function Museum() {
               <img
                 className={movingRight}
                 src={`${import.meta.env.VITE_BACKEND_URL}/${
-                  arts[artsIndexRight].imgSrc
+                  filteredArts[artsIndexRight].imgSrc
                 }`}
-                alt={arts[artsIndexRight].imgAlt}
+                alt={filteredArts[artsIndexRight].imgAlt}
               />
             </button>
             <p className={movingRight}>
@@ -223,7 +222,7 @@ function Museum() {
             <img
               className="fleche__haut"
               src="src/assets/flechehaut96.png"
-              alt=""
+              alt="flèche avant"
             />
           </button>
           <button
@@ -235,7 +234,7 @@ function Museum() {
             <img
               className="fleche__bas"
               src="src/assets/flechebas96.png"
-              alt=""
+              alt="flèche arrière"
             />
           </button>
         </nav>
@@ -243,12 +242,5 @@ function Museum() {
     </button>
   );
 }
-
-// Museum.propTypes = {
-//   arts: PropTypes.shape({
-//     imgAlt: PropTypes.string.isRequired,
-//     imgSrc: PropTypes.string.isRequired,
-//   }).isRequired,
-// };
 
 export default Museum;
