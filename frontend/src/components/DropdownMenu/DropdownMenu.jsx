@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./DropdownMenu.scss";
+import { useState, useEffect, useContext } from "react";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
-import { useState, useEffect } from "react";
+import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
   const [arts, setArts] = useState();
@@ -13,35 +13,52 @@ function DropdownMenu() {
       .catch((error) => console.error(error));
   }, []);
 
+  const { setFilter } = useContext(FilterContext);
+  const [city, setCity] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
   const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
-  const [district, selectDistrict] = useState("");
-  const uniqueCity = [...new Set(arts?.map((item) => item.city))];
-  const filteredDistrict = arts?.filter((item) =>
-    item.city?.includes(district)
+  const [districtToFilter, setDistrictToFilter] = useState("");
+  const uniqueCity = [];
+  arts?.map((item) =>
+    uniqueCity.includes(item.city) ? "" : uniqueCity.push(item.city)
   );
-  const uniqueDistrict = [
-    ...new Set(filteredDistrict?.map((item) => item.district)),
-  ];
-
+  const filteredDistrict = arts?.filter((item) =>
+    item.city?.includes(districtToFilter)
+  );
+  const uniqueDistrict = [];
+  filteredDistrict?.map((item) =>
+    uniqueDistrict.includes(item.district)
+      ? ""
+      : uniqueDistrict.push(item.district)
+  );
   const setOpen = () => {
     setIsOpen(!isOpen);
   };
-
+  const setFilterFunction = (location) => {
+    setFilter(location);
+  };
   const handleClickCity = ({ location }) => {
-    selectDistrict(location);
+    setDistrictToFilter(location);
     setBtnText(location);
     setOpen();
     setshowDistrictList(true);
+    setCity(location);
   };
   const handleClickDistrict = ({ location }) => {
-    selectDistrict(location);
+    setDistrictToFilter(location);
     setBtnText(location);
     setIsOpen(false);
     setshowDistrictList(false);
     setShowVisitButton(true);
+    setFilterFunction(location);
+  };
+  const handleClickCityOnly = () => {
+    setIsOpen(false);
+    setshowDistrictList(false);
+    setShowVisitButton(true);
+    setFilterFunction(city);
   };
   return (
     <div className="dropdownMenu">
@@ -69,7 +86,7 @@ function DropdownMenu() {
                 className="dropdownMenu__button"
                 onClick={() => handleClickCity({ location })}
                 type="submit"
-                key={location}
+                key={`city-${location}`}
               >
                 {location}
               </button>
@@ -79,13 +96,20 @@ function DropdownMenu() {
       )}
       {showDistrictList && (
         <div className="dropdownMenu__districtList">
+          <button
+            type="submit"
+            className="dropdownMenu__button"
+            onClick={handleClickCityOnly}
+          >
+            Toute la ville
+          </button>
           {uniqueDistrict.map((location) => {
             return (
               <button
                 className="dropdownMenu__button"
                 onClick={() => handleClickDistrict({ location })}
                 type="submit"
-                key={location}
+                key={`disctrict-${location}`}
               >
                 {location}
               </button>
@@ -104,12 +128,5 @@ function DropdownMenu() {
     </div>
   );
 }
-
-DropdownMenu.propTypes = {
-  arts: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    district: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default DropdownMenu;
