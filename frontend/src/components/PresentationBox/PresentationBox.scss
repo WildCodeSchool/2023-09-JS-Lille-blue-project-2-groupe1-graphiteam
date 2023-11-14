@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+
+$light-main: rgb(153, 204, 172);
+$dark-main: #4f654e;
+$darkest-main: rgb(56, 52, 46);
+$accent: #ffd353;
+$white: #cbcbcb;
+$outline:
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white,
+  0 0 2px white;
+
+.logo-app {
+  width: 15vw;
+  margin-top: 1vh;
+  filter: drop-shadow(8px 8px 5px $dark-main);
+}
+
+.box__description {
+  overflow: scroll;
+  scrollbar-width: none;
+  width: 50vw;
+  color: $darkest-main;
+  font-family: $font-text;
+  margin-top: 12vh;
+  margin-left: 4vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: ns-resize;
+}
+.box__description::-webkit-scrollbar {
+  display: none;
+}
+article {
+  background-color: white;
+  background-image: url("./src/assets/111386198-ripped-poster-background-grunge-texture-of-torn-advertisement-on-billboard-sheet-metal.png");
+  font-size: clamp(13px, 2.1vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-inline: 4px solid white;
+  font-weight: bold;
+  color: $darkest-main;
+}
+
+.title__description {
+  font-family: $font-title;
+  color: $darkest-main;
+  margin: 3vh;
+}
+
+.text__description {
+  padding: 5%;
+  text-align: left;
+}
+
+.box__paperUp,
+.box__paperDown {
+  max-width: 100%;
+  padding: 0;
+}
+
+strong {
+  color: $accent;
+  text-shadow:
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main,
+    0 0 2px $darkest-main;
+  font-size: clamp(15px, 2.2vw, 1.6rem);
+}
+
+.text__description--first {
+  padding-bottom: 10px;
+}
+
+.text__description--second {
+  padding-top: 0;
+}

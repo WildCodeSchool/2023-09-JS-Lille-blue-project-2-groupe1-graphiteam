@@ -5,7 +5,7 @@ import { FilterContext } from "../../contexts/filterContext";
 function Museum() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
@@ -124,8 +124,17 @@ function Museum() {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "ArrowUp") {
+      handleClickNext(event);
+    }
+    if (event.key === "ArrowDown") {
+      handleClickPrevious(event);
+    }
+  };
+
   return (
-    <div className="museum">
+    <button type="button" className="museum" onKeyDown={handleKeyPress}>
       <div className="museum__background">
         <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
       </div>
@@ -139,11 +148,13 @@ function Museum() {
             >
               <img
                 className={movingLeft}
-                src={`http://localhost:3310/${filteredArts[artsIndexLeft].imgSrc}`}
-                alt={filteredArts[artsIndexLeft].imgAlt}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  arts[artsIndexLeft].imgSrc
+                }`}
+                alt={arts[artsIndexLeft].imgAlt}
               />
             </button>
-            <p className="museum__caption">
+            <p className={{ movingLeft } && "museum__caption"}>
               <strong>
                 {`${filteredArts[artsIndexLeft].artist} - ${filteredArts[artsIndexLeft].city} `}
               </strong>
@@ -169,11 +180,13 @@ function Museum() {
             >
               <img
                 className={movingRight}
-                src={`http://localhost:3310/${filteredArts[artsIndexRight].imgSrc}`}
-                alt={filteredArts[artsIndexRight].imgAlt}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  arts[artsIndexRight].imgSrc
+                }`}
+                alt={arts[artsIndexRight].imgAlt}
               />
             </button>
-            <p className="museum__caption">
+            <p className={movingRight}>
               <strong>
                 {`${filteredArts[artsIndexRight].artist} - ${filteredArts[artsIndexRight].city} `}
               </strong>
@@ -217,7 +230,7 @@ function Museum() {
           </button>
         </nav>
       </div>
-    </div>
+    </button>
   );
 }
 

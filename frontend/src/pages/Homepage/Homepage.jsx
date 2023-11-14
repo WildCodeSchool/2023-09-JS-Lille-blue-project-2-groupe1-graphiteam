@@ -1,5 +1,5 @@
 import "./Homepage.scss";
-import PresentationBox from "../../components/presentationbBox/PresentationBox";
+import PresentationBox from "../../components/PresentationBox/PresentationBox";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 
 function Homepage() {
