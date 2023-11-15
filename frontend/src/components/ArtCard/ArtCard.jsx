@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import "./ArtCard.scss";
 
 function ArtCard({
@@ -37,5 +37,16 @@ function ArtCard({
     </div>
   );
 }
+
+ArtCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  artist: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  district: PropTypes.string.isRequired,
+  street: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+};
 
 export default ArtCard;

@@ -46,11 +46,9 @@ $outline:
 }
 .card__artist {
   margin-left: 0.3vw;
-  text-align: left;
   width: 20vw;
   height: auto;
   justify-content: space-around;
-  // rewrite article
   background-color: transparent;
   background-image: none;
   border-inline: 0;
@@ -81,7 +79,6 @@ $outline:
   display: flex;
   flex-direction: row;
   gap: 5px;
-  // rewrite article
   background-image: none;
   background-color: transparent;
   border-inline: 0;
