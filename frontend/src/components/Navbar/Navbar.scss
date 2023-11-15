@@ -4,10 +4,10 @@ $darkest-main: rgb(56, 52, 46);
 $accent: #ffd353;
 $white: #cbcbcb;
 $outline:
-  3px 0px 0px $darkest-main,
-  -3px 0px 0px $dark-main,
-  0px 3px 0px $darkest-main,
-  0px -3px 0px $dark-main;
+  2px 0px 0px $darkest-main,
+  -2px 0px 0px $dark-main,
+  0px 2px 0px $darkest-main,
+  0px -2px 0px $dark-main;
 
 @font-face {
   font-family: "amsterdamG";
