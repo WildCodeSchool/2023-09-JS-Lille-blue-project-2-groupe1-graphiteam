@@ -1,27 +1,62 @@
+//IMPORT FONT-FAMILY OF THE APP
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+//FONT-FAMILY
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+// COLORS OF THE APP
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$white: rgb(255, 239, 217);
+$accent: #ffd353;
+$white: #cbcbcb;
+//SHADOW OUTLINE
+$outline:
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white,
+  0 0 2px $white;
 
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  min-height: 100vh;
-  background-color: $accent;
-  overflow: hidden;
-}
 
 .homepage {
   display: flex;
+  flex-direction: row;
+  text-align: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("src/assets/bg_main.jpg");
+  background-image: url("/src/assets/wall-3.jpg");
   background-position: top right;
   background-size: 100% 100%;
   animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
+}
+.homepage--button--container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.homepage--title {
+  font-size: clamp(1rem, 8vw, 8rem);
+  font-family: $font-app-name;
+  margin-top: 4vh;
+  text-shadow: $outline;
 }
 
 @keyframes myAnim {

@@ -1,38 +1,45 @@
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$dropdownBG: #ffefd9;
+$accent: #ffd353;
+$white: #cbcbcb;
 
 .iconContainer {
-  background-color: $light-main;
+  background-color: $accent;
   height: 100%;
-  width: 40px;
+  width: 3vw;
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0 8px 0 0;
 }
 .dropdownMenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 8vh 0 0 0;
+}
+.dropdownMenu::-webkit-scrollbar {
+  display: none;
 }
 .dropdownMenu__button {
-  background-color: $dropdownBG;
+  background-color: $dark-main;
   color: $darkest-main;
   border-radius: 8px;
   padding: 0 0 0 50px;
-  border: 1px solid black;
+  box-shadow: 0px 0px 10px 20px $dark-main;
   width: 300px;
   height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 1em;
+  font-size: 2rem;
+  color: $accent;
+  text-shadow: 2px 5px 1px $darkest-main;
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -40,14 +47,35 @@ $dropdownBG: #ffefd9;
     border-color: $dark-main;
   }
 }
+
+.dropdownMenu__cityList {
+  scrollbar-width: none;
+}
+.dropdownMenu__main__button {
+  border-radius: 8px 8px 0 0;
+}
 .button__startVisit {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: $accent;
-  border: 1px solid $darkest-main;
-  border-radius: 8px;
-  padding: 0 0 0 0;
-  width: 200px;
   box-shadow: 2px 4px 4px -1px $darkest-main;
-  justify-content: center;
+  border: 1px solid $darkest-main;
+  border-radius: 0 0 8px 8px;
+  padding: 0 0 0 1vw;
+  width: 25vw;
+  height: 7vh;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+.linkToMuseum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25vw;
+  height: 7vh;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+.button__startVisit a {
+  color: inherit;
+  text-decoration: inherit;
 }
