@@ -34,12 +34,14 @@ $outline:
   flex-direction: column;
   cursor: ns-resize;
 }
+
 .box__description::-webkit-scrollbar {
   display: none;
 }
+
 article {
   background-color: white;
-  background-image: url("./src/assets/111386198-ripped-poster-background-grunge-texture-of-torn-advertisement-on-billboard-sheet-metal.png");
+  background-image: url("./src/assets/posters.png");
   font-size: clamp(13px, 1.2vw, 1.5rem);
   display: flex;
   flex-direction: column;

@@ -16,7 +16,7 @@ function ArtCard({
       <img
         className="card__picture"
         src={`http://localhost:3310/${img}`}
-        alt=""
+        alt="oeuvre"
       />
       <article className="card__artist">
         <h2 className="card__title fancy">{artist}</h2>

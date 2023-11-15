@@ -10,7 +10,7 @@ $darkest-main: rgb(56, 52, 46);
 $accent: rgb(242, 148, 138);
 $white: rgb(255, 239, 217);
 
-.wrapper {
+.landscape__wrapper {
   background-color: $white;
   display: flex;
   flex-direction: column;
@@ -21,9 +21,17 @@ $white: rgb(255, 239, 217);
   color: $darkest-main;
   height: 100vh;
 }
-.portraitGif {
+.landscape__portraitMode {
   margin: 2vh;
   width: 40vw;
   opacity: 70%;
   border-radius: 25px;
+}
+
+.landscape__sign {
+  color: $darkest-main;
+  font-size: 8vh;
+}
+.landscape__portraitMode--explanation {
+  font-size: 5vw;
 }
