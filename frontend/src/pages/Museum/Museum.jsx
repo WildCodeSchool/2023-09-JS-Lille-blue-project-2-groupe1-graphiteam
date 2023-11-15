@@ -165,10 +165,11 @@ function Museum() {
             </button>
             <article className={leftClass}>
               <p>
-                <strong className="fancy">
+                <strong className="museum__caption--artist fancy">
                   {filteredArts[artsIndexLeft].artist}
-                </strong>{" "}
-                {`(${filteredArts[artsIndexLeft].city}, ${filteredArts[artsIndexLeft].street}) ${filteredArts[artsIndexLeft].description}`}
+                </strong>
+                <br />
+                {`${filteredArts[artsIndexLeft].city}, ${filteredArts[artsIndexLeft].street}. `}
               </p>
             </article>
 
@@ -199,10 +200,11 @@ function Museum() {
             </button>
             <article className={rightClass}>
               <p>
-                <strong className="fancy">
+                <strong className="museum__caption--artist fancy">
                   {filteredArts[artsIndexRight].artist}
-                </strong>{" "}
-                {`(${filteredArts[artsIndexRight].city}, ${filteredArts[artsIndexRight].street}) ${filteredArts[artsIndexRight].description}`}
+                </strong>
+                <br />
+                {`${filteredArts[artsIndexRight].city}, ${filteredArts[artsIndexRight].street}. `}
               </p>
             </article>
             {popUpRight ===

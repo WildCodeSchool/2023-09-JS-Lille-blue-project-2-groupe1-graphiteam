@@ -73,7 +73,7 @@ function DropdownMenu() {
             {isOpen ? (
               <div className="iconContainer fancy">
                 <img
-                  className="dropDownMenu__arrow"
+                  className="dropdownMenu__arrow"
                   src="src/assets/yellowUp.png"
                   alt="a spray painted arrow up"
                 />
@@ -81,7 +81,7 @@ function DropdownMenu() {
             ) : (
               <div className="iconContainer fancy">
                 <img
-                  className="dropDownMenu__arrow"
+                  className="dropdownMenu__arrow"
                   src="src/assets/yellowDown.png"
                   alt="a spray painted arrow down"
                 />
@@ -130,9 +130,8 @@ function DropdownMenu() {
           {showVisitButton && (
             <div className="button__startVisit">
               <button type="submit" className="button__startVisit fancy">
-                <Link to="/museum">Exposition</Link>
+                <Link to="/museum">Démarrer la visite</Link>
               </button>
-              <img className="small" src="src/assets/arrowRightHD.png" alt="" />
             </div>
           )}
         </div>

@@ -12,30 +12,33 @@ $dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
 $accent: #ffd353;
 $white: #a4a1a0;
+$outline:
+  2px 0px 0px $darkest-main,
+  -2px 0px 0px $dark-main,
+  0px 2px 0px $darkest-main,
+  0px -2px 0px $dark-main;
 
 .card {
-  background-color: $white;
-  opacity: 90%;
-  width: 38vw;
-  height: 39vh;
+  background-color: white;
+  opacity: 85%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  gap: 5px;
   padding: 1vw;
   border-radius: 15px;
   box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 3vh;
 }
 .card__picture {
-  width: 95%;
-  height: 95%;
+  width: 20vw;
+  height: auto;
   border-radius: 10px;
   border-top: 7px double $accent;
   border-right: 7px double $accent;
-  border-bottom: 7px double $dark-main;
-  border-left: 7px double $dark-main;
+  border-bottom: 7px double $accent;
+  border-left: 7px double $accent;
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
@@ -43,23 +46,56 @@ $white: #a4a1a0;
 }
 .card__artist {
   margin-left: 0.3vw;
-
   text-align: left;
-  width: 100%;
-  height: 100%;
+  width: 20vw;
+  height: auto;
+  justify-content: space-around;
+  // rewrite article
+  background-color: transparent;
+  background-image: none;
+  border-inline: 0;
+  align-items: left;
 }
 .card__title {
   margin-bottom: 1vh;
-  font-family: $font-title;
-  color: $darkest-main;
-
-  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.39);
+  color: $accent;
+  text-shadow: $outline;
+  text-align: center;
+  font-size: 1.5rem;
 }
 .card__description {
   color: $darkest-main;
   font-family: $font-text;
   margin-bottom: 1rem;
+  font-size: clamp(12px, 1.6vw, 1.3rem);
+  line-height: 100%;
 }
-.card__lieu {
-  margin-bottom: 0.5rem;
+
+.card__type {
+  font-family: $font-text;
+}
+
+.card__location {
+  font-family: $font-text;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  // rewrite article
+  background-image: none;
+  background-color: transparent;
+  border-inline: 0;
+}
+
+.artCard__iconMap {
+  width: 1.7vw;
+}
+
+@media screen and (max-height: 450px) {
+  .card {
+    width: 80%;
+  }
+  .card__artist {
+    width: auto;
+  }
 }

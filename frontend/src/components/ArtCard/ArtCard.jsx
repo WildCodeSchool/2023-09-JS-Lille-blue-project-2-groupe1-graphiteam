@@ -10,7 +10,6 @@ function ArtCard({
   street,
   type,
   year,
-  lieu,
 }) {
   return (
     <div className="card">
@@ -20,19 +19,20 @@ function ArtCard({
         alt=""
       />
       <article className="card__artist">
-        <h2 className="card__title">Artiste: {artist}</h2>
-        <h4>Adresse:</h4>
-        <article className="card__lieu">
-          {lieu}
-
-          <p className="card__city"> {city}</p>
-          <p className="card__street"> {street}</p>
-          <p className="card__district"> {district}</p>
-        </article>
-        <h4>Description:</h4>
+        <h2 className="card__title fancy">{artist}</h2>
         <p className="card__description"> {description}</p>
-        <p className="card__type">{type}</p>
-        <p className="card__year">{year}</p>
+        <p className="card__type">
+          {type} - {year}
+        </p>
+
+        <article className="card__location">
+          <img
+            className="artCard__iconMap"
+            src="src/assets/icon_map.png"
+            alt="icône lieu"
+          />
+          <p>{`${street} à ${city} (${district})`}</p>
+        </article>
       </article>
     </div>
   );

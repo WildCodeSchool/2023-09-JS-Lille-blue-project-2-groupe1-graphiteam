@@ -13,11 +13,11 @@ function Catalog() {
   }, []);
   console.warn(arts);
   return (
-    <>
+    <div className="catalog">
       <div className="carrousel">
         <ArtCarrousel />
       </div>
-      <div className="catalog" style={{ overflow: "scroll", height: "100vh" }}>
+      <div className="cards" style={{ overflow: "scroll", overflowX: "clip" }}>
         {arts
           ? arts.map((art) => (
               <ArtCard
@@ -35,7 +35,7 @@ function Catalog() {
             ))
           : "Loading"}
       </div>
-    </>
+    </div>
   );
 }
 
