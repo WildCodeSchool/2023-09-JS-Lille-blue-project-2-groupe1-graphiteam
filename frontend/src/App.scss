@@ -11,19 +11,6 @@ $Fancy: "Sedgwick Ave";
     display: none;
   }
 }
-@font-face {
-  font-family: "blowBrush";
-  src: url("BlowBrush.eot");
-  src:
-    url("../../fonts/BlowBrush.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/BlowBrush.woff2") format("woff2"),
-    url("../../fonts/BlowBrush.woff") format("woff"),
-    url("../../fonts/BlowBrush.ttf") format("truetype"),
-    url("../../fonts/BlowBrush.svg#BlowBrush") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "attackG";

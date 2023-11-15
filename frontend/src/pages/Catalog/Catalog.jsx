@@ -11,7 +11,6 @@ function Catalog() {
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
   }, []);
-  console.warn(arts);
   return (
     <div className="catalog">
       <div className="carrousel">
