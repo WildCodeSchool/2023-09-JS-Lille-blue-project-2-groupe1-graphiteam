@@ -4,23 +4,24 @@ $darkest-main: rgb(56, 52, 46);
 $accent: #ffd353;
 $white: #cbcbcb;
 $outline:
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white;
+  2px 0px 0px $darkest-main,
+  -2px 0px 0px $dark-main,
+  0px 2px 0px $darkest-main,
+  0px -2px 0px $dark-main;
 
+@font-face {
+  font-family: "blowBrush";
+  src: url("BlowBrush.eot");
+  src:
+    url("../../fonts/BlowBrush.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/BlowBrush.woff2") format("woff2"),
+    url("../../fonts/BlowBrush.woff") format("woff"),
+    url("../../fonts/BlowBrush.ttf") format("truetype"),
+    url("../../fonts/BlowBrush.svg#BlowBrush") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,7 @@ $outline:
 
 .navbar__ul {
   background: white;
-  background-image: url("/src/assets/111386198-ripped-poster-background-grunge-texture-of-torn-advertisement-on-billboard-sheet-metal.png");
+  background-image: url("/src/assets/posters.png");
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -57,11 +58,21 @@ $outline:
   align-items: center;
 }
 
-.navbar__title {
-  text-shadow: $outline;
+.navbar__ul {
+  .navbar__button {
+    a {
+      color: $accent;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-family: "blowBrush";
+    }
+  }
 }
 
 .navbar__title h1 {
-  font-size: clamp(1.8rem, 6vh, 2.5rem);
-  color: $darkest-main;
+  padding-top: 1vh;
+  font-size: clamp(1.8rem, 6vh, 1.9rem);
+  color: $accent;
+  text-shadow: $outline;
+  font-family: "blowBrush";
 }

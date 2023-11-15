@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./DropdownMenu.scss";
 import { useState, useEffect, useContext } from "react";
-import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { FilterContext } from "../../contexts/filterContext";
 
 function DropdownMenu() {
@@ -18,8 +17,9 @@ function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("-- Métropole Lilloise --");
+  const [btnText, setBtnText] = useState("Métropole Lilloise");
   const [districtToFilter, setDistrictToFilter] = useState("");
+
   const uniqueCity = [];
   arts?.map((item) =>
     uniqueCity.includes(item.city) ? "" : uniqueCity.push(item.city)
@@ -61,70 +61,94 @@ function DropdownMenu() {
     setFilterFunction(city);
   };
   return (
-    <div className="dropdownMenu">
-      <button
-        className="dropdownMenu__button dropdownMenu__main__button"
-        type="submit"
-        onClick={setOpen}
-      >
-        {btnText}
-        {isOpen ? (
-          <div className="iconContainer">
-            <AiOutlineCaretUp size="1.5vw" />
-          </div>
-        ) : (
-          <div className="iconContainer">
-            <AiOutlineCaretDown size="1.5vw" />
-          </div>
-        )}
-      </button>
-      {isOpen && (
-        <div className="dropdownMenu__cityList">
-          {uniqueCity.map((location) => {
-            return (
-              <button
-                className="dropdownMenu__button"
-                onClick={() => handleClickCity({ location })}
-                type="submit"
-                key={`city-${location}`}
-              >
-                {location}
-              </button>
-            );
-          })}
-        </div>
-      )}
-      {showDistrictList && (
-        <div className="dropdownMenu__districtList">
+    <div>
+      <div className="dropdown__Container">
+        <div className="dropdownMenu">
           <button
+            className="dropdownMenu__button fancy"
             type="submit"
-            className="dropdownMenu__button"
-            onClick={handleClickCityOnly}
+            onClick={setOpen}
           >
-            Toute la ville
+            {btnText}
+            {isOpen ? (
+              <div className="iconContainer fancy">
+                <img
+                  className="dropdownMenu__arrow"
+                  src="src/assets/yellowUp.png"
+                  alt="a spray painted arrow up"
+                />
+              </div>
+            ) : (
+              <div className="iconContainer fancy">
+                <img
+                  className="dropdownMenu__arrow"
+                  src="src/assets/yellowDown.png"
+                  alt="a spray painted arrow down"
+                />
+              </div>
+            )}
           </button>
-          {uniqueDistrict.map((location) => {
-            return (
+          {isOpen && (
+            <div className="dropdownMenu__cityList fancy">
+              {uniqueCity.map((location) => {
+                return (
+                  <button
+                    className="dropdownMenu__button"
+                    onClick={() => handleClickCity({ location })}
+                    type="submit"
+                    key={`city-${location}`}
+                  >
+                    {location}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {showDistrictList && (
+            <div className="dropdownMenu__districtList city">
               <button
-                className="dropdownMenu__button"
-                onClick={() => handleClickDistrict({ location })}
                 type="submit"
-                key={`disctrict-${location}`}
+                className="dropdownMenu__button fancy"
+                onClick={handleClickCityOnly}
               >
-                {location}
+                Toute la ville
               </button>
-            );
-          })}
+              {uniqueDistrict.map((location) => {
+                return (
+                  <button
+                    className="dropdownMenu__button fancy"
+                    onClick={() => handleClickDistrict({ location })}
+                    type="submit"
+                    key={`disctrict-${location}`}
+                  >
+                    {location}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {showVisitButton && (
+            <div className="button__startVisit">
+              <button type="submit" className="button__startVisit fancy">
+                <Link to="/museum">Démarrer la visite</Link>
+              </button>
+            </div>
+          )}
         </div>
-      )}
-      {showVisitButton && (
-        <button type="submit" className="button__startVisit">
-          <Link to="/museum">
-            Exposition {">"}
-            {">"}
-          </Link>
-        </button>
-      )}
+        {showVisitButton ? (
+          <img
+            className="dropdownMenu__dripping"
+            src="src/assets/dripDDYellow.png"
+            alt="dripping paint"
+          />
+        ) : (
+          <img
+            className="dropdownMenu__dripping"
+            src="src/assets/dripDDGreen.png"
+            alt="dripping paint"
+          />
+        )}
+      </div>
     </div>
   );
 }

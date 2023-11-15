@@ -2,10 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Sedgwick+Ave&display=swap");
+
+@font-face {
+  font-family: "attackG";
+  src: url("../../fonts/aAttackGraffiti.eot");
+  src:
+    url("../../fonts/aAttackGraffiti.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/aAttackGraffiti.woff2") format("woff2"),
+    url("../../fonts/aAttackGraffiti.woff") format("woff"),
+    url("../../fonts/aAttackGraffiti.ttf") format("truetype"),
+    url("../../fonts/aAttackGraffiti.svg#aAttackGraffiti") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 //FONT-FAMILY
 $font-app-name: "Saira Stencil One", sans-serif;
-$font-title: "Source Serif 4", serif;
 $font-text: "Source Sans 3", sans-serif;
+$font-title: "attackG";
 // COLORS OF THE APP
 $light-main: rgb(153, 204, 172);
 $dark-main: #4f654e;
@@ -14,22 +30,10 @@ $accent: #ffd353;
 $white: #cbcbcb;
 //SHADOW OUTLINE
 $outline:
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white,
-  0 0 2px $white;
+  8px 0px 0px $darkest-main,
+  -8px 0px 0px $dark-main,
+  0px 8px 0px $darkest-main,
+  0px -8px 0px $dark-main;
 
 * {
   margin: 0;
@@ -45,28 +49,26 @@ $outline:
   background-image: url("/src/assets/wall-3.jpg");
   background-position: top right;
   background-size: 100% 100%;
-  animation: myAnim 15s ease-in-out 0s infinite alternate-reverse none;
 }
+
 .homepage--button--container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .homepage--title {
-  font-size: clamp(1rem, 8vw, 8rem);
-  font-family: $font-app-name;
-  margin-top: 4vh;
+  z-index: 100;
+  color: $accent;
+  font-size: clamp(1rem, 6vw, 8rem);
+  font-family: $font-title;
+  margin-top: 25vh;
   text-shadow: $outline;
 }
 
-@keyframes myAnim {
-  0% {
-    background-position: right top;
-    background-size: 100% 100%;
-  }
-
-  100% {
-    background-position: right top;
-    background-size: 150% 150%;
-  }
+.homepage--banner {
+  position: absolute;
+  left: 0;
+  top: -20vh;
+  z-index: 1;
+  width: 100vw;
 }

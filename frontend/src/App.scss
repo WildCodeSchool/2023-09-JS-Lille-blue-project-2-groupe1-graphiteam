@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Montserrat&family=Sedgwick+Ave&display=swap");
+$Fancy: "Sedgwick Ave";
+
 @media only screen and (orientation: portrait) {
   .landscape {
     display: none;
@@ -7,4 +10,21 @@
   .warning-msg {
     display: none;
   }
+}
+
+@font-face {
+  font-family: "attackG";
+  src: url("../../fonts/aAttackGraffiti.eot");
+  src:
+    url("../../fonts/aAttackGraffiti.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/aAttackGraffiti.woff2") format("woff2"),
+    url("../../fonts/aAttackGraffiti.woff") format("woff"),
+    url("../../fonts/aAttackGraffiti.ttf") format("truetype"),
+    url("../../fonts/aAttackGraffiti.svg#aAttackGraffiti") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.fancy {
+  font-family: $Fancy;
 }

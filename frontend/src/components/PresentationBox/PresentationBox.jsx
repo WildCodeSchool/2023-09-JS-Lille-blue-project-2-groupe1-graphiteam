@@ -13,7 +13,7 @@ export default function PresentationBox() {
         <img
           src="./src/assets/lsaLogo.png"
           className="logo-app"
-          alt="L S A letter in a graffity style, logo of the page"
+          alt="lettres L S A acronyme de Lille street art"
         />
         <p className="text__description text__description--first">
           Le Street Art se cache dans la ville, se devine, disparaît au gré des

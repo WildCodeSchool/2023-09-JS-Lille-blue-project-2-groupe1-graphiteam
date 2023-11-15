@@ -7,7 +7,8 @@ function Homepage() {
     <div className="homepage">
       <PresentationBox />
       <div className="homepage--button--container">
-        <h1 className="homepage--title">Lille Street Art</h1>
+        <h1 className="homepage--title fancy"> Lille Street Art</h1>
+
         <DropdownMenu />
       </div>
     </div>
