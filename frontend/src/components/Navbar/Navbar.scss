@@ -36,7 +36,7 @@ $outline:
 
 .navbar__ul {
   background: white;
-  background-image: url("/src/assets/111386198-ripped-poster-background-grunge-texture-of-torn-advertisement-on-billboard-sheet-metal.png");
+  background-image: url("/src/assets/posters.png");
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -74,4 +74,5 @@ $outline:
   font-size: clamp(1.8rem, 6vh, 1.9rem);
   color: $accent;
   text-shadow: $outline;
+  font-family: "blowBrush";
 }
