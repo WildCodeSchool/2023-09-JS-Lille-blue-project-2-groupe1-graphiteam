@@ -5,7 +5,6 @@ import "./App.scss";
 import LandscapeMsg from "./components/LandscapeMsg/LandscapeMsg";
 import Navbar from "./components/Navbar/Navbar";
 import { FilterProvider } from "./contexts/filterContext";
-import "./fonts/DonGraffiti.otf";
 
 function App() {
   return (

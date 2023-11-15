@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Montserrat&family=Sedgwick+Ave&display=swap");
-$title: "Hind Madurai", sans-serif;
-$text: "Montserrat", sans-serif;
 $Fancy: "Sedgwick Ave";
 
 @media only screen and (orientation: portrait) {
@@ -14,12 +12,6 @@ $Fancy: "Sedgwick Ave";
   }
 }
 @font-face {
-  font-family: "donGraffiti";
-  src:
-    local("DonGraffiti"),
-    url("./fonts/DonGraffiti.otf") format("opentype");
-}
-@font-face {
   font-family: "blowBrush";
   src: url("BlowBrush.eot");
   src:
@@ -28,19 +20,6 @@ $Fancy: "Sedgwick Ave";
     url("../../fonts/BlowBrush.woff") format("woff"),
     url("../../fonts/BlowBrush.ttf") format("truetype"),
     url("../../fonts/BlowBrush.svg#BlowBrush") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "adrippingmarker";
-  src: url("adrippingmarker.eot");
-  src:
-    url("adrippingmarker.eot?#iefix") format("embedded-opentype"),
-    url("adrippingmarker.woff2") format("woff2"),
-    url("adrippingmarker.woff") format("woff"),
-    url("adrippingmarker.ttf") format("truetype"),
-    url("adrippingmarker.svg#adrippingmarker") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -59,32 +38,6 @@ $Fancy: "Sedgwick Ave";
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: "amsterdamG";
-  src: url("../../fonts/AmsterdamGraffiti.eot");
-  src:
-    url("../../fonts/AmsterdamGraffiti.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/AmsterdamGraffiti.woff2") format("woff2"),
-    url("../../fonts/AmsterdamGraffiti.woff") format("woff"),
-    url("../../fonts/AmsterdamGraffiti.ttf") format("truetype"),
-    url("../../fonts/AmsterdamGraffiti.svg#AmsterdamGraffiti") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-.title {
-  font-family: $title;
-}
 .fancy {
   font-family: $Fancy;
-}
-.text {
-  font-family: $text;
-}
-.tt {
-  font-family: $Fancy;
-}
-.drip {
-  font-family: "drip";
 }

@@ -99,7 +99,6 @@ button {
   color: $darkest-main;
   text-align: left;
   font-family: $font-text;
-  // enlever caption
   text-align: center;
   background-color: transparent;
   background-image: none;
@@ -165,8 +164,8 @@ button {
   flex-direction: column;
   bottom: -6vh;
 }
-.fleche__haut,
-.fleche__bas {
+.arrow__up,
+.arrow__down {
   width: 8vw;
 }
 .museum__navigationArrows--left {

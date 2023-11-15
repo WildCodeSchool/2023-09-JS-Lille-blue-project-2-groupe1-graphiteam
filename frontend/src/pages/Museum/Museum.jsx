@@ -225,7 +225,7 @@ function Museum() {
             label="flecheavant"
           >
             <img
-              className="fleche__haut"
+              className="arrow__up"
               src="src/assets/flechehaut96.png"
               alt="flèche avant"
             />
@@ -234,10 +234,10 @@ function Museum() {
             type="button"
             className={`museum__navigationArrows--right ${isDisabled}`}
             onClick={handleClickPrevious}
-            label="flechearriere"
+            label="flèche arriere"
           >
             <img
-              className="fleche__bas"
+              className="arrow__down"
               src="src/assets/flechebas96.png"
               alt="flèche arrière"
             />

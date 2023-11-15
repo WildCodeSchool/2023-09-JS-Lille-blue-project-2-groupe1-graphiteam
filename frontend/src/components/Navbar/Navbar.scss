@@ -10,14 +10,14 @@ $outline:
   0px -2px 0px $dark-main;
 
 @font-face {
-  font-family: "amsterdamG";
-  src: url("../../fonts/AmsterdamGraffiti.eot");
+  font-family: "blowBrush";
+  src: url("BlowBrush.eot");
   src:
-    url("../../fonts/AmsterdamGraffiti.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/AmsterdamGraffiti.woff2") format("woff2"),
-    url("../../fonts/AmsterdamGraffiti.woff") format("woff"),
-    url("../../fonts/AmsterdamGraffiti.ttf") format("truetype"),
-    url("../../fonts/AmsterdamGraffiti.svg#AmsterdamGraffiti") format("svg");
+    url("../../fonts/BlowBrush.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/BlowBrush.woff2") format("woff2"),
+    url("../../fonts/BlowBrush.woff") format("woff"),
+    url("../../fonts/BlowBrush.ttf") format("truetype"),
+    url("../../fonts/BlowBrush.svg#BlowBrush") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -74,4 +74,5 @@ $outline:
   font-size: clamp(1.8rem, 6vh, 1.9rem);
   color: $accent;
   text-shadow: $outline;
+  font-family: "blowBrush";
 }

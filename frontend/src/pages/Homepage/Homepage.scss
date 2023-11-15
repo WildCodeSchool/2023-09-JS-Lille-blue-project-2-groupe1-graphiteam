@@ -5,20 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lemon&family=Sedgwick+Ave&display=swap");
 
 @font-face {
-  font-family: "donGraffiti";
-  src: url("../../fonts/DonGraffitiRegular.eot");
-  src:
-    url("../../fonts/DonGraffitiRegular.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/DonGraffitiRegular.woff2") format("woff2"),
-    url("../../fonts/DonGraffitiRegular.woff") format("woff"),
-    url("../../fonts/DonGraffitiRegular.ttf") format("truetype"),
-    url("../../fonts/DonGraffitiRegular.svg#DonGraffitiRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "blowBrush";
   src: url("BlowBrush.eot");
   src:
@@ -46,25 +32,10 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "amsterdamG";
-  src: url("../../fonts/AmsterdamGraffiti.eot");
-  src:
-    url("../../fonts/AmsterdamGraffiti.eot?#iefix") format("embedded-opentype"),
-    url("../../fonts/AmsterdamGraffiti.woff2") format("woff2"),
-    url("../../fonts/AmsterdamGraffiti.woff") format("woff"),
-    url("../../fonts/AmsterdamGraffiti.ttf") format("truetype"),
-    url("../../fonts/AmsterdamGraffiti.svg#AmsterdamGraffiti") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 //FONT-FAMILY
 $font-app-name: "Saira Stencil One", sans-serif;
-$font-title: "Source Serif 4", serif;
 $font-text: "Source Sans 3", sans-serif;
-$font-test: "attackG";
+$font-title: "attackG";
 // COLORS OF THE APP
 $light-main: rgb(153, 204, 172);
 $dark-main: #4f654e;
@@ -103,7 +74,7 @@ $outline:
   z-index: 100;
   color: $accent;
   font-size: clamp(1rem, 6vw, 8rem);
-  font-family: $font-test;
+  font-family: $font-title;
   margin-top: 25vh;
   text-shadow: $outline;
 }
