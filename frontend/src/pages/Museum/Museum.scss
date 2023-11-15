@@ -120,11 +120,10 @@ button {
   max-height: 100%;
   box-shadow: 0 0 8px $darkest-main;
   cursor: pointer;
-  transition: 1s;
 }
 
 .museum__wall img:hover {
-  transform: scale(1.05);
+  border: 4px ridge $dark-main;
 }
 
 //ARROWS MUSEUM
