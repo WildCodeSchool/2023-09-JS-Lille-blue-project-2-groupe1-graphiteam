@@ -1,6 +1,7 @@
 import "./Catalog.scss";
 import { useState, useEffect } from "react";
 import ArtCard from "../../components/ArtCard/ArtCard";
+import ArtCarrousel from "../../components/ArtCarrousel/ArtCarrousel";
 
 function Catalog() {
   const [arts, setArts] = useState();
@@ -12,9 +13,14 @@ function Catalog() {
   }, []);
   console.warn(arts);
   return (
-    <div className="catalog" style={{ overflow: "scroll", height: "100vh" }}>
-      {arts ? arts.map((art) => <ArtCard key={art.id} />) : "Loading"}
-    </div>
+    <>
+      <div className="carrousel">
+        <ArtCarrousel />
+      </div>
+      <div className="catalog" style={{ overflow: "scroll", height: "100vh" }}>
+        {arts ? arts.map((art) => <ArtCard key={art.id} />) : "Loading"}
+      </div>
+    </>
   );
 }
 
