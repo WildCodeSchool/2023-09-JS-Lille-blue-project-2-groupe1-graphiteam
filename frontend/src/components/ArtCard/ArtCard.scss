@@ -1,17 +1,65 @@
+//IMPORT FONT-FAMILY OF THE APP
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+//FONT-FAMILY
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+// COLORS OF THE APP
 $light-main: rgb(153, 204, 172);
-$dark-main: #4f654e;
+$dark-main: rgb(115, 125, 98);
 $darkest-main: rgb(56, 52, 46);
-$accent: #ffd353;
-$white: #a4a1a0;
+$accent: rgb(242, 148, 138);
+$white: rgb(255, 239, 217);
 
 .card {
-  background-color: antiquewhite;
-  width: 20vw;
-  height: 20vh;
+  background-color: $white;
+  opacity: 90%;
+  width: 38vw;
+  height: 39vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 3vw;
+  padding: 1vw;
   border-radius: 15px;
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.75);
+}
+.card__picture {
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+  border-top: 7px double #f2948a;
+  border-right: 7px double #f2948a;
+  border-bottom: 7px double #737e62;
+  border-left: 7px double #737e62;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.75);
+  margin-right: 0.5rem;
+}
+.card__artist {
+  margin-left: 0.3vw;
+
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+.card__title {
+  margin-bottom: 1vh;
+  font-family: $font-title;
+  color: $darkest-main;
+
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.39);
+}
+.card__description {
+  color: $darkest-main;
+  font-family: $font-text;
+  margin-bottom: 1rem;
+}
+.card__lieu {
+  margin-bottom: 0.5rem;
 }
