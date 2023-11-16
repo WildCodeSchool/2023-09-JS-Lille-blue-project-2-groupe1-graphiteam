@@ -25,7 +25,6 @@ $outline:
   overflow: scroll;
   scrollbar-width: none;
   width: 50vw;
-  color: $darkest-main;
   font-family: $font-text;
   margin-top: 12vh;
   margin-left: 4vw;
@@ -48,7 +47,6 @@ article {
   align-items: center;
   border-inline: 4px solid white;
   font-weight: bold;
-  color: $darkest-main;
 }
 
 .title__description {
