@@ -22,7 +22,7 @@ function ArtCard({
         <h2 className="card__title fancy">{artist}</h2>
         <p className="card__description"> {description}</p>
         <p className="card__type">
-          {type} - {year}
+          {type} de {year}.
         </p>
 
         <article className="card__location">

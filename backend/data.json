@@ -98,14 +98,14 @@
   },
   {
     "id": "09",
-    "artist": "Jeroo, Spyre, Sly2, Grey, Eyes.B et Sancé",
+    "artist": "Jeroo, Spyre (...)",
     "imgSrc": "/Collectif_Moulins_01.jpg",
     "imgAlt": "Fresque collective incluant une très grande souris.",
     "city": "Lille",
     "district": "Moulins",
     "street": "rue Dupetit Thouars",
     "year": "2016",
-    "description": "BIG 2016 - Fresque réalisée lors de la BIG 2016 (Battle Internationale de Graffiti) organisée par l'association Epsilone. ",
+    "description": "BIG 2016 - Fresque réalisée par Jeroo, Spyre, Sly2, Grey, Eyes.B et Sancé lors de la BIG 2016 (Battle Internationale de Graffiti) organisée par l'association Epsilone.",
     "type": "Fresque"
   },
   {
@@ -122,7 +122,7 @@
   },
   {
     "id": "11",
-    "artist": "Collectif Des Friches et des Lettres",
+    "artist": "Des Friches et des Lettres",
     "imgSrc": "/desfrichesetdeslettres_roubaix_2018.jpg",
     "imgAlt": "Un bébé mannequin de crash test.",
     "city": "Roubaix",
@@ -278,7 +278,7 @@
   },
   {
     "id": "24",
-    "artist": "Lady Alezia et Monsieur Cana",
+    "artist": "Lady Alezia et M. Cana",
     "imgSrc": "/LadyAlezia_Villeneuve_01.jpg",
     "imgAlt": "Portrait de femme signé par une calligraphie.",
     "city": "Villeneuve d'Ascq",
@@ -326,7 +326,7 @@
   },
   {
     "id": "28",
-    "artist": "Nean, Rocket01 et Benjamin Duquenne",
+    "artist": "Nean, Rocket01 (...)",
     "imgSrc": "/Nean_Rocket01_BenjaminDuquenne_Roubaix_01.jpg",
     "imgAlt": "Ville sous cloche et oiseau.",
     "city": "Roubaix",
@@ -422,7 +422,7 @@
   },
   {
     "id": "36",
-    "artist": "Tlacolulokos et Lady Alezia",
+    "artist": "Tlacolulokos, Lady Alezia",
     "imgSrc": "/tlacolulokosLadyAlezia_moulins_2019.jpg",
     "imgAlt": "Portraits de femmes mexicaines et calligraphies.",
     "city": "Lille",

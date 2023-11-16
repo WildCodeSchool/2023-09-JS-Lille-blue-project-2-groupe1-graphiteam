@@ -91,12 +91,11 @@ button {
 }
 
 .museum__caption {
-  font-size: clamp(15px, 3vh, 2rem);
+  font-size: clamp(12px, 3vh, 2rem);
   margin-top: 0.5vh;
   margin-left: 1.5vw;
   padding: 0.8vh;
   max-width: 90%;
-  color: $darkest-main;
   text-align: left;
   font-family: $font-text;
   text-align: center;

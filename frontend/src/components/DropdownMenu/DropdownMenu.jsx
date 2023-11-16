@@ -17,7 +17,7 @@ function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDistrictList, setshowDistrictList] = useState(false);
   const [showVisitButton, setShowVisitButton] = useState(false);
-  const [btnText, setBtnText] = useState("Métropole Lilloise");
+  const [btnText, setBtnText] = useState("Choisissez votre ville");
   const [districtToFilter, setDistrictToFilter] = useState("");
 
   const uniqueCity = [];
