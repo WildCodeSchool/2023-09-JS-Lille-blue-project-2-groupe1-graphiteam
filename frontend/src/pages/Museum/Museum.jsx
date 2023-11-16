@@ -1,17 +1,30 @@
-import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect, useContext } from "react";
 import "./Museum.scss";
+import { FilterContext } from "../../contexts/filterContext";
 
 function Museum() {
   const [arts, setArts] = useState();
   useEffect(() => {
-    fetch("http://localhost:3310/artpieces")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/artpieces`)
       .then((response) => response.json())
       .then((data) => setArts(data))
       .catch((error) => console.error(error));
   }, []);
   const [artsIndexLeft, setArtsIndexLeft] = useState(0);
   const [artsIndexRight, setArtsIndexRight] = useState(1);
+  const { filter } = useContext(FilterContext);
+  const city = [
+    "Lille",
+    "Tourcoing",
+    "Roubaix",
+    "Hellemmes",
+    "Marquette-Lez-Lille",
+    "Villeneuve d'Ascq",
+    "Saint-André-Lez-Lille",
+  ];
+  const filteredArts = city.includes(filter)
+    ? arts?.filter((item) => item.city?.includes(filter))
+    : arts?.filter((item) => item.district?.includes(filter));
   const [movingLeft, setMovingLeft] = useState("");
   const [movingRight, setMovingRight] = useState("");
   const [isDisabled, setIsDisabled] = useState("");
@@ -51,12 +64,12 @@ function Museum() {
     }, 2000);
   };
   const incrementIndex = () => {
-    if (artsIndexLeft >= arts.length - 1) {
+    if (artsIndexLeft >= filteredArts.length - 2) {
       setArtsIndexLeft(0);
     } else {
       setArtsIndexLeft(artsIndexLeft + 2);
     }
-    if (artsIndexRight >= arts.length - 2) {
+    if (artsIndexRight >= filteredArts.length - 2) {
       setArtsIndexRight(1);
     } else {
       setArtsIndexRight(artsIndexRight + 2);
@@ -64,12 +77,12 @@ function Museum() {
   };
   const decrementIndex = () => {
     if (artsIndexLeft <= 1) {
-      setArtsIndexLeft(arts.length - 1);
+      setArtsIndexLeft(filteredArts.length - 1);
     } else {
       setArtsIndexLeft(artsIndexLeft - 2);
     }
     if (artsIndexRight <= 1) {
-      setArtsIndexRight(arts.length - 2);
+      setArtsIndexRight(filteredArts.length - 2);
     } else {
       setArtsIndexRight(artsIndexRight - 2);
     }
@@ -111,14 +124,32 @@ function Museum() {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "ArrowUp") {
+      handleClickNext(event);
+    }
+    if (event.key === "ArrowDown") {
+      handleClickPrevious(event);
+    }
+  };
+
+  const leftClass = `${movingLeft} museum__caption`;
+  const rightClass = `${movingRight} museum__caption`;
+
   return (
-    <div className="museum">
+    <button type="button" className="museum" onKeyDown={handleKeyPress}>
       <div className="museum__background">
-        <img src="src/assets/bg main.jpg" alt="Portrait de Camille Claudel" />
+        <img src="src/assets/anguille.png" alt="Portrait de Camille Claudel" />
       </div>
       <div className="museum__walls">
-        {arts ? (
-          <div className={popUpLeft}>
+        {filteredArts ? (
+          <div
+            className={
+              filteredArts?.length === 1
+                ? "museum__wall museum__wall--left museum__popUpImg"
+                : popUpLeft
+            }
+          >
             <button
               type="button"
               className="museum__img--button"
@@ -126,20 +157,25 @@ function Museum() {
             >
               <img
                 className={movingLeft}
-                src={`http://localhost:3310/${arts[artsIndexLeft].imgSrc}`}
-                alt={arts[artsIndexLeft].imgAlt}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  filteredArts[artsIndexLeft].imgSrc
+                }`}
+                alt={filteredArts[artsIndexLeft].imgAlt}
               />
             </button>
-            <p className="museum__caption">
-              <strong>
-                {`${arts[artsIndexLeft].artist} - ${arts[artsIndexLeft].city} `}
-              </strong>
-              {`(${arts[artsIndexLeft].street})`} <br />
-              {arts[artsIndexLeft].description}
-            </p>
+            <article className={leftClass}>
+              <p>
+                <strong className="museum__caption--artist fancy">
+                  {filteredArts[artsIndexLeft].artist}
+                </strong>
+                <br />
+                {`${filteredArts[artsIndexLeft].city}, ${filteredArts[artsIndexLeft].street}. `}
+              </p>
+            </article>
+
             {popUpLeft ===
             "museum__wall museum__wall--left museum__popUpImg" ? (
-              <p className="museum__img--escapeMessage">
+              <p className="museum__img--escapeMessage text">
                 Cliquez ou touchez l'oeuvre pour retourner au Musée.
               </p>
             ) : null}
@@ -147,7 +183,7 @@ function Museum() {
         ) : (
           "Loading"
         )}
-        {arts ? (
+        {filteredArts?.length > 1 ? (
           <div className={popUpRight}>
             <button
               type="button"
@@ -156,17 +192,21 @@ function Museum() {
             >
               <img
                 className={movingRight}
-                src={`http://localhost:3310/${arts[artsIndexRight].imgSrc}`}
-                alt={arts[artsIndexRight].imgAlt}
+                src={`${import.meta.env.VITE_BACKEND_URL}/${
+                  filteredArts[artsIndexRight].imgSrc
+                }`}
+                alt={filteredArts[artsIndexRight].imgAlt}
               />
             </button>
-            <p className="museum__caption">
-              <strong>
-                {`${arts[artsIndexRight].artist} - ${arts[artsIndexRight].city} `}
-              </strong>
-              {`(${arts[artsIndexRight].street})`} <br />
-              {arts[artsIndexRight].description}
-            </p>
+            <article className={rightClass}>
+              <p>
+                <strong className="museum__caption--artist fancy">
+                  {filteredArts[artsIndexRight].artist}
+                </strong>
+                <br />
+                {`${filteredArts[artsIndexRight].city}, ${filteredArts[artsIndexRight].street}. `}
+              </p>
+            </article>
             {popUpRight ===
             "museum__wall museum__wall--right museum__popUpImg" ? (
               <p className="museum__img--escapeMessage">
@@ -185,34 +225,27 @@ function Museum() {
             label="flecheavant"
           >
             <img
-              className="fleche__haut"
+              className="arrow__up"
               src="src/assets/flechehaut96.png"
-              alt=""
+              alt="flèche avant"
             />
           </button>
           <button
             type="button"
             className={`museum__navigationArrows--right ${isDisabled}`}
             onClick={handleClickPrevious}
-            label="flechearriere"
+            label="flèche arriere"
           >
             <img
-              className="fleche__bas"
+              className="arrow__down"
               src="src/assets/flechebas96.png"
-              alt=""
+              alt="flèche arrière"
             />
           </button>
         </nav>
       </div>
-    </div>
+    </button>
   );
 }
-
-Museum.propTypes = {
-  arts: PropTypes.shape({
-    imgAlt: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default Museum;

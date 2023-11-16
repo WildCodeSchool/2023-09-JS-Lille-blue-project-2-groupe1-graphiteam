@@ -58,6 +58,11 @@ function Navbar() {
           </button>
         </li>
       </ul>
+      <img
+        alt="papier déchiré"
+        className="navbar__img"
+        src="./src/assets/023.png"
+      />
     </div>
   );
 }

@@ -1,16 +1,29 @@
+//IMPORT FONT-FAMILY OF THE APP
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
+//FONT-FAMILY
+$font-app-name: "Saira Stencil One", sans-serif;
+$font-title: "Source Serif 4", serif;
+$font-text: "Source Sans 3", sans-serif;
+
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
+$dark-main: #4f654e;
 $darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$white: rgb(255, 239, 217);
+$accent: #ffd353;
+$white: #a4a1a0;
 
 body {
   margin: 0;
   background-color: $accent;
-  background-image: url("src/assets/gravel.png");
+  background-image: url("src/assets/vieux-lille_def.jpg");
+  background-size: cover;
   overflow: hidden;
 }
 
+button {
+  all: unset;
+}
 .museum {
   display: flex;
   height: 100%;
@@ -24,24 +37,25 @@ body {
   width: 100%;
 }
 .museum__background img {
-  height: 89%;
+  height: 100%;
   width: 100%;
   border-bottom: 1px solid $dark-main;
 }
 
 .museum__walls {
+  height: 80vh;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 9%;
   display: flex;
   perspective: 500px;
   position: absolute;
-  bottom: 2%;
+  bottom: 2.5%;
   width: 100%;
 }
 .museum__wall {
+  border: 0.7vh solid white;
   background-color: $white;
-  border: 1px solid $white;
   align-items: center;
   padding-top: 3vh;
   padding-inline: 1vw;
@@ -49,7 +63,8 @@ body {
   width: 36vw;
   display: flex;
   flex-direction: column;
-  background-image: url("src/assets/seamless_wall_texture_by_hhh316_d4gbwzc-pre.png");
+  background-image: url("src/assets/40.png");
+  background-size: cover;
 }
 
 .museum__wall--left {
@@ -57,11 +72,10 @@ body {
   transform: rotateY(25deg);
   position: relative;
   padding-left: 3vw;
-  border-top-right-radius: 40px;
-  box-shadow: inset -10px 10px 15px -6px rgba(175, 175, 175, 0.723);
+  border-top-right-radius: 20px;
   align-items: center;
   & img {
-    border: 8px ridge $dark-main;
+    border: 4px ridge $accent;
   }
 }
 
@@ -70,23 +84,28 @@ body {
   transform: rotateY(-25deg);
   position: relative;
   padding-right: 3vw;
-  border-top-left-radius: 40px;
-  box-shadow: inset 10px 10px 15px -6px rgba(175, 175, 175, 0.723);
+  border-top-left-radius: 20px;
   & img {
-    border: 8px ridge $dark-main;
+    border: 4px ridge $accent;
   }
 }
 
 .museum__caption {
-  font-size: clamp(12px, 2.5vh, 3rem);
+  font-size: clamp(12px, 3vh, 2rem);
   margin-top: 0.5vh;
+  margin-left: 1.5vw;
   padding: 0.8vh;
-  max-width: 75%;
-  background-color: rgb(255, 247, 236);
-  color: $darkest-main;
-  border: 1px solid $dark-main;
-  box-shadow: 0 0 3px $dark-main;
+  max-width: 90%;
   text-align: left;
+  font-family: $font-text;
+  text-align: center;
+  background-color: transparent;
+  background-image: none;
+  border: 0 solid $accent;
+}
+
+.museum__caption--artist {
+  font-size: clamp(20px, 5vh, 5rem);
 }
 
 .museum__img--button {
@@ -98,13 +117,15 @@ body {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  box-shadow: 0 0 5px grey;
-  box-shadow:
-    $white 0px 0px 0px 1px,
-    0 0 8px grey;
+  box-shadow: 0 0 8px $darkest-main;
+  cursor: pointer;
 }
-//ARROWS MUSEUM
 
+.museum__wall img:hover {
+  border: 4px ridge $dark-main;
+}
+
+//ARROWS MUSEUM
 .museum__popUpImg {
   z-index: 2;
   flex-direction: row;
@@ -130,46 +151,39 @@ body {
 .museum__img--escapeMessage {
   font-weight: bold;
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   right: 5%;
   font-size: clamp(12px, 2.5vh, 3rem);
 }
 
 .museum__navigationArrows {
-  position: fixed;
-  bottom: -3vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: -6vh;
 }
-.fleche__haut {
-  width: 8vw;
-}
-
-.fleche__bas {
+.arrow__up,
+.arrow__down {
   width: 8vw;
 }
 .museum__navigationArrows--left {
-  padding-block: 0.5vw;
-  background-color: #99ccac;
-  border: solid 1%;
-  border-radius: 10px;
-  margin-right: 0.5rem;
-  transform: rotateX(60deg) rotateY(1deg);
-  transform-style: preserve-3d;
-  box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  bottom: -7vh;
 }
+
+.museum__navigationArrows--left,
 .museum__navigationArrows--right {
-  background-color: #99ccac;
+  background-color: $accent;
+  border: 0.6vh solid $darkest-main;
+  border-radius: 50%;
+  transform: rotateX(70deg) rotateY(1deg);
   padding-block: 0.5vw;
-  border: solid 1%;
-  border-radius: 10px;
-  margin-left: 0.5rem;
-  transform: rotateX(60deg) rotateY(1deg);
   transform-style: preserve-3d;
   box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.75);
 }
+
 .disabled {
   pointer-events: none;
   opacity: 0.3;

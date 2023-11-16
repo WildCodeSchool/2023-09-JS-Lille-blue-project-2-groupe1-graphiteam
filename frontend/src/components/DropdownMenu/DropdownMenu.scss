@@ -1,53 +1,91 @@
 $light-main: rgb(153, 204, 172);
-$dark-main: rgb(115, 125, 98);
-$darkest-main: rgb(56, 52, 46);
-$accent: rgb(242, 148, 138);
-$dropdownBG: #ffefd9;
+$dark-main: #4f654e;
+$darkest-main: #38342e;
+$accent: #ffd353;
+$white: #cbcbcb;
+
+.dropdown__Container {
+  margin: 0 auto;
+  width: 30vw;
+}
 
 .iconContainer {
-  background-color: $light-main;
   height: 100%;
-  width: 40px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 8px;
+  width: 10%;
+}
+.iconContainer img {
+  margin-left: 3vw;
+  height: 70%;
+  width: 70%;
+  filter: drop-shadow(2px 4px 0px $darkest-main);
 }
 .dropdownMenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 10vh 0 0 0;
+  box-shadow: 0px 0px 10px 20px $dark-main;
+}
+.dropdownMenu::-webkit-scrollbar {
+  display: none;
 }
 .dropdownMenu__button {
-  background-color: $dropdownBG;
+  background-color: $dark-main;
   color: $darkest-main;
-  border-radius: 8px;
-  padding: 0 0 0 50px;
-  border: 1px solid black;
-  width: 300px;
-  height: 50px;
+  padding: 0 0 0 0px;
+  width: 100%;
+  height: 6vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  font-size: 1em;
+  justify-content: center;
+  font-size: clamp(13px, 2.1vw, 2.2rem);
+  color: $accent;
+  text-shadow: 2px 5px 1px $darkest-main;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.25s;
-  &:hover {
-    border-color: $dark-main;
-  }
 }
+
+.dropdownMenu__cityList,
+.dropdownMenu__districtList {
+  width: 100%;
+}
+
 .button__startVisit {
   display: flex;
   align-items: center;
-  background-color: $accent;
-  border: 1px solid $darkest-main;
-  border-radius: 8px;
-  padding: 0 0 0 0;
-  width: 200px;
-  box-shadow: 2px 4px 4px -1px $darkest-main;
   justify-content: center;
+  background-color: $accent;
+  height: 7vh;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+  width: 100%;
+  box-shadow: 0 0 7px 5px $accent;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+.linkToMuseum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+  height: 7vh;
+  font-size: clamp(1rem, 1.5vw, 3rem);
+}
+.button__startVisit a {
+  color: inherit;
+  text-decoration: inherit;
+}
+button {
+  all: unset;
+}
+
+.dropdownMenu__dripping {
+  margin-top: -1px;
+  align-items: center;
+  width: 100%;
+}
+.small {
+  margin-left: 2vw;
+  width: 15%;
 }
